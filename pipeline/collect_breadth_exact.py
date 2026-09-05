@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import json
+import os
 import re
 
 import pandas as pd
@@ -18,6 +19,11 @@ INDEXES = {
     "kospi200": {"code": "1028", "expected": 200, "suffix": "KS", "market": "KOSPI"},
     "kosdaq150": {"code": "2203", "expected": 150, "suffix": "KQ", "market": "KOSDAQ"},
 }
+
+
+def _report_krx_env_presence() -> None:
+    print(f"KRX_ID_PRESENT={'yes' if bool(os.getenv('KRX_ID')) else 'no'}")
+    print(f"KRX_PW_PRESENT={'yes' if bool(os.getenv('KRX_PW')) else 'no'}")
 
 
 def _norm_name(value: object) -> str:
@@ -237,4 +243,5 @@ cb.collect_prices = exact_prices
 cb.compute_breadth = strict_compute_breadth
 
 if __name__ == "__main__":
+    _report_krx_env_presence()
     cb.main()
