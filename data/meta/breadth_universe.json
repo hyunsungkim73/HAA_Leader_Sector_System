@@ -7,7 +7,7 @@
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
   ],
-  "official_plus_error": "PLUS basket count mismatch https://www.plusetf.co.kr/product/detail?n=006184: expected=200, six-digit=10, raw=10",
+  "official_plus_error": "PLUS Excel stock count mismatch PLUS 200: expected=200, got=316, embedded=10, asof=2026-09-04, codes_head=['005930', '000660', '402340', '009150', '105560', '005380', '055550', '028260', '086790', '034020', '012450', '006400']",
   "symbols": [
     "000080.KS",
     "000100.KS",

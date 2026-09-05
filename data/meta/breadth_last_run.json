@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-05T13:02:14.622621+09:00",
+  "generated_at_kst": "2026-09-05T22:42:23.416381+09:00",
   "start_requested": "2025-07-02",
   "symbol_count": 349,
   "price_rows": 98784,
@@ -13,6 +13,28 @@
     "slope": -0.007580174927113697,
     "acceleration": -0.008746355685131182
   },
+  "price_retry": {
+    "bulk_missing_count": 6,
+    "bulk_missing_symbols": [
+      "025070.KQ",
+      "041140.KQ",
+      "108600.KQ",
+      "239010.KQ",
+      "261660.KQ",
+      "403450.KQ"
+    ],
+    "alternate_suffix_recovered_count": 0,
+    "alternate_suffix_map": {},
+    "unresolved_count": 6,
+    "unresolved_symbols": [
+      "025070.KQ",
+      "041140.KQ",
+      "108600.KQ",
+      "239010.KQ",
+      "261660.KQ",
+      "403450.KQ"
+    ]
+  },
   "source": "public_github_constituent_cache_fallback",
   "kospi200_count": 199,
   "kosdaq150_count": 150,
@@ -21,5 +43,5 @@
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
   ],
-  "official_plus_error": "PLUS basket count mismatch https://www.plusetf.co.kr/product/detail?n=006184: expected=200, six-digit=10, raw=10"
+  "official_plus_error": "PLUS Excel stock count mismatch PLUS 200: expected=200, got=316, embedded=10, asof=2026-09-04, codes_head=['005930', '000660', '402340', '009150', '105560', '005380', '055550', '028260', '086790', '034020', '012450', '006400']"
 }
