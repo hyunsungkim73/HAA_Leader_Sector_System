@@ -2,6 +2,10 @@ name: Update investment data
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'pipeline/**'
+      - '.github/workflows/update-investment-data.yml'
   schedule:
     # 18:40 KST on weekdays = 09:40 UTC
     - cron: '40 9 * * 1-5'
