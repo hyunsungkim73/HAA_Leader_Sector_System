@@ -1,0 +1,81 @@
+series_id,dataset,sector,indicator,observations,latest_observation,ready,quality,reason
+price_semi_it,Price_Daily,반도체/IT,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_auto,Price_Daily,자동차,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_battery,Price_Daily,2차전지,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_bio,Price_Daily,바이오·헬스케어,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_financial,Price_Daily,금융,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_ship_machinery,Price_Daily,조선·기계,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_steel,Price_Daily,철강·소재,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_consumer,Price_Daily,소비재,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_media_platform,Price_Daily,미디어·플랫폼,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_construction,Price_Daily,건설·인프라,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_kbeauty,Price_Daily,소비재,close,565,2026-09-04,True,direct/market,565 daily observations; 220 required
+price_kfood,Price_Daily,소비재,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+price_biosim_cdmo,Price_Daily,바이오·헬스케어,close,411,2026-09-04,True,direct/market,411 daily observations; 220 required
+tip_tr,HAA_TIP,HAA,TIP total return,672,2026-09-04,True,market total-return proxy,TIP observations=672; HAA rows=208
+bb350,Breadth,시장,"KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",269,2026-09-04,False,partial-universe,latest universe_count=343; strict target=350
+eps_sector,EPS_Revisions,전섹터,EPS revision,15,2026-09-03,False,proxy-public,"market weeks=6; missing EPS-required sectors=['미디어·플랫폼', '바이오·헬스케어']"
+price_kospi200,Price_Daily,시장,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
+semi_price,Fundamental,반도체/IT,DRAM/NAND/HBM 현물·계약가격,2,2026-09-02,True,direct-or-standardized-proxy,matched observations=2; registry_status=active_partial_history
+semi_spot_demand,Fundamental,반도체/IT,현물 구매수요/거래강도,1,2026-09-02,False,partial,matched observations=1; registry_status=partial_backfill
+semi_inventory,Fundamental,반도체/IT,재고일수·채널재고,0,,False,partial,matched observations=0; registry_status=proxy_active
+semi_supply_capex,Fundamental,반도체/IT,가동률·공급증가·CAPEX,3,2026-06-01,True,direct-or-standardized-proxy,matched observations=3; registry_status=active_partial_history
+semi_eps,Fundamental,반도체/IT,EPS 수정,0,,False,partial,matched observations=0; registry_status=proxy_active_partial_history
+auto_inventory,Fundamental,자동차,재고·days supply,3,2026-07-31,True,direct-or-standardized-proxy,matched observations=3; registry_status=active_partial_history
+auto_incentive,Fundamental,자동차,인센티브/할인,4,2026-07-31,True,direct-or-standardized-proxy,matched observations=4; registry_status=active_partial_history
+auto_asp_mix,Fundamental,자동차,ASP·SUV·HEV·EV 믹스,3,2026-07-31,True,direct-or-standardized-proxy,matched observations=3; registry_status=active_partial_history
+auto_sales_orders,Fundamental,자동차,글로벌 판매/주문·백로그,6,2026-07-31,True,direct-or-standardized-proxy,matched observations=6; registry_status=active_partial_history
+auto_eps,Fundamental,자동차,EPS 수정,0,,False,partial,matched observations=0; registry_status=proxy_active_partial_history
+battery_ev_sales,Fundamental,2차전지,글로벌 EV 판매,16,2026-08-07,True,direct-or-standardized-proxy,matched observations=16; registry_status=active_partial_history
+battery_install,Fundamental,2차전지,배터리 설치량/출하량,4,2026-06-30,True,direct-or-standardized-proxy,matched observations=4; registry_status=active_partial_history
+battery_util,Fundamental,2차전지,셀·소재 가동률,5,2026-06-30,True,direct-or-standardized-proxy,matched observations=5; registry_status=active_partial_history
+battery_customer_inventory,Fundamental,2차전지,고객사/유통재고 대체지표,0,,False,partial,matched observations=0; registry_status=active_partial_history
+battery_cell_price_margin,Fundamental,2차전지,셀 시장가격·원재료 대비 마진,6,2026-08-07,True,direct-or-standardized-proxy,matched observations=6; registry_status=active_partial_history
+bio_rx_share,Fundamental,바이오·헬스케어,처방량/시장점유율,4,2026-07-31,True,direct-or-standardized-proxy,matched observations=4; registry_status=active_partial_history
+bio_sales_volume,Fundamental,바이오·헬스케어,바이오시밀러·신약 판매량,6,2026-06-30,True,direct-or-standardized-proxy,matched observations=6; registry_status=proxy_active
+bio_orders,Fundamental,바이오·헬스케어,CDMO/기술이전 신규수주·수주잔고,0,,False,partial,matched observations=0; registry_status=active_partial_history
+bio_approval,Fundamental,바이오·헬스케어,FDA/EMA/식약처 허가·임상,3,2026-06-30,True,direct-or-standardized-proxy,matched observations=3; registry_status=active_partial_history
+bio_eps,Fundamental,바이오·헬스케어,EPS 수정,0,,False,partial,matched observations=0; registry_status=initial_backfill_required
+fin_nim,Fundamental,금융,NIM,2,2026-06-30,False,partial,matched observations=2; registry_status=partial_backfill
+fin_loans,Fundamental,금융,대출성장률·대출믹스,0,,False,partial,matched observations=0; registry_status=partial_backfill
+fin_npl,Fundamental,금융,연체율/NPL,3,2026-06-30,True,direct-or-standardized-proxy,matched observations=3; registry_status=active_partial_history
+fin_credit_cost,Fundamental,금융,대손비용률/충당금,0,,False,partial,matched observations=0; registry_status=partial_backfill
+fin_eps,Fundamental,금융,EPS 수정,0,,False,partial,matched observations=0; registry_status=initial_backfill_required
+ship_price,Fundamental,조선·기계,신조선가,1,2026-08-31,False,partial,matched observations=1; registry_status=partial_backfill
+ship_orders,Fundamental,조선·기계,글로벌 신규수주,3,2026-08-31,True,direct-or-standardized-proxy,matched observations=3; registry_status=partial_backfill
+ship_backlog,Fundamental,조선·기계,수주잔고/매출,3,2026-03-31,True,direct-or-standardized-proxy,matched observations=3; registry_status=active_partial_history
+ship_mix,Fundamental,조선·기계,선종믹스,0,,False,partial,matched observations=0; registry_status=partial_backfill
+ship_eps,Fundamental,조선·기계,EPS 수정,0,,False,partial,matched observations=0; registry_status=proxy_active_partial_history
+steel_product_price,Fundamental,철강·소재,주요 철강제품가격,0,,False,partial,matched observations=0; registry_status=active_partial_history
+steel_rawmat,Fundamental,철강·소재,철광석·원료탄·스크랩,3,2026-09-04,True,direct-or-standardized-proxy,matched observations=3; registry_status=partial_backfill
+steel_spread,Fundamental,철강·소재,제품-원재료 스프레드,0,,False,partial,matched observations=0; registry_status=initial_backfill_required
+steel_inventory,Fundamental,철강·소재,중국 완제품/유통재고,12,2026-09-04,True,direct-or-standardized-proxy,matched observations=12; registry_status=active_partial_history
+steel_output,Fundamental,철강·소재,중국 생산·가동률/감산,13,2026-09-04,True,direct-or-standardized-proxy,matched observations=13; registry_status=partial_backfill
+cons_volume,Fundamental,소비재,판매량/트래픽,0,,False,partial,matched observations=0; registry_status=active_partial_history
+cons_ticket,Fundamental,소비재,객단가·ASP,0,,False,partial,matched observations=0; registry_status=partial_backfill
+cons_inventory,Fundamental,소비재,재고/재고회전 대체지표,0,,False,partial,matched observations=0; registry_status=initial_backfill_required
+cons_promo,Fundamental,소비재,프로모션 강도 대체지표,0,,False,partial,matched observations=0; registry_status=initial_backfill_required
+cons_margin,Fundamental,소비재,원재료·물류비 대비 마진스프레드,0,,False,partial,matched observations=0; registry_status=initial_backfill_required
+plat_mau,Fundamental,미디어·플랫폼,MAU/DAU/트래픽,2,2026-08-31,False,partial,matched observations=2; registry_status=partial_backfill
+plat_ads,Fundamental,미디어·플랫폼,광고단가·광고주수요,0,,False,partial,matched observations=0; registry_status=partial_backfill
+plat_gmv,Fundamental,미디어·플랫폼,커머스 GMV,1,2026-06-30,True,direct-or-standardized-proxy,matched observations=1; registry_status=active_partial_history
+plat_monetize,Fundamental,미디어·플랫폼,ARPU·take rate 대체지표,0,,False,partial,matched observations=0; registry_status=partial_backfill
+plat_eps,Fundamental,미디어·플랫폼,EPS 수정,0,,False,partial,matched observations=0; registry_status=initial_backfill_required
+const_demand,Fundamental,건설·인프라,분양률/청약경쟁률,0,,False,partial,matched observations=0; registry_status=active_partial_history
+const_unsold,Fundamental,건설·인프라,미분양·준공후미분양,6,2026-07-31,True,direct-or-standardized-proxy,matched observations=6; registry_status=active_partial_history
+const_orders,Fundamental,건설·인프라,신규수주/수주잔고,0,,False,partial,matched observations=0; registry_status=partial_backfill
+const_pf,Fundamental,건설·인프라,PF금리·연체/자금조달,0,,False,partial,matched observations=0; registry_status=active_partial_history
+const_cost,Fundamental,건설·인프라,원가율/공사비,0,,False,partial,matched observations=0; registry_status=partial_backfill
+macro_us2y,Macro_Market,방어자산,미국2년 국채금리,10,2026-09-03,True,direct/official-or-market,10 stored observations
+macro_us10y,Macro_Market,방어자산,미국10년 국채금리,10,2026-09-03,True,direct/official-or-market,10 stored observations
+macro_us30y,Macro_Market,방어자산,미국30년 국채금리,10,2026-09-03,True,direct/official-or-market,10 stored observations
+macro_kr3y,Macro_Market,방어자산,한국 국고3년,6,2026-09-04,True,direct/official-or-market,6 stored observations
+macro_kr10y,Macro_Market,방어자산,한국 국고10년,6,2026-09-04,True,direct/official-or-market,6 stored observations
+macro_real10y,Macro_Market,방어자산,미국 10년 실질금리,10,2026-09-03,True,direct/official-or-market,10 stored observations
+macro_usdkrw,Macro_Market,방어자산,USDKRW,12,2026-09-05,True,direct/official-or-market,12 stored observations
+macro_dxy,Macro_Market,방어자산,DXY,11,2026-09-04,True,direct/official-or-market,11 stored observations
+macro_gold,Macro_Market,방어자산,금 가격,11,2026-09-04,True,direct/official-or-market,11 stored observations
+macro_kofr,Macro_Market,방어자산,KOFR,2,2026-09-04,False,proxy,2 stored observations
+macro_cd91,Macro_Market,방어자산,CD91일,7,2026-09-04,True,direct/official-or-market,7 stored observations
+account_snapshots,Account_Snapshots,계좌,보유수량·평가액·현금·분배금·납입·거래,0,,True,private-archive,intentionally excluded from public GitHub; managed in ChatGPT Archive
+derived_weekly,Derived_Weekly,전섹터,M21/M63/M126/RS/slope/accel/score/stage/state,1200,2026-09-04,True,price-derived-only,price/RS/HAA/breadth derived inputs present; full 60/40 sector score requires fundamental gate
