@@ -97,14 +97,9 @@ def yf_series(series_id: str, ticker: str, label: str, unit: str, start: str) ->
     return out[COLS]
 
 
-def ecos_series(series_id: str, item_code: str, label: str, unit: str, start: str) -> pd.DataFrame:
-    # Prefer a real API key when configured; ECOS also exposes a documented sample key
-    # suitable for limited public queries, which lets CI perform a no-secret backfill test.
-    key = os.environ.get("BOK_ECOS_API_KEY", "sample")
-    start_compact = pd.Timestamp(start).strftime("%Y%m%d")
-    end_compact = datetime.now(KST).strftime("%Y%m%d")
+def _ecos_request(key: str, start_row: int, end_row: int, start_compact: str, end_compact: str, item_code: str) -> dict:
     url = (
-        f"https://ecos.bok.or.kr/api/StatisticSearch/{key}/json/kr/1/1000/"
+        f"https://ecos.bok.or.kr/api/StatisticSearch/{key}/json/kr/{start_row}/{end_row}/"
         f"817Y002/D/{start_compact}/{end_compact}/{item_code}"
     )
     r = requests.get(url, timeout=45)
@@ -112,15 +107,49 @@ def ecos_series(series_id: str, item_code: str, label: str, unit: str, start: st
     payload = r.json()
     if "RESULT" in payload:
         raise RuntimeError(f"ECOS error {payload['RESULT']}")
-    rows = payload.get("StatisticSearch", {}).get("row", [])
-    if not rows:
+    return payload
+
+
+def _ecos_rows(key: str, start_compact: str, end_compact: str, item_code: str) -> list[dict]:
+    # The documented ECOS sample key permits at most 10 rows per request. Query the
+    # first page, read list_total_count, then paginate without needing a secret key.
+    # A configured real key can use larger pages to reduce request count.
+    page_size = 1000 if key != "sample" else 10
+    first_end = page_size
+    first = _ecos_request(key, 1, first_end, start_compact, end_compact, item_code)
+    block = first.get("StatisticSearch", {})
+    rows = list(block.get("row", []) or [])
+    total = int(block.get("list_total_count", len(rows)) or len(rows))
+    if not rows and total <= 0:
         raise RuntimeError("ECOS returned no rows")
+    start_row = first_end + 1
+    while start_row <= total:
+        end_row = min(start_row + page_size - 1, total)
+        payload = _ecos_request(key, start_row, end_row, start_compact, end_compact, item_code)
+        page_rows = payload.get("StatisticSearch", {}).get("row", []) or []
+        if not page_rows:
+            raise RuntimeError(f"ECOS pagination returned no rows for {start_row}-{end_row} of {total}")
+        rows.extend(page_rows)
+        start_row = end_row + 1
+    return rows
+
+
+def ecos_series(series_id: str, item_code: str, label: str, unit: str, start: str) -> pd.DataFrame:
+    # GitHub exposes an unset secret to the step as an empty string, so normalize an
+    # empty value back to the documented public sample key instead of treating it as
+    # an invalid key. Pagination keeps sample-key requests within the 10-row cap.
+    key = (os.environ.get("BOK_ECOS_API_KEY") or "sample").strip() or "sample"
+    start_compact = pd.Timestamp(start).strftime("%Y%m%d")
+    end_compact = datetime.now(KST).strftime("%Y%m%d")
+    rows = _ecos_rows(key, start_compact, end_compact, item_code)
     out = pd.DataFrame({
         "obs_date": [str(x.get("TIME", "")) for x in rows],
         "value": [pd.to_numeric(x.get("DATA_VALUE"), errors="coerce") for x in rows],
     })
     out["obs_date"] = pd.to_datetime(out["obs_date"], format="%Y%m%d", errors="coerce").dt.strftime("%Y-%m-%d")
     out = out.dropna(subset=["obs_date", "value"])
+    if out.empty:
+        raise RuntimeError("ECOS rows contained no valid dated numeric observations")
     out["series_id"] = series_id
     out["category"] = "방어자산"
     out["indicator"] = label
