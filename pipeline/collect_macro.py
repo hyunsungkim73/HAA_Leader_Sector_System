@@ -111,7 +111,7 @@ def _ecos_request(key: str, start_row: int, end_row: int, start_compact: str, en
 
 
 def _ecos_rows(key: str, start_compact: str, end_compact: str, item_code: str) -> list[dict]:
-    # The documented ECOS sample key permits at most 10 rows per request.  Query the
+    # The documented ECOS sample key permits at most 10 rows per request. Query the
     # first page, read list_total_count, then paginate without needing a secret key.
     # A configured real key can use larger pages to reduce request count.
     page_size = 1000 if key != "sample" else 10
@@ -135,10 +135,10 @@ def _ecos_rows(key: str, start_compact: str, end_compact: str, item_code: str) -
 
 
 def ecos_series(series_id: str, item_code: str, label: str, unit: str, start: str) -> pd.DataFrame:
-    # Prefer a real API key when configured; ECOS also exposes a documented sample key
-    # suitable for limited public queries. Pagination keeps sample-key requests within
-    # the 10-row cap while still allowing a full 3-month backfill.
-    key = os.environ.get("BOK_ECOS_API_KEY", "sample")
+    # GitHub exposes an unset secret to the step as an empty string, so normalize an
+    # empty value back to the documented public sample key instead of treating it as
+    # an invalid key. Pagination keeps sample-key requests within the 10-row cap.
+    key = (os.environ.get("BOK_ECOS_API_KEY") or "sample").strip() or "sample"
     start_compact = pd.Timestamp(start).strftime("%Y%m%d")
     end_compact = datetime.now(KST).strftime("%Y%m%d")
     rows = _ecos_rows(key, start_compact, end_compact, item_code)
