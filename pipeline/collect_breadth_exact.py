@@ -10,6 +10,7 @@ import pandas as pd
 import requests as http_requests
 import FinanceDataReader as fdr
 import FinanceDataReader.krx.snap as fdr_snap
+from pykrx import stock
 
 import collect_breadth as cb
 
@@ -29,14 +30,66 @@ def _norm_name(value: object) -> str:
     return s
 
 
-class _HttpsRequestsProxy:
-    """Transport-only hardening for FinanceDataReader's KRX snap reader.
+def _normalize_code(value: object) -> str | None:
+    s = str(value).strip().upper()
+    if s.endswith(".0"):
+        s = s[:-2]
+    if re.fullmatch(r"[0-9A-Z]{6}", s):
+        return s
+    if s.isdigit() and 1 <= len(s) < 6:
+        return s.zfill(6)
+    return None
 
-    FinanceDataReader 0.9.202 still constructs data.krx.co.kr URLs with http://.
-    KRX can return a non-JSON block page for that transport on hosted runners.
-    Keep the FinanceDataReader reader and request payload unchanged, but force the
-    same KRX host to HTTPS and add finite timeouts.
-    """
+
+def _clean_codes(values: list[object]) -> list[str]:
+    codes = [code for value in values if (code := _normalize_code(value))]
+    return list(dict.fromkeys(codes))
+
+
+def _pykrx_exact_universe() -> tuple[list[str], dict]:
+    errors: list[str] = []
+    today = datetime.now(KST).date()
+    for days_back in range(1, 15):
+        requested = (today - timedelta(days=days_back)).strftime("%Y%m%d")
+        pieces: list[str] = []
+        detail: dict[str, dict] = {}
+        try:
+            for key, cfg in INDEXES.items():
+                raw = list(stock.get_index_portfolio_deposit_file(cfg["code"], date=requested, alternative=True))
+                codes = _clean_codes(raw)
+                expected = int(cfg["expected"])
+                if len(codes) != expected:
+                    invalid = [str(v).strip() for v in raw if _normalize_code(v) is None]
+                    raise RuntimeError(
+                        f"{key} expected={expected}, got={len(codes)}, raw={len(raw)}, invalid={invalid[:10]}"
+                    )
+                pieces.extend([f"{code}.{cfg['suffix']}" for code in codes])
+                detail[key] = {
+                    "index_code": cfg["code"],
+                    "expected": expected,
+                    "count": len(codes),
+                    "codes": codes,
+                }
+            symbols = list(dict.fromkeys(pieces))
+            if len(symbols) != 350:
+                raise RuntimeError(f"combined expected=350, got={len(symbols)}")
+            return symbols, {
+                "source": "pykrx_KRX_index_constituents",
+                "source_type": "exact_index_constituents",
+                "validation_policy": "KRX index constituent endpoint via pykrx; exact 200+150 only",
+                "asof_requested": requested,
+                "combined_count": 350,
+                "sources": detail,
+                "prior_attempt_errors": errors,
+                "symbols": symbols,
+            }
+        except Exception as exc:
+            errors.append(f"{requested}:{type(exc).__name__}:{exc}")
+    raise RuntimeError("pykrx exact universe failed across recent dates: " + " | ".join(errors[-8:]))
+
+
+class _HttpsRequestsProxy:
+    """Transport-only hardening for FinanceDataReader's KRX snap reader."""
 
     @staticmethod
     def _url(url: str) -> str:
@@ -66,9 +119,9 @@ def _fdr_krx_listing_map() -> dict[str, dict[str, str]]:
         raise RuntimeError(f"Unexpected FDR KRX listing columns: {list(df.columns)}")
     out: dict[str, dict[str, str]] = {}
     for _, row in df.iterrows():
-        code = str(row[code_col]).strip()
+        code = _normalize_code(row[code_col])
         name = str(row["Name"]).strip()
-        if not re.fullmatch(r"\d{6}", code):
+        if not code:
             continue
         market = str(row.get("Market", "")).strip().upper()
         out[code] = {"name": name, "name_norm": _norm_name(name), "market": market}
@@ -107,10 +160,10 @@ def _fdr_index_constituents(
     errors: list[str] = []
     seen: set[str] = set()
     for _, row in df.iterrows():
-        code = str(row["Code"]).strip()
+        code = _normalize_code(row["Code"])
         snap_name = str(row["Name"]).strip()
-        if not re.fullmatch(r"\d{6}", code):
-            errors.append(f"invalid_code:{code}:{snap_name}")
+        if not code:
+            errors.append(f"invalid_code:{row['Code']}:{snap_name}")
             continue
         if code in seen:
             errors.append(f"duplicate_code:{code}:{snap_name}")
@@ -165,7 +218,6 @@ def _fdr_exact_universe() -> tuple[list[str], dict]:
     return symbols, {
         "source": "FinanceDataReader_KRX_index_constituents",
         "source_type": "exact_index_constituents",
-        "source_policy": "FinanceDataReader-only",
         "validation_policy": "FDR index constituents internally validated against FDR KRX listing",
         "definition": "KOSPI200 (KRX index 1028) + KOSDAQ150 (KRX index 2203) exact constituents",
         "kospi200": m200,
@@ -177,7 +229,17 @@ def _fdr_exact_universe() -> tuple[list[str], dict]:
 
 
 def exact_universe() -> tuple[list[str], dict]:
-    symbols, meta = _fdr_exact_universe()
+    errors: list[str] = []
+    try:
+        symbols, meta = _pykrx_exact_universe()
+    except Exception as exc:
+        errors.append(f"pykrx:{type(exc).__name__}:{exc}")
+        try:
+            symbols, meta = _fdr_exact_universe()
+        except Exception as exc2:
+            errors.append(f"fdr_exact:{type(exc2).__name__}:{exc2}")
+            raise RuntimeError("Exact BB350 universe unavailable; refusing proxy/partial output. " + " | ".join(errors))
+    meta["fallback_errors"] = errors
     (META / "breadth_universe.json").write_text(
         json.dumps(meta | {"symbols": symbols}, ensure_ascii=False, indent=2),
         encoding="utf-8",
@@ -224,7 +286,7 @@ def exact_prices(symbols: list[str], start: str) -> tuple[pd.DataFrame, dict]:
     present = set(prices["ticker"].astype(str).unique()) if not prices.empty else set()
     unresolved = [symbol for symbol in symbols if symbol not in present]
     return prices, {
-        "source_policy": "FinanceDataReader-only",
+        "source_policy": "FinanceDataReader prices for exact KRX constituent universe",
         "requested_count": len(symbols),
         "fdr_recovered_count": len(recovered),
         "fdr_recovered_symbols": sorted(recovered),
