@@ -1,0 +1,128 @@
+obs_date,sector,subsector,indicator,indicator_role,frequency,value,unit,direction,acceleration,source,source_type,is_proxy,confidence,loaded_at,notes
+2026-02-28,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,65.3,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Feb cumulative; +12.1% YoY
+2026-03-31,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,117.4,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Mar cumulative; +17.4% YoY
+2026-04-30,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,162.7,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Apr cumulative; +21.0% YoY
+2026-06-30,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,269,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Jun cumulative; +26.3% YoY
+2022-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,73.6,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2023-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,69.3,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2024-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,57.8,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2025-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,47.6,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,52.8,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,2차전지,,EV 파우치 삼원계 셀 시장가격,leading,monthly,0.59,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,2차전지,,EV 각형 삼원계 셀 시장가격,leading,monthly,0.58,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,2차전지,,EV 각형 LFP 셀 시장가격,leading,monthly,0.38,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-07,2차전지,,EV 파우치 삼원계 셀 시장가격,leading,monthly,0.61,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-07,2차전지,,EV 각형 삼원계 셀 시장가격,leading,monthly,0.6,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-07,2차전지,,EV 각형 LFP 셀 시장가격,leading,monthly,0.39,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,2차전지,,미국 신차 EV days supply,leading,monthly,81,days,,,Cox Automotive EV Market Monitor,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-07-31,2차전지,,미국 신차 EV days supply,leading,monthly,80,days,,,Cox Automotive EV Market Monitor,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-07-31,2차전지,,현대 EV days supply,leading,monthly,52,days,,,Cox Automotive EV Market Monitor,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-07-31,바이오·헬스케어,,Steqeyma 미국 시장점유율,leading,monthly,16.2,%,,,Celltrion official newsroom (IQVIA-cited),public proxy,True,medium,2026-09-05T11:30:00+09:00,Company-disclosed IQVIA-derived share
+2026-07-31,바이오·헬스케어,,Yuflyma 미국 시장점유율,leading,monthly,9.4,%,,,Celltrion official newsroom (IQVIA-cited),public proxy,True,medium,2026-09-05T11:30:00+09:00,Company-disclosed IQVIA-derived share
+2026-07-31,바이오·헬스케어,,Truxima 미국 시장점유율,leading,monthly,38.6,%,,,Celltrion official newsroom (IQVIA-cited),public proxy,True,medium,2026-09-05T11:30:00+09:00,Company-disclosed IQVIA-derived share
+2026-07-31,바이오·헬스케어,,Inflectra 미국 시장점유율,leading,monthly,30.7,%,,,Celltrion official newsroom (IQVIA-cited),public proxy,True,medium,2026-09-05T11:30:00+09:00,Company-disclosed IQVIA-derived share
+2026-02-28,바이오·헬스케어,,Hadlima 미국 adalimumab volume share,leading,quarterly,7,%,,,Samsung Bioepis US Biosimilar Market Report Q2 2026,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,금융,,KB은행 NIM,leading,quarterly,1.74,%,,,KB Financial Group quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,-3bp QoQ
+2026-06-30,금융,,신한은행 NIM QoQ change,leading,quarterly,1,bp,,,Shinhan Financial Group Q2 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,금융,,신한 원화대출 QoQ growth,leading,quarterly,0.4,%,,,Shinhan Financial Group Q2 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,금융,,KB 대출 QoQ growth,leading,quarterly,1.6,%,,,KB Financial Group quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,금융,,KB credit cost,leading,quarterly,38,bp,,,KB Financial Group quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,금융,,신한 credit cost,leading,quarterly,42,bp,,,Shinhan Financial Group Q2 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-31,조선·기계,,Clarksons 신조선가지수,leading,monthly,186.34,index,,,Clarksons cited public monthly reports,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-08-31,조선·기계,,글로벌 신규수주,leading,monthly,4.2,million CGT,,,Clarksons cited public monthly reports,public proxy,True,medium,2026-09-05T11:30:00+09:00,125 vessels
+2026-08-31,조선·기계,,글로벌 수주잔량,leading,monthly,216.43,million CGT,,,Clarksons cited public monthly reports,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-03-31,조선·기계,,삼성중공업 총 수주잔고,leading,quarterly,29.9,USD bn,,,Samsung Heavy Industries Q1 IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,조선·기계,,삼성중공업 LNGC 수주잔고,leading,quarterly,15.4,USD bn,,,Samsung Heavy Industries Q1 IR,public/official,False,high,2026-09-05T11:30:00+09:00,66 LNG carriers
+2026-06-30,조선·기계,,한화오션 H1 신규수주,leading,semiannual,4.35,USD bn,,,Hanwha Ocean results/public conference,public/official,False,medium,2026-09-05T11:30:00+09:00,"LNGC6, VLCC15, VLAC3, WTIV1"
+2026-03-31,조선·기계,,한화오션 총 수주잔고,leading,quarterly,35.374,KRW tn,,,Hanwha Ocean KIND/DART Q1 report,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-10,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3384.1,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-20,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3367.3,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3325.2,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-07-10,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3301.4,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-07-20,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3305.6,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-07-31,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3288.4,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-10,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3241.1,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-20,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3265.3,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-31,철강·소재,,중국 열연(Q235) 가격,leading,10-day,3326.4,RMB/t,,,China NBS Market Prices of Important Means of Production,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-07,철강·소재,,중국 47항 수입 철광석 재고,leading,weekly,175.0068,Mt,,,Mysteel public iron ore data hub,public proxy,True,medium,2026-09-05T11:30:00+09:00,+1.0022Mt WoW
+2026-08-21,철강·소재,,중국 47항 수입 철광석 재고,leading,weekly,173.606,Mt,,,Mysteel public iron ore data hub,public proxy,True,medium,2026-09-05T11:30:00+09:00,-0.609Mt WoW
+2026-09-04,철강·소재,,중국 47항 수입 철광석 재고,leading,weekly,171.308,Mt,,,Mysteel public iron ore data hub,public proxy,True,medium,2026-09-05T11:30:00+09:00,-2.4443Mt WoW
+2026-08-21,철강·소재,,칭다오항 PB분(60.8%) 현물가격,leading,weekly,732,RMB/t,,,Mysteel public iron ore data hub,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-09-04,철강·소재,,247개 제철소 일평균 철수 생산,leading,weekly,2.3682,Mt/day,,,Mysteel public iron ore data hub,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-06-30,소비재,,주요 유통업체 전체 매출 YoY,leading,monthly,7.3,%,,,MOTIR Major Retailers Sales Trends,public/official,False,high,2026-09-05T11:30:00+09:00,"offline 6.2%, online 8.1%, dept 20.1%, convenience 3.7%, hypermarket -7.3%, SSM -6.6%"
+2026-07-31,소비재,,주요 유통업체 전체 매출 YoY,leading,monthly,6.4,%,,,MOTIR Major Retailers Sales Trends,public/official,False,high,2026-09-05T11:30:00+09:00,"offline 3.2%, online 8.5%, dept 17.9%, convenience 1.1%, hypermarket -11.2%, SSM -2.9%"
+2026-07-31,소비재,,표본 구매건수 YoY,leading,monthly,-4.7,%,,,MOTIR Major Retailers Sales Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-07-31,소비재,,표본 구매단가 YoY,leading,monthly,1.9,%,,,MOTIR Major Retailers Sales Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2024-12-31,미디어·플랫폼,,NAVER Pay TPV,leading,quarterly,19.3,KRW tn,,,NAVER official quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2025-03-31,미디어·플랫폼,,NAVER Pay TPV,leading,quarterly,19.6,KRW tn,,,NAVER official quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2025-06-30,미디어·플랫폼,,NAVER Pay TPV,leading,quarterly,20.8,KRW tn,,,NAVER official quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2025-09-30,미디어·플랫폼,,NAVER Pay TPV,leading,quarterly,22.7,KRW tn,,,NAVER official quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2025-12-31,미디어·플랫폼,,NAVER Pay TPV,leading,quarterly,23,KRW tn,,,NAVER official quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,미디어·플랫폼,,NAVER Pay TPV,leading,quarterly,24.2,KRW tn,,,NAVER official quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,미디어·플랫폼,,NAVER Pay TPV,leading,quarterly,25.2,KRW tn,,,NAVER official quarterly IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,미디어·플랫폼,,NAVER Financial Platform 매출,leading,quarterly,470.7,KRW bn,,,NAVER Q2 2026 IR,public proxy,True,medium,2026-09-05T11:30:00+09:00,"Use revenue/TPV as monetization proxy, not actual take rate"
+2026-06-30,미디어·플랫폼,,NAVER Smartstore GMV YoY,leading,quarterly,15.5,%,,,NAVER Q2 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,미디어·플랫폼,,NAVER AI Tab MAU,leading,quarterly,10,million users,,,NAVER Q2 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-31,미디어·플랫폼,,NAVER app MAU,leading,monthly,47.253614,million users,,,MobileIndex public monthly data,public proxy,True,medium,2026-09-05T11:30:00+09:00,+4.4% YoY
+2026-03-31,미디어·플랫폼,,Kakao Talk Biz Commerce GTV,leading,quarterly,2.9,KRW tn,,,Kakao official Q1 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,+10% YoY
+2026-06-30,미디어·플랫폼,,Kakao Talk Biz Commerce GTV,leading,quarterly,2.7,KRW tn,,,Kakao official Q2 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,+9% YoY
+2026-06-30,미디어·플랫폼,,Kakao Talk Biz Commerce 매출,leading,quarterly,243.2,KRW bn,,,Kakao official Q2 2026 IR,public proxy,True,medium,2026-09-05T11:30:00+09:00,Revenue/GTV proxy
+2026-06-30,미디어·플랫폼,,Kakao Talk Biz 광고/구독 매출,leading,quarterly,399.9,KRW bn,,,Kakao official Q2 2026 IR,public/official,False,high,2026-09-05T11:30:00+09:00,"+14% YoY; business messages +20%, display +28%"
+2026-09-04,반도체/IT,,DDR5 16Gb spot average,leading,daily,54.067,quoted market unit,,,TrendForce/DRAMeXchange public spot update,public proxy,True,medium,2026-09-05T11:30:00+09:00,Sep4 change +0.12%
+2026-09-04,반도체/IT,,DDR4 16Gb spot average,leading,daily,93.5,quoted market unit,,,TrendForce/DRAMeXchange public spot update,public proxy,True,medium,2026-09-05T11:30:00+09:00,Sep4 change +0.63%
+2026-09-04,반도체/IT,,DDR4 8Gb spot average,leading,daily,45,quoted market unit,,,TrendForce/DRAMeXchange public spot update,public proxy,True,medium,2026-09-05T11:30:00+09:00,Sep4 change +0.96%
+2026-08-26,반도체/IT,,DDR4 spot average reference,leading,weekly,43.64,quoted market unit,,,TrendForce public spot update,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-09-01,반도체/IT,,DDR4 spot average reference,leading,weekly,44.54,quoted market unit,,,TrendForce public spot update,public proxy,True,medium,2026-09-05T11:30:00+09:00,+2.08% vs Aug26
+2026-09-02,반도체/IT,,NAND 512Gb TLC wafer WoW change,leading,weekly,-0.9,%,,,TrendForce public NAND update,public proxy,True,medium,2026-09-05T11:30:00+09:00,price level 20.708
+2026-09-02,반도체/IT,,현물 구매수요 정성점수,leading,weekly,-1,score,,,TrendForce public market commentary,public proxy,True,low,2026-09-05T11:30:00+09:00,DDR5 branded demand decelerated; DDR4 procurement weak/limited transactions
+2026-05-31,자동차,,재고·days supply,leading,monthly,76,days,,,Cox Automotive May 2026 New-Vehicle Inventory,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry days supply; brand direct history incomplete
+2026-06-30,자동차,,재고·days supply,leading,monthly,80.3,days,,,Cox Automotive June 2026 New-Vehicle Inventory,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry days supply; Kia 74 days in June
+2026-07-31,자동차,,재고·days supply,leading,monthly,75,days,,,Cox Automotive July 2026 New-Vehicle Inventory,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry days supply
+2026-04-30,자동차,,인센티브/할인,leading,monthly,6.9,% of ATP,,,Kelley Blue Book/Cox April 2026 ATP Report,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio; brand direct average unavailable
+2026-05-31,자동차,,인센티브/할인,leading,monthly,7.2,% of ATP,,,Kelley Blue Book/Cox May 2026 ATP Report,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio
+2026-06-30,자동차,,인센티브/할인,leading,monthly,7,% of ATP,,,Cox Auto Market Weekly 2026-07-13,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio; $3463/unit
+2026-07-31,자동차,,인센티브/할인,leading,monthly,6.4,% of ATP,,,Kelley Blue Book/Cox July 2026 ATP Report,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio
+2026-05-31,자동차,Hyundai USA,글로벌 판매/주문·백로그,leading,monthly,87468,units,,,Hyundai Motor America May 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-06-30,자동차,Hyundai USA,글로벌 판매/주문·백로그,leading,monthly,77555,units,,,Hyundai Motor America June 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-07-31,자동차,Hyundai USA,글로벌 판매/주문·백로그,leading,monthly,82480,units,,,Hyundai Motor America July 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-05-31,자동차,Kia USA,글로벌 판매/주문·백로그,leading,monthly,80502,units,,,Kia America May 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-06-30,자동차,Kia USA,글로벌 판매/주문·백로그,leading,monthly,70507,units,,,Kia America June 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-07-31,자동차,Kia USA,글로벌 판매/주문·백로그,leading,monthly,75857,units,,,Kia America July 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-05-31,자동차,Hyundai USA,ASP·SUV·HEV·EV 믹스,leading,monthly,90,% YoY hybrid sales,,,Hyundai Motor America May 2026 Sales,company,Y,medium,2026-09-05T12:20:00+09:00,hybrid growth proxy for mix
+2026-06-30,자동차,Hyundai USA,ASP·SUV·HEV·EV 믹스,leading,monthly,74,% YoY hybrid sales,,,Hyundai Motor America June 2026 Sales,company,Y,medium,2026-09-05T12:20:00+09:00,hybrid sales growth; H1 electrified share 33%
+2026-07-31,자동차,Hyundai USA,ASP·SUV·HEV·EV 믹스,leading,monthly,35,% YoY hybrid sales,,,Hyundai Motor America July 2026 Sales,company,Y,medium,2026-09-05T12:20:00+09:00,hybrid sales growth; SUVs 73% of sales
+2026-05-31,건설·인프라,주택,분양 물량,leading,monthly,14731,호,,,MOLIT monthly housing statistics,official,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,건설·인프라,주택,분양 물량,leading,monthly,22838,호,,,MOLIT monthly housing statistics,official,False,high,2026-09-05T12:00:00+09:00,
+2026-07-31,건설·인프라,주택,수도권 분양 물량,leading,monthly,10405,호,,,MOLIT monthly housing statistics,official,False,high,2026-09-05T12:00:00+09:00,전국 총분양은 원문 상세표 추가 적재 필요
+2026-05-31,건설·인프라,주택,전국 미분양,leading,monthly,65239,호,,,MOLIT/stat.molit.go.kr,official,False,high,2026-09-05T12:00:00+09:00,
+2026-05-31,건설·인프라,주택,준공후 미분양,leading,monthly,29350,호,,,MOLIT/stat.molit.go.kr,official,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,건설·인프라,주택,전국 미분양,leading,monthly,67464,호,,,MOLIT/stat.molit.go.kr,official,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,건설·인프라,주택,준공후 미분양,leading,monthly,29786,호,,,MOLIT/stat.molit.go.kr,official,False,high,2026-09-05T12:00:00+09:00,
+2026-07-31,건설·인프라,주택,전국 미분양,leading,monthly,68217,호,,,MOLIT/stat.molit.go.kr,official,False,high,2026-09-05T12:00:00+09:00,
+2026-07-31,건설·인프라,주택,준공후 미분양,leading,monthly,29152,호,,,MOLIT/stat.molit.go.kr,official,False,high,2026-09-05T12:00:00+09:00,
+2026-03-31,2차전지,,글로벌 EV 판매,leading,quarterly,3.9,million units,,,IEA Global EV Outlook 2026,official,False,high,2026-09-05T12:00:00+09:00,Q1 2026 around 3.9m; YoY -8%
+2026-05-31,2차전지,,글로벌 EV 판매 누적,leading,monthly,7.754,million units,,,SNE Research Global EV & Battery Monthly Tracker,industry,False,high,2026-09-05T12:00:00+09:00,Jan-May 2026; YoY +3.5%
+2026-06-30,2차전지,,비중국 글로벌 EV 판매 누적,leading,monthly,4.598,million units,,,SNE Research,industry,False,high,2026-09-05T12:00:00+09:00,Jan-Jun 2026; YoY +30.3%; global market growth +5.5%
+2024-12-31,금융,신한금융,NPL 비율,leading,semiannual,0.66,%,,,Shinhan Financial Group 2026 interim report,official,False,high,2026-09-05T12:00:00+09:00,
+2025-12-31,금융,신한금융,NPL 비율,leading,semiannual,0.64,%,,,Shinhan Financial Group 2026 interim report,official,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,금융,신한금융,NPL 비율,leading,semiannual,0.7,%,,,Shinhan Financial Group 2026 interim report,official,False,high,2026-09-05T12:00:00+09:00,
+2025-07-09,반도체/IT,메모리,공급자 재고 타이트니스 점수,leading,event,0,score(-2~2),,,TrendForce,industry,True,medium,2026-09-05T12:00:00+09:00,"inventory shifting suppliers to buyers; PC/module stockpile, server healthy, mixed handset"
+2025-09-24,반도체/IT,메모리,공급자 재고 타이트니스 점수,leading,event,1,score(-2~2),,,TrendForce,industry,True,medium,2026-09-05T12:00:00+09:00,supplier inventories declining; no high-risk levels
+2026-04-08,반도체/IT,메모리,공급자 재고 타이트니스 점수,leading,event,2,score(-2~2),,,TrendForce,industry,True,medium,2026-09-05T12:00:00+09:00,supplier stocks at floor levels / tight
+2026-06-01,반도체/IT,메모리,공급자 재고 타이트니스 점수,leading,event,2,score(-2~2),,,TrendForce,industry,True,medium,2026-09-05T12:00:00+09:00,supplier DRAM inventory remains extremely low
+2026-07-29,반도체/IT,메모리,공급자 재고 타이트니스 점수,leading,event,2,score(-2~2),,,TrendForce,industry,True,medium,2026-09-05T12:00:00+09:00,supplier inventories extremely low; buyer inventories building
+2026-01-05,반도체/IT,메모리,공급/CAPEX,leading,event,1,score,,,TrendForce / Micron,industry,True,medium,2026-09-05T12:00:00+09:00,"Suppliers prioritize server/HBM, reallocating advanced nodes and new capacity"
+2026-05-28,반도체/IT,메모리,공급/CAPEX,leading,event,7.1,USD bn,,,TrendForce / Micron,industry,False,high,2026-09-05T12:00:00+09:00,Micron FYQ3 2026 capex
+2026-06-01,반도체/IT,메모리,공급/CAPEX,leading,event,1,score,,,TrendForce / Micron,industry,True,medium,2026-09-05T12:00:00+09:00,wafer input growth limited; bit output mainly process migration
+2025-12-31,바이오·헬스,바이오시밀러,신제품 매출 비중,leading,quarterly,54,%,,,Celltrion official earnings,official,True,medium,2026-09-05T12:00:00+09:00,Celltrion newer portfolio share of biopharmaceutical sales
+2026-06-30,바이오·헬스,바이오시밀러,신제품 매출 비중,leading,quarterly,65,%,,,Celltrion official earnings,official,True,medium,2026-09-05T12:00:00+09:00,Celltrion newer high-margin products share of biologics revenue; +76% YoY
+2026-03-31,바이오·헬스,바이오시밀러,Samsung Bioepis revenue,leading,quarterly,454.9,KRW bn,,,Samsung Epis Holdings official Q1 results,official,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,바이오·헬스,바이오시밀러,Samsung Bioepis H1 revenue,leading,semiannual,847.1,KRW bn,,,Samsung Epis Holdings official H1 results,official,False,high,2026-09-05T12:00:00+09:00,
+2026-03-31,바이오·헬스,CDMO,Samsung Biologics cumulative contract value,leading,quarterly,21.4,USD bn,,,Samsung Biologics official earnings,official,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,바이오·헬스,CDMO,Samsung Biologics cumulative contract value,leading,quarterly,21.7,USD bn,,,Samsung Biologics official earnings,official,False,high,2026-09-05T12:00:00+09:00,
+2025-12-31,바이오·헬스,미국 바이오시밀러 시장,FDA 승인 바이오시밀러 수,leading,quarterly,90,count,,,Samsung Bioepis US Biosimilar Market Report,industry,False,high,2026-09-05T12:00:00+09:00,
+2025-12-31,바이오·헬스,미국 바이오시밀러 시장,출시 바이오시밀러 수,leading,quarterly,63,count,,,Samsung Bioepis US Biosimilar Market Report,industry,False,high,2026-09-05T12:00:00+09:00,
+2026-03-31,바이오·헬스,미국 바이오시밀러 시장,FDA 승인 바이오시밀러 수,leading,quarterly,92,count,,,Samsung Bioepis US Biosimilar Market Report,industry,False,high,2026-09-05T12:00:00+09:00,
+2026-03-31,바이오·헬스,미국 바이오시밀러 시장,출시 바이오시밀러 수,leading,quarterly,67,count,,,Samsung Bioepis US Biosimilar Market Report,industry,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,바이오·헬스,미국 바이오시밀러 시장,FDA 승인 바이오시밀러 수,leading,quarterly,96,count,,,Samsung Bioepis US Biosimilar Market Report,industry,False,high,2026-09-05T12:00:00+09:00,
+2026-06-30,바이오·헬스,미국 바이오시밀러 시장,출시 바이오시밀러 수,leading,quarterly,71,count,,,Samsung Bioepis US Biosimilar Market Report,industry,False,high,2026-09-05T12:00:00+09:00,
