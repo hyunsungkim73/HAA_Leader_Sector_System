@@ -1,0 +1,17 @@
+obs_date,sector,subsector,indicator,indicator_role,frequency,value,unit,direction,acceleration,source,source_type,is_proxy,confidence,loaded_at,notes
+2026-05-31,자동차,,재고·days supply,leading,monthly,76,days,,,Cox Automotive May 2026 New-Vehicle Inventory,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry days supply; brand direct history incomplete
+2026-06-30,자동차,,재고·days supply,leading,monthly,80.3,days,,,Cox Automotive June 2026 New-Vehicle Inventory,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry days supply; Kia 74 days in June
+2026-07-31,자동차,,재고·days supply,leading,monthly,75,days,,,Cox Automotive July 2026 New-Vehicle Inventory,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry days supply
+2026-04-30,자동차,,인센티브/할인,leading,monthly,6.9,% of ATP,,,Kelley Blue Book/Cox April 2026 ATP Report,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio; brand direct average unavailable
+2026-05-31,자동차,,인센티브/할인,leading,monthly,7.2,% of ATP,,,Kelley Blue Book/Cox May 2026 ATP Report,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio
+2026-06-30,자동차,,인센티브/할인,leading,monthly,7,% of ATP,,,Cox Auto Market Weekly 2026-07-13,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio; $3463/unit
+2026-07-31,자동차,,인센티브/할인,leading,monthly,6.4,% of ATP,,,Kelley Blue Book/Cox July 2026 ATP Report,industry,Y,medium,2026-09-05T12:20:00+09:00,US industry incentive ratio
+2026-05-31,자동차,Hyundai USA,글로벌 판매/주문·백로그,leading,monthly,87468,units,,,Hyundai Motor America May 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-06-30,자동차,Hyundai USA,글로벌 판매/주문·백로그,leading,monthly,77555,units,,,Hyundai Motor America June 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-07-31,자동차,Hyundai USA,글로벌 판매/주문·백로그,leading,monthly,82480,units,,,Hyundai Motor America July 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-05-31,자동차,Kia USA,글로벌 판매/주문·백로그,leading,monthly,80502,units,,,Kia America May 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-06-30,자동차,Kia USA,글로벌 판매/주문·백로그,leading,monthly,70507,units,,,Kia America June 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-07-31,자동차,Kia USA,글로벌 판매/주문·백로그,leading,monthly,75857,units,,,Kia America July 2026 Sales,company,N,high,2026-09-05T12:20:00+09:00,US total sales
+2026-05-31,자동차,Hyundai USA,ASP·SUV·HEV·EV 믹스,leading,monthly,90,% YoY hybrid sales,,,Hyundai Motor America May 2026 Sales,company,Y,medium,2026-09-05T12:20:00+09:00,hybrid growth proxy for mix
+2026-06-30,자동차,Hyundai USA,ASP·SUV·HEV·EV 믹스,leading,monthly,74,% YoY hybrid sales,,,Hyundai Motor America June 2026 Sales,company,Y,medium,2026-09-05T12:20:00+09:00,hybrid sales growth; H1 electrified share 33%
+2026-07-31,자동차,Hyundai USA,ASP·SUV·HEV·EV 믹스,leading,monthly,35,% YoY hybrid sales,,,Hyundai Motor America July 2026 Sales,company,Y,medium,2026-09-05T12:20:00+09:00,hybrid sales growth; SUVs 73% of sales
