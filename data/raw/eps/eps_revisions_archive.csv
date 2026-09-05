@@ -1,0 +1,16 @@
+obs_date,sector,company,metric,value,unit,lookback,source,is_proxy,loaded_at,notes
+2026-07-30,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,78.1,pct,weekly,Hanwha EPS LIVE #222,1,2026-09-05T12:35:00+09:00,direct public summary; industrials/energy/financials upward sectors
+2026-08-06,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,77.9,pct,weekly,Hanwha EPS LIVE #223,0,2026-09-05T12:35:00+09:00,direct public report; semiconductor/DM IT upward concentration
+2026-08-13,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,77.1,pct,weekly,Hanwha EPS LIVE #224,1,2026-09-05T12:35:00+09:00,derived from #225 disclosure; down 10.5pp WoW
+2026-08-20,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,66.6,pct,weekly,Hanwha EPS LIVE #225,0,2026-09-05T12:35:00+09:00,direct public summary; semiconductor components upward
+2026-08-27,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,66,pct,weekly,Hanwha EPS LIVE #226,0,2026-09-05T12:35:00+09:00,direct public summary; cosmetics/food strength highlighted
+2026-09-03,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,65.8,pct,weekly,Hanwha EPS LIVE #227,0,2026-09-05T12:35:00+09:00,direct public summary; Kia upward Hyundai pressure
+2026-07-30,금융,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #222,1,2026-09-05T12:35:00+09:00,financials among annual earnings-upgrade sectors
+2026-07-30,조선·기계,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #222,1,2026-09-05T12:35:00+09:00,industrials upward sector proxy
+2026-08-06,반도체/IT,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #223,1,2026-09-05T12:35:00+09:00,semiconductor/IT upward concentration
+2026-08-20,반도체/IT,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #225,1,2026-09-05T12:35:00+09:00,semiconductor materials/equipment upward
+2026-08-20,2차전지,,sector_revision_direction,-1,direction_score,weekly,Hanwha EPS LIVE #225,1,2026-09-05T12:35:00+09:00,LGES large negative EPS revision highlighted
+2026-08-20,자동차,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #225,1,2026-09-05T12:35:00+09:00,Kia breakout but aggregate mixed
+2026-08-27,소비재,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #226,1,2026-09-05T12:35:00+09:00,cosmetics KT&G Samyang Foods strength
+2026-09-03,자동차,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #227,1,2026-09-05T12:35:00+09:00,Kia upward while Hyundai downward pressure
+2026-09-03,조선·기계,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #227,1,2026-09-05T12:35:00+09:00,Hanwha Ocean among estimate upgrades
