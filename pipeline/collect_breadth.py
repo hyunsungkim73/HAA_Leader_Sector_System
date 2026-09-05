@@ -46,10 +46,19 @@ def extract_asof(page_text: str) -> str:
 
 
 def normalize_six_digit_code(value: object) -> str | None:
+    if pd.isna(value):
+        return None
+    if isinstance(value, (int, np.integer)):
+        n = int(value)
+        return f"{n:06d}" if 0 <= n <= 999999 else None
+    if isinstance(value, (float, np.floating)):
+        if not np.isfinite(value) or not float(value).is_integer():
+            return None
+        n = int(value)
+        return f"{n:06d}" if 0 <= n <= 999999 else None
     s = str(value).strip()
-    if s.endswith(".0"):
-        s = s[:-2]
-    return s if re.fullmatch(r"\d{6}", s) else None
+    m = re.fullmatch(r"(\d{1,6})(?:\.0+)?", s)
+    return m.group(1).zfill(6) if m else None
 
 
 def code_column_candidates(frames: list[pd.DataFrame], etf_ticker: str | None) -> list[dict]:
