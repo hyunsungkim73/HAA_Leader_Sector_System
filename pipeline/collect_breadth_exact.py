@@ -1,15 +1,15 @@
 from __future__ import annotations
 
-from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import json
-import os
 import re
 
 import pandas as pd
+import requests as http_requests
 import FinanceDataReader as fdr
-from pykrx import stock
+import FinanceDataReader.krx.snap as fdr_snap
 
 import collect_breadth as cb
 
@@ -22,11 +22,6 @@ INDEXES = {
 }
 
 
-def _report_krx_env_presence() -> None:
-    print(f"KRX_ID_PRESENT={'yes' if bool(os.getenv('KRX_ID')) else 'no'}")
-    print(f"KRX_PW_PRESENT={'yes' if bool(os.getenv('KRX_PW')) else 'no'}")
-
-
 def _norm_name(value: object) -> str:
     s = str(value).strip().upper()
     s = re.sub(r"\s+", "", s)
@@ -34,69 +29,32 @@ def _norm_name(value: object) -> str:
     return s
 
 
-def _normalize_code(value: object) -> str | None:
-    s = str(value).strip()
-    if s.endswith(".0"):
-        s = s[:-2]
-    if s.isdigit() and 1 <= len(s) <= 6:
-        return s.zfill(6)
-    return None
+class _HttpsRequestsProxy:
+    """Transport-only hardening for FinanceDataReader's KRX snap reader.
+
+    FinanceDataReader 0.9.202 still constructs data.krx.co.kr URLs with http://.
+    KRX can return a non-JSON block page for that transport on hosted runners.
+    Keep the FinanceDataReader reader and request payload unchanged, but force the
+    same KRX host to HTTPS and add finite timeouts.
+    """
+
+    @staticmethod
+    def _url(url: str) -> str:
+        return url.replace("http://data.krx.co.kr", "https://data.krx.co.kr")
+
+    @classmethod
+    def get(cls, url: str, *args, **kwargs):
+        kwargs.setdefault("timeout", 30)
+        return http_requests.get(cls._url(url), *args, **kwargs)
+
+    @classmethod
+    def post(cls, url: str, *args, **kwargs):
+        kwargs.setdefault("timeout", 30)
+        return http_requests.post(cls._url(url), *args, **kwargs)
 
 
-def _clean_codes(values: list[object]) -> list[str]:
-    codes = [code for value in values if (code := _normalize_code(value))]
-    return list(dict.fromkeys(codes))
-
-
-def _describe_raw_codes(values: list[object]) -> str:
-    normalized = [_normalize_code(v) for v in values]
-    valid = [v for v in normalized if v]
-    duplicates = sorted(code for code, count in Counter(valid).items() if count > 1)
-    invalid = [str(v).strip() for v, code in zip(values, normalized) if not code]
-    return (
-        f"raw={len(values)} valid={len(valid)} unique={len(set(valid))} "
-        f"duplicates={duplicates[:10]} invalid={invalid[:10]}"
-    )
-
-
-def _pykrx_exact_universe() -> tuple[list[str], dict]:
-    errors: list[str] = []
-    today = datetime.now(KST).date()
-    # Query explicit recent dates so pykrx does not depend on an implicit latest-date
-    # resolution that can fail around weekends/holidays. Only an exact 200+150 set passes.
-    for days_back in range(1, 15):
-        d = (today - timedelta(days=days_back)).strftime("%Y%m%d")
-        pieces: list[str] = []
-        detail: dict[str, dict] = {}
-        try:
-            for key, cfg in INDEXES.items():
-                raw = list(stock.get_index_portfolio_deposit_file(cfg["code"], date=d, alternative=True))
-                codes = _clean_codes(raw)
-                expected = int(cfg["expected"])
-                if len(codes) != expected:
-                    raise RuntimeError(
-                        f"{key} expected={expected}, got={len(codes)}; {_describe_raw_codes(raw)}"
-                    )
-                pieces.extend([f"{code}.{cfg['suffix']}" for code in codes])
-                detail[key] = {
-                    "index_code": cfg["code"],
-                    "expected": expected,
-                    "count": len(codes),
-                }
-            symbols = list(dict.fromkeys(pieces))
-            if len(symbols) != 350:
-                raise RuntimeError(f"combined expected=350, got={len(symbols)}")
-            return symbols, {
-                "source": "pykrx_KRX_index_constituents",
-                "source_type": "exact_index_constituents",
-                "asof_requested": d,
-                "combined_count": 350,
-                "sources": detail,
-                "prior_attempt_errors": errors,
-            }
-        except Exception as exc:
-            errors.append(f"{d}:{type(exc).__name__}:{exc}")
-    raise RuntimeError("pykrx exact universe failed across recent dates: " + " | ".join(errors[-5:]))
+def _install_fdr_krx_https_transport() -> None:
+    fdr_snap.requests = _HttpsRequestsProxy
 
 
 def _fdr_krx_listing_map() -> dict[str, dict[str, str]]:
@@ -119,16 +77,29 @@ def _fdr_krx_listing_map() -> dict[str, dict[str, str]]:
     return out
 
 
-def _fdr_index_constituents(index_key: str, listing_map: dict[str, dict[str, str]]) -> tuple[list[str], dict, list[dict]]:
+def _fdr_index_constituents(
+    index_key: str, listing_map: dict[str, dict[str, str]]
+) -> tuple[list[str], dict, list[dict]]:
     cfg = INDEXES[index_key]
     index_code = cfg["code"]
     expected = int(cfg["expected"])
     suffix = cfg["suffix"]
     expected_market = cfg["market"]
 
-    df = fdr.SnapDataReader(f"KRX/INDEX/STOCK/{index_code}")
+    last_exc: Exception | None = None
+    df = pd.DataFrame()
+    for _ in range(3):
+        try:
+            df = fdr.SnapDataReader(f"KRX/INDEX/STOCK/{index_code}")
+            if df is not None and not df.empty:
+                break
+        except Exception as exc:
+            last_exc = exc
     if df is None or df.empty:
-        raise RuntimeError(f"FDR SnapDataReader KRX/INDEX/STOCK/{index_code} returned no rows")
+        raise RuntimeError(
+            f"FDR SnapDataReader KRX/INDEX/STOCK/{index_code} returned no rows"
+            + (f"; last_error={type(last_exc).__name__}:{last_exc}" if last_exc else "")
+        )
     if "Code" not in df.columns or "Name" not in df.columns:
         raise RuntimeError(f"Unexpected FDR index constituent columns for {index_code}: {list(df.columns)}")
 
@@ -176,12 +147,14 @@ def _fdr_index_constituents(index_key: str, listing_map: dict[str, dict[str, str
         "count": len(rows),
         "source": f"FinanceDataReader SnapDataReader KRX/INDEX/STOCK/{index_code}",
         "validation": "code and name matched against FinanceDataReader StockListing('KRX')",
+        "transport_note": "FinanceDataReader KRX snap transport forced from http to https on data.krx.co.kr",
         "asof_kst": datetime.now(KST).date().isoformat(),
     }
     return symbols, meta, rows
 
 
 def _fdr_exact_universe() -> tuple[list[str], dict]:
+    _install_fdr_krx_https_transport()
     listing_map = _fdr_krx_listing_map()
     k200, m200, rows200 = _fdr_index_constituents("kospi200", listing_map)
     k150, m150, rows150 = _fdr_index_constituents("kosdaq150", listing_map)
@@ -192,6 +165,7 @@ def _fdr_exact_universe() -> tuple[list[str], dict]:
     return symbols, {
         "source": "FinanceDataReader_KRX_index_constituents",
         "source_type": "exact_index_constituents",
+        "source_policy": "FinanceDataReader-only",
         "validation_policy": "FDR index constituents internally validated against FDR KRX listing",
         "definition": "KOSPI200 (KRX index 1028) + KOSDAQ150 (KRX index 2203) exact constituents",
         "kospi200": m200,
@@ -203,18 +177,11 @@ def _fdr_exact_universe() -> tuple[list[str], dict]:
 
 
 def exact_universe() -> tuple[list[str], dict]:
-    errors: list[str] = []
-    try:
-        symbols, meta = _pykrx_exact_universe()
-    except Exception as exc:
-        errors.append(f"pykrx:{type(exc).__name__}:{exc}")
-        try:
-            symbols, meta = _fdr_exact_universe()
-        except Exception as exc2:
-            errors.append(f"fdr_exact:{type(exc2).__name__}:{exc2}")
-            raise RuntimeError("Exact BB350 universe unavailable; refusing proxy/partial output. " + " | ".join(errors))
-    meta["fallback_errors"] = errors
-    (META / "breadth_universe.json").write_text(json.dumps(meta | {"symbols": symbols}, ensure_ascii=False, indent=2), encoding="utf-8")
+    symbols, meta = _fdr_exact_universe()
+    (META / "breadth_universe.json").write_text(
+        json.dumps(meta | {"symbols": symbols}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     return symbols, meta
 
 
@@ -235,9 +202,36 @@ def _fdr_one(symbol: str, start: str) -> pd.DataFrame:
 
 
 def exact_prices(symbols: list[str], start: str) -> tuple[pd.DataFrame, dict]:
-    # Keep the shared Yahoo bulk collector first, then use FinanceDataReader as the
-    # required per-symbol price fallback. Exchange-suffix retry remains a last resort.
-    return cb.collect_prices(symbols, start)
+    frames: list[pd.DataFrame] = []
+    recovered: list[str] = []
+    failures: list[str] = []
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        futures = {pool.submit(_fdr_one, symbol, start): symbol for symbol in symbols}
+        for future in as_completed(futures):
+            symbol = futures[future]
+            try:
+                frame = future.result()
+            except Exception:
+                frame = pd.DataFrame()
+            if frame is None or frame.empty:
+                failures.append(symbol)
+            else:
+                frames.append(frame)
+                recovered.append(symbol)
+    prices = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(columns=["date", "ticker", "close"])
+    if not prices.empty:
+        prices = prices.drop_duplicates(["date", "ticker"], keep="last")
+    present = set(prices["ticker"].astype(str).unique()) if not prices.empty else set()
+    unresolved = [symbol for symbol in symbols if symbol not in present]
+    return prices, {
+        "source_policy": "FinanceDataReader-only",
+        "requested_count": len(symbols),
+        "fdr_recovered_count": len(recovered),
+        "fdr_recovered_symbols": sorted(recovered),
+        "unresolved_count": len(unresolved),
+        "unresolved_symbols": unresolved,
+        "request_failures": sorted(set(failures)),
+    }
 
 
 _base_compute_breadth = cb.compute_breadth
@@ -260,5 +254,4 @@ cb.collect_prices = exact_prices
 cb.compute_breadth = strict_compute_breadth
 
 if __name__ == "__main__":
-    _report_krx_env_presence()
     cb.main()
