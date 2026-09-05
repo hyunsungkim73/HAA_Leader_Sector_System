@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-05T22:42:23.416381+09:00",
+  "generated_at_kst": "2026-09-05T22:46:00.889751+09:00",
   "start_requested": "2025-07-02",
   "symbol_count": 349,
   "price_rows": 98784,
@@ -43,5 +43,5 @@
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
   ],
-  "official_plus_error": "PLUS Excel stock count mismatch PLUS 200: expected=200, got=316, embedded=10, asof=2026-09-04, codes_head=['005930', '000660', '402340', '009150', '105560', '005380', '055550', '028260', '086790', '034020', '012450', '006400']"
+  "official_plus_error": "PLUS Excel stock code-column mismatch PLUS 200: expected=200, selected=0, embedded=10, asof=2026-09-04, candidate_columns=[{'sheet': 0, 'column': '1', 'count': 198, 'ratio': 0.9801980198019802}]"
 }
