@@ -44,10 +44,19 @@ def extract_asof(page_text: str) -> str:
 
 
 def normalize_six_digit_code(value: object) -> str | None:
+    if pd.isna(value):
+        return None
+    if isinstance(value, (int, np.integer)):
+        n = int(value)
+        return f"{n:06d}" if 0 <= n <= 999999 else None
+    if isinstance(value, (float, np.floating)):
+        if not np.isfinite(value) or not float(value).is_integer():
+            return None
+        n = int(value)
+        return f"{n:06d}" if 0 <= n <= 999999 else None
     s = str(value).strip()
-    if s.endswith(".0"):
-        s = s[:-2]
-    return s if re.fullmatch(r"\d{6}", s) else None
+    m = re.fullmatch(r"(\d{1,6})(?:\.0+)?", s)
+    return m.group(1).zfill(6) if m else None
 
 
 def code_column_candidates(frames: list[pd.DataFrame], etf_ticker: str | None) -> list[dict]:
@@ -79,9 +88,6 @@ def choose_stock_codes(frames: list[pd.DataFrame], expected: int, etf_ticker: st
         exact.sort(key=lambda c: c["ratio"], reverse=True)
         return exact[0]["codes"], candidates
 
-    # Some workbooks can carry one header/footer value that is also six digits. Prefer the
-    # column closest to the target only when it has strong code-column density, then trim
-    # only a leading ETF self-ticker already handled above. Never silently pad a universe.
     dense = [c for c in candidates if c["ratio"] >= 0.80]
     if dense:
         dense.sort(key=lambda c: (abs(c["count"] - expected), -c["ratio"]))
