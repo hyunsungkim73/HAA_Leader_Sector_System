@@ -13,61 +13,122 @@ import collect_breadth as cb
 KST = timezone(timedelta(hours=9))
 META = Path(__file__).resolve().parents[1] / "data" / "meta"
 
-
-def _code_col(df: pd.DataFrame) -> str:
-    for c in ["Code", "Symbol"]:
-        if c in df.columns:
-            return c
-    raise RuntimeError(f"FDR listing code column not found: {list(df.columns)}")
+INDEXES = {
+    "kospi200": {"code": "1028", "expected": 200, "suffix": "KS", "market": "KOSPI"},
+    "kosdaq150": {"code": "2203", "expected": 150, "suffix": "KQ", "market": "KOSDAQ"},
+}
 
 
-def _marcap_col(df: pd.DataFrame) -> str:
-    for c in ["Marcap", "MarketCap", "Market Cap"]:
-        if c in df.columns:
-            return c
-    raise RuntimeError(f"FDR listing market-cap column not found: {list(df.columns)}")
+def _norm_name(value: object) -> str:
+    s = str(value).strip().upper()
+    s = re.sub(r"\s+", "", s)
+    s = re.sub(r"[^0-9A-Z가-힣]", "", s)
+    return s
 
 
-def _top_market_codes(market: str, n: int, suffix: str) -> tuple[list[str], dict]:
-    df = fdr.StockListing(market)
+def _fdr_krx_listing_map() -> dict[str, dict[str, str]]:
+    df = fdr.StockListing("KRX")
     if df is None or df.empty:
-        raise RuntimeError(f"FinanceDataReader StockListing({market!r}) returned no rows")
-    cc = _code_col(df)
-    mc = _marcap_col(df)
-    z = df[[cc, mc]].copy()
-    z[cc] = z[cc].astype(str).str.extract(r"(\d{1,6})", expand=False).str.zfill(6)
-    z[mc] = pd.to_numeric(z[mc], errors="coerce")
-    z = z[z[cc].str.fullmatch(r"\d{6}", na=False) & z[mc].notna()]
-    z = z.sort_values([mc, cc], ascending=[False, True]).drop_duplicates(cc, keep="first")
-    if len(z) < n:
-        raise RuntimeError(f"FDR {market} listing has only {len(z)} usable rows; need {n}")
-    codes = z.head(n)[cc].tolist()
-    return [f"{c}.{suffix}" for c in codes], {
-        "market": market,
-        "selection": f"top_{n}_by_FDR_market_cap",
-        "count": len(codes),
+        raise RuntimeError("FinanceDataReader StockListing('KRX') returned no rows")
+    code_col = "Code" if "Code" in df.columns else "Symbol" if "Symbol" in df.columns else None
+    if not code_col or "Name" not in df.columns:
+        raise RuntimeError(f"Unexpected FDR KRX listing columns: {list(df.columns)}")
+    out: dict[str, dict[str, str]] = {}
+    for _, row in df.iterrows():
+        code = str(row[code_col]).strip()
+        name = str(row["Name"]).strip()
+        if not re.fullmatch(r"\d{6}", code):
+            continue
+        market = str(row.get("Market", "")).strip().upper()
+        out[code] = {"name": name, "name_norm": _norm_name(name), "market": market}
+    if len(out) < 2000:
+        raise RuntimeError(f"FDR KRX listing validation map unexpectedly small: {len(out)}")
+    return out
+
+
+def _index_constituents(index_key: str, listing_map: dict[str, dict[str, str]]) -> tuple[list[str], dict, list[dict]]:
+    cfg = INDEXES[index_key]
+    index_code = cfg["code"]
+    expected = int(cfg["expected"])
+    suffix = cfg["suffix"]
+    expected_market = cfg["market"]
+
+    df = fdr.SnapDataReader(f"KRX/INDEX/STOCK/{index_code}")
+    if df is None or df.empty:
+        raise RuntimeError(f"FDR SnapDataReader KRX/INDEX/STOCK/{index_code} returned no rows")
+    if "Code" not in df.columns or "Name" not in df.columns:
+        raise RuntimeError(f"Unexpected FDR index constituent columns for {index_code}: {list(df.columns)}")
+
+    rows: list[dict] = []
+    errors: list[str] = []
+    seen: set[str] = set()
+    for _, row in df.iterrows():
+        code = str(row["Code"]).strip()
+        snap_name = str(row["Name"]).strip()
+        if not re.fullmatch(r"\d{6}", code):
+            errors.append(f"invalid_code:{code}:{snap_name}")
+            continue
+        if code in seen:
+            errors.append(f"duplicate_code:{code}:{snap_name}")
+            continue
+        seen.add(code)
+        listed = listing_map.get(code)
+        if not listed:
+            errors.append(f"not_in_FDR_KRX_listing:{code}:{snap_name}")
+            continue
+        if _norm_name(snap_name) != listed["name_norm"]:
+            errors.append(f"name_mismatch:{code}:{snap_name}!={listed['name']}")
+            continue
+        listed_market = listed["market"]
+        if expected_market not in listed_market:
+            errors.append(f"market_mismatch:{code}:{snap_name}:{listed_market}")
+            continue
+        rows.append({
+            "code": code,
+            "name": listed["name"],
+            "market": expected_market,
+            "index_code": index_code,
+            "symbol": f"{code}.{suffix}",
+        })
+
+    if errors:
+        raise RuntimeError(f"FDR internal validation failed for {index_key}: {errors[:20]}")
+    if len(rows) != expected:
+        raise RuntimeError(f"FDR {index_key} constituent count mismatch: got={len(rows)} expected={expected}")
+
+    symbols = [r["symbol"] for r in rows]
+    meta = {
+        "index_code": index_code,
+        "expected": expected,
+        "count": len(rows),
+        "source": f"FinanceDataReader SnapDataReader KRX/INDEX/STOCK/{index_code}",
+        "validation": "code and name matched against FinanceDataReader StockListing('KRX')",
         "asof_kst": datetime.now(KST).date().isoformat(),
     }
+    return symbols, meta, rows
 
 
 def fdr_only_universe() -> tuple[list[str], dict]:
-    k200, m200 = _top_market_codes("KOSPI", 200, "KS")
-    k150, m150 = _top_market_codes("KOSDAQ", 150, "KQ")
+    listing_map = _fdr_krx_listing_map()
+    k200, m200, rows200 = _index_constituents("kospi200", listing_map)
+    k150, m150, rows150 = _index_constituents("kosdaq150", listing_map)
     symbols = k200 + k150
     if len(symbols) != 350 or len(set(symbols)) != 350:
-        raise RuntimeError(f"FDR-only universe must be 350 unique symbols; got {len(symbols)} / {len(set(symbols))}")
+        raise RuntimeError(f"FDR index universe must be 350 unique symbols; got {len(symbols)} / {len(set(symbols))}")
+
+    constituents = rows200 + rows150
     meta = {
         "source": "FinanceDataReader_only",
-        "source_type": "user_approved_single_source_proxy",
-        "validation_policy": "user_approved_no_double_check",
-        "definition": "KOSPI top 200 + KOSDAQ top 150 by FDR market capitalization; operational BB350 proxy, not official index-membership exact universe",
-        "kospi200_proxy": m200,
-        "kosdaq150_proxy": m150,
+        "source_type": "user_approved_single_source",
+        "validation_policy": "FDR-only; no external double-check; internal FDR code-name-market validation required",
+        "definition": "KOSPI200 (KRX index 1028) + KOSDAQ150 (KRX index 2203) constituents from FinanceDataReader SnapDataReader",
+        "kospi200": m200,
+        "kosdaq150": m150,
         "combined_count": 350,
+        "constituents": constituents,
+        "symbols": symbols,
     }
-    (META / "breadth_universe.json").write_text(
-        json.dumps(meta | {"symbols": symbols}, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    (META / "breadth_universe.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     return symbols, meta
 
 
@@ -106,6 +167,7 @@ def fdr_only_prices(symbols: list[str], start: str) -> tuple[pd.DataFrame, dict]
         "unresolved_count": len(unresolved),
         "unresolved_symbols": unresolved,
         "double_check": False,
+        "universe_validation": "FDR SnapDataReader constituents internally validated against FDR KRX listing",
     }
 
 
