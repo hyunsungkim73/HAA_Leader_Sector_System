@@ -13,7 +13,7 @@ DERIVED = DATA / "derived"
 RAW = DATA / "raw"
 KST = timezone(timedelta(hours=9))
 
-REGISTRY = META / "series_registry.csv"
+REGISTRY_JSON = META / "series_registry_min.json"
 OUT_CSV = META / "completeness_series.csv"
 OUT_JSON = META / "completeness_report.json"
 
@@ -42,6 +42,18 @@ def safe_csv(path: Path) -> pd.DataFrame:
         return pd.DataFrame()
 
 
+def load_registry() -> pd.DataFrame:
+    rows = json.loads(REGISTRY_JSON.read_text(encoding="utf-8"))
+    reg = pd.DataFrame(rows)
+    required = {"series_id", "dataset", "sector", "indicator", "status"}
+    missing = required - set(reg.columns)
+    if missing:
+        raise RuntimeError(f"registry missing fields: {sorted(missing)}")
+    if len(reg) != 80 or reg["series_id"].nunique() != 80:
+        raise RuntimeError(f"registry must contain exactly 80 unique series, got rows={len(reg)}, unique={reg['series_id'].nunique()}")
+    return reg
+
+
 def fundamental_counts() -> pd.DataFrame:
     folder = RAW / "fundamentals"
     frames = []
@@ -57,14 +69,13 @@ def fundamental_counts() -> pd.DataFrame:
         if c not in f.columns:
             f[c] = ""
     f["obs_date"] = pd.to_datetime(f["obs_date"], errors="coerce")
-    # The all_observations seed and sector-specific files may overlap. Deduplicate semantic observations.
     keys = ["obs_date","sector","subsector","indicator","source"]
     f = f.drop_duplicates(keys, keep="last")
     return f
 
 
 def main() -> None:
-    reg = pd.read_csv(REGISTRY)
+    reg = load_registry()
     price_cov = safe_csv(META / "price_coverage.csv")
     price_cov = price_cov.set_index("series") if not price_cov.empty else pd.DataFrame()
     fund = fundamental_counts()
