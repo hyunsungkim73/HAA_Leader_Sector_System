@@ -1,0 +1,9 @@
+obs_date,sector,subsector,indicator,indicator_role,frequency,value,unit,direction,acceleration,source,source_type,is_proxy,confidence,loaded_at,notes
+2026-07-31,철강·소재,,HRC/원료탄 가격비율,leading,10-day,1.753813,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3288.4 / coking coal 1875.0; directional margin proxy, not accounting spread
+2026-08-10,철강·소재,,HRC/원료탄 가격비율,leading,10-day,1.698423,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3241.1 / coking coal 1908.3
+2026-08-20,철강·소재,,HRC/원료탄 가격비율,leading,10-day,1.598209,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3265.3 / coking coal 2043.1
+2026-08-31,철강·소재,,HRC/원료탄 가격비율,leading,10-day,1.402716,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3326.4 / coking coal 2371.4
+2026-07-31,철강·소재,,HRC/코크스 가격비율,leading,10-day,1.889668,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3288.4 / coke 1740.2; directional margin proxy
+2026-08-10,철강·소재,,HRC/코크스 가격비율,leading,10-day,1.929571,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3241.1 / coke 1679.7
+2026-08-20,철강·소재,,HRC/코크스 가격비율,leading,10-day,1.983297,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3265.3 / coke 1646.4
+2026-08-31,철강·소재,,HRC/코크스 가격비율,leading,10-day,1.889249,ratio,,,China NBS means-of-production prices,official-derived,True,medium,2026-09-05T12:45:00+09:00,HRC 3326.4 / coke 1760.7
