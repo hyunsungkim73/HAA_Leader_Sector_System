@@ -1,0 +1,11 @@
+date,tip_close,distribution,tr_index,R1,R3,R6,R12,score_13612U,regime,source_close_1,source_close_2,source_distribution,loaded_at
+2026-05-01,,0.560849,,,,,,,,,,iShares official TIP distributions,2026-09-05T11:30:00+09:00
+2026-06-01,,1.277516,,,,,,,,,,iShares official TIP distributions,2026-09-05T11:30:00+09:00
+2026-07-01,,1.058023,,,,,,,,,,iShares official TIP distributions,2026-09-05T11:30:00+09:00
+2026-08-03,,0.784384,,,,,,,,,,iShares official TIP distributions,2026-09-05T11:30:00+09:00
+2026-09-01,,0,,,,,,,,,,iShares official TIP distributions,2026-09-05T11:30:00+09:00
+2026-09-02,106.86,,,,,,,,,market close sources (previously crosschecked),,,2026-09-05T11:30:00+09:00
+2026-09-03,107,,,,,,,,,market close sources (previously crosschecked),,,2026-09-05T11:30:00+09:00
+2026-09-04,106.96,,,,,,,,,market close sources (previously crosschecked),,,2026-09-05T11:30:00+09:00
+2026-08-27,,,,,,,,0.797964,Risk-On,previous exact computation record,,,2026-09-05T11:30:00+09:00
+2026-09-03,,,,0,-0.0085656,-0.0050484,0.0098167,-0.0086356,Risk-Off,previous exact computation record,,,2026-09-05T11:30:00+09:00
