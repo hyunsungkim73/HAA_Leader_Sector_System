@@ -1,9 +1,9 @@
 {
-  "generated_at_kst": "2026-09-05T12:50:12.416018+09:00",
+  "generated_at_kst": "2026-09-05T12:55:31.690617+09:00",
   "registered_series": 80,
-  "ready_series": 48,
-  "not_ready_series": 32,
-  "completion_pct": 60.0,
+  "ready_series": 52,
+  "not_ready_series": 28,
+  "completion_pct": 65.0,
   "strict_complete": false,
   "not_ready": [
     {
@@ -11,224 +11,196 @@
       "dataset": "Breadth",
       "sector": "시장",
       "indicator": "KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",
-      "reason": "latest universe_count=343; strict target=350"
-    },
-    {
-      "series_id": "eps_sector",
-      "dataset": "EPS_Revisions",
-      "sector": "전섹터",
-      "indicator": "EPS revision",
-      "reason": "market weeks=6; missing EPS-required sectors=['미디어·플랫폼', '바이오·헬스케어']"
+      "reason": "breadth rows=269; latest universe_count=343; strict target=350"
     },
     {
       "series_id": "semi_spot_demand",
       "dataset": "Fundamental",
       "sector": "반도체/IT",
       "indicator": "현물 구매수요/거래강도",
-      "reason": "matched observations=1; registry_status=partial_backfill"
-    },
-    {
-      "series_id": "semi_inventory",
-      "dataset": "Fundamental",
-      "sector": "반도체/IT",
-      "indicator": "재고일수·채널재고",
-      "reason": "matched observations=0; registry_status=proxy_active"
-    },
-    {
-      "series_id": "semi_eps",
-      "dataset": "Fundamental",
-      "sector": "반도체/IT",
-      "indicator": "EPS 수정",
-      "reason": "matched observations=0; registry_status=proxy_active_partial_history"
-    },
-    {
-      "series_id": "auto_eps",
-      "dataset": "Fundamental",
-      "sector": "자동차",
-      "indicator": "EPS 수정",
-      "reason": "matched observations=0; registry_status=proxy_active_partial_history"
-    },
-    {
-      "series_id": "battery_customer_inventory",
-      "dataset": "Fundamental",
-      "sector": "2차전지",
-      "indicator": "고객사/유통재고 대체지표",
-      "reason": "matched observations=0; registry_status=active_partial_history"
+      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "bio_orders",
       "dataset": "Fundamental",
       "sector": "바이오·헬스케어",
       "indicator": "CDMO/기술이전 신규수주·수주잔고",
-      "reason": "matched observations=0; registry_status=active_partial_history"
-    },
-    {
-      "series_id": "bio_eps",
-      "dataset": "Fundamental",
-      "sector": "바이오·헬스케어",
-      "indicator": "EPS 수정",
-      "reason": "matched observations=0; registry_status=initial_backfill_required"
+      "reason": "matched native/proxy observations=2; 3 required for direction"
     },
     {
       "series_id": "fin_nim",
       "dataset": "Fundamental",
       "sector": "금융",
       "indicator": "NIM",
-      "reason": "matched observations=2; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=2; 3 required for direction"
     },
     {
       "series_id": "fin_loans",
       "dataset": "Fundamental",
       "sector": "금융",
       "indicator": "대출성장률·대출믹스",
-      "reason": "matched observations=0; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=2; 3 required for direction"
     },
     {
       "series_id": "fin_credit_cost",
       "dataset": "Fundamental",
       "sector": "금융",
       "indicator": "대손비용률/충당금",
-      "reason": "matched observations=0; registry_status=partial_backfill"
-    },
-    {
-      "series_id": "fin_eps",
-      "dataset": "Fundamental",
-      "sector": "금융",
-      "indicator": "EPS 수정",
-      "reason": "matched observations=0; registry_status=initial_backfill_required"
+      "reason": "matched native/proxy observations=2; 3 required for direction"
     },
     {
       "series_id": "ship_price",
       "dataset": "Fundamental",
       "sector": "조선·기계",
       "indicator": "신조선가",
-      "reason": "matched observations=1; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=1; 3 required for direction"
+    },
+    {
+      "series_id": "ship_orders",
+      "dataset": "Fundamental",
+      "sector": "조선·기계",
+      "indicator": "글로벌 신규수주",
+      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "ship_mix",
       "dataset": "Fundamental",
       "sector": "조선·기계",
       "indicator": "선종믹스",
-      "reason": "matched observations=0; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=2; 3 required for direction"
     },
     {
-      "series_id": "ship_eps",
-      "dataset": "Fundamental",
-      "sector": "조선·기계",
-      "indicator": "EPS 수정",
-      "reason": "matched observations=0; registry_status=proxy_active_partial_history"
-    },
-    {
-      "series_id": "steel_product_price",
+      "series_id": "steel_rawmat",
       "dataset": "Fundamental",
       "sector": "철강·소재",
-      "indicator": "주요 철강제품가격",
-      "reason": "matched observations=0; registry_status=active_partial_history"
+      "indicator": "철광석·원료탄·스크랩",
+      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "steel_spread",
       "dataset": "Fundamental",
       "sector": "철강·소재",
       "indicator": "제품-원재료 스프레드",
-      "reason": "matched observations=0; registry_status=initial_backfill_required"
+      "reason": "matched native/proxy observations=0; 3 required for direction"
+    },
+    {
+      "series_id": "steel_inventory",
+      "dataset": "Fundamental",
+      "sector": "철강·소재",
+      "indicator": "중국 완제품/유통재고",
+      "reason": "matched native/proxy observations=0; 3 required for direction"
+    },
+    {
+      "series_id": "steel_output",
+      "dataset": "Fundamental",
+      "sector": "철강·소재",
+      "indicator": "중국 생산·가동률/감산",
+      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "cons_volume",
       "dataset": "Fundamental",
       "sector": "소비재",
       "indicator": "판매량/트래픽",
-      "reason": "matched observations=0; registry_status=active_partial_history"
+      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "cons_ticket",
       "dataset": "Fundamental",
       "sector": "소비재",
       "indicator": "객단가·ASP",
-      "reason": "matched observations=0; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "cons_inventory",
       "dataset": "Fundamental",
       "sector": "소비재",
       "indicator": "재고/재고회전 대체지표",
-      "reason": "matched observations=0; registry_status=initial_backfill_required"
+      "reason": "matched native/proxy observations=0; 3 required for direction"
     },
     {
       "series_id": "cons_promo",
       "dataset": "Fundamental",
       "sector": "소비재",
       "indicator": "프로모션 강도 대체지표",
-      "reason": "matched observations=0; registry_status=initial_backfill_required"
+      "reason": "matched native/proxy observations=0; 3 required for direction"
     },
     {
       "series_id": "cons_margin",
       "dataset": "Fundamental",
       "sector": "소비재",
       "indicator": "원재료·물류비 대비 마진스프레드",
-      "reason": "matched observations=0; registry_status=initial_backfill_required"
+      "reason": "matched native/proxy observations=0; 3 required for direction"
     },
     {
       "series_id": "plat_mau",
       "dataset": "Fundamental",
       "sector": "미디어·플랫폼",
       "indicator": "MAU/DAU/트래픽",
-      "reason": "matched observations=2; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=2; 3 required for direction"
     },
     {
       "series_id": "plat_ads",
       "dataset": "Fundamental",
       "sector": "미디어·플랫폼",
       "indicator": "광고단가·광고주수요",
-      "reason": "matched observations=0; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "plat_monetize",
       "dataset": "Fundamental",
       "sector": "미디어·플랫폼",
       "indicator": "ARPU·take rate 대체지표",
-      "reason": "matched observations=0; registry_status=partial_backfill"
-    },
-    {
-      "series_id": "plat_eps",
-      "dataset": "Fundamental",
-      "sector": "미디어·플랫폼",
-      "indicator": "EPS 수정",
-      "reason": "matched observations=0; registry_status=initial_backfill_required"
-    },
-    {
-      "series_id": "const_demand",
-      "dataset": "Fundamental",
-      "sector": "건설·인프라",
-      "indicator": "분양률/청약경쟁률",
-      "reason": "matched observations=0; registry_status=active_partial_history"
+      "reason": "matched native/proxy observations=2; 3 required for direction"
     },
     {
       "series_id": "const_orders",
       "dataset": "Fundamental",
       "sector": "건설·인프라",
       "indicator": "신규수주/수주잔고",
-      "reason": "matched observations=0; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=0; 3 required for direction"
     },
     {
       "series_id": "const_pf",
       "dataset": "Fundamental",
       "sector": "건설·인프라",
       "indicator": "PF금리·연체/자금조달",
-      "reason": "matched observations=0; registry_status=active_partial_history"
+      "reason": "matched native/proxy observations=0; 3 required for direction"
     },
     {
       "series_id": "const_cost",
       "dataset": "Fundamental",
       "sector": "건설·인프라",
       "indicator": "원가율/공사비",
-      "reason": "matched observations=0; registry_status=partial_backfill"
+      "reason": "matched native/proxy observations=0; 3 required for direction"
+    },
+    {
+      "series_id": "macro_kr3y",
+      "dataset": "Macro_Market",
+      "sector": "방어자산",
+      "indicator": "한국 국고3년",
+      "reason": "6 stored observations; 65 required for 3-month direction"
+    },
+    {
+      "series_id": "macro_kr10y",
+      "dataset": "Macro_Market",
+      "sector": "방어자산",
+      "indicator": "한국 국고10년",
+      "reason": "6 stored observations; 65 required for 3-month direction"
     },
     {
       "series_id": "macro_kofr",
       "dataset": "Macro_Market",
       "sector": "방어자산",
       "indicator": "KOFR",
-      "reason": "2 stored observations"
+      "reason": "2 stored observations; 65 required for 3-month direction"
+    },
+    {
+      "series_id": "macro_cd91",
+      "dataset": "Macro_Market",
+      "sector": "방어자산",
+      "indicator": "CD91일",
+      "reason": "7 stored observations; 65 required for 3-month direction"
     }
   ],
   "dataset_summary": [
@@ -250,12 +222,12 @@
     {
       "dataset": "EPS_Revisions",
       "count": 1,
-      "sum": 0
+      "sum": 1
     },
     {
       "dataset": "Fundamental",
       "count": 50,
-      "sum": 21
+      "sum": 27
     },
     {
       "dataset": "HAA_TIP",
@@ -265,7 +237,7 @@
     {
       "dataset": "Macro_Market",
       "count": 11,
-      "sum": 10
+      "sum": 7
     },
     {
       "dataset": "Price_Daily",
@@ -273,5 +245,5 @@
       "sum": 14
     }
   ],
-  "privacy_note": "Personal account snapshots are deliberately kept outside the public GitHub repository and are counted as ready only when present in the private ChatGPT Archive."
+  "privacy_note": "Personal account snapshots remain outside the public GitHub repository and are managed in the private ChatGPT Archive."
 }
