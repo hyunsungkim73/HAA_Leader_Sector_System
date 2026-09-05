@@ -40,11 +40,18 @@ jobs:
       - name: Collect prices and HAA
         run: python pipeline/collect_market_data.py
 
+      - name: Collect macro market
+        continue-on-error: true
+        run: python pipeline/collect_macro.py
+
       - name: Collect breadth
         continue-on-error: true
         run: python pipeline/collect_breadth.py
 
-      - name: Validate outputs
+      - name: Check completeness
+        run: python pipeline/check_completeness.py
+
+      - name: Validate core outputs
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -54,6 +61,8 @@ jobs:
               Path('data/derived/momentum_weekly.csv'),
               Path('data/derived/relative_strength_weekly.csv'),
               Path('data/derived/tip_haa_weekly.csv'),
+              Path('data/meta/completeness_report.json'),
+              Path('data/meta/completeness_series.csv'),
           ]
           missing = [str(p) for p in required if not p.exists()]
           if missing:
@@ -71,5 +80,5 @@ jobs:
             echo 'No data changes'
             exit 0
           fi
-          git commit -m "data: update market archive $(date -u +%Y-%m-%d)"
+          git commit -m "data: update investment archive $(date -u +%Y-%m-%d)"
           git push
