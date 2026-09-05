@@ -43,6 +43,34 @@ jobs:
       - name: Install dependencies
         run: pip install -r pipeline/requirements.txt
 
+      - name: Probe PLUS holdings HTML
+        if: github.event_name == 'pull_request'
+        run: |
+          python - <<'PY'
+          import re
+          from io import StringIO
+          import pandas as pd
+          import requests
+
+          for n, expected in [('006184', 200), ('006318', 150)]:
+              url = f'https://www.plusetf.co.kr/product/detail?n={n}'
+              text = requests.get(url, timeout=30, headers={'User-Agent': 'Mozilla/5.0'}).text
+              tables = pd.read_html(StringIO(text))
+              found = []
+              for i, table in enumerate(tables):
+                  for col in table.columns:
+                      vals = []
+                      for v in table[col].tolist():
+                          s = str(v).strip()
+                          m = re.fullmatch(r'(\d{1,6})(?:\.0+)?', s)
+                          if m:
+                              vals.append(m.group(1).zfill(6))
+                      vals = list(dict.fromkeys(vals))
+                      if len(vals) >= 10:
+                          found.append((i, str(col), len(vals), vals[:12]))
+              print('PLUS_HTML_PROBE', n, 'expected', expected, 'tables', len(tables), 'candidates', found)
+          PY
+
       - name: Collect prices and HAA
         run: python pipeline/collect_market_data.py
 
