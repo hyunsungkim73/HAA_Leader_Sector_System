@@ -43,6 +43,39 @@ jobs:
       - name: Install dependencies
         run: pip install -r pipeline/requirements.txt
 
+      - name: Probe KRX index constituents
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import requests
+
+          url = 'http://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd'
+          headers = {
+              'User-Agent': 'Mozilla/5.0',
+              'Referer': 'http://data.krx.co.kr/contents/MDC/MDI/mdiLoader/index.cmd',
+          }
+          for ticker, ind_idx, ind_idx2, expected in [
+              ('1028', '1', '028', 200),
+              ('2203', '2', '203', 150),
+          ]:
+              payload = {
+                  'bld': 'dbms/MDC/STAT/standard/MDCSTAT00601',
+                  'locale': 'ko_KR',
+                  'trdDd': '20260904',
+                  'indIdx': ind_idx,
+                  'indIdx2': ind_idx2,
+              }
+              r = requests.post(url, data=payload, headers=headers, timeout=30)
+              print('KRX_PROBE_STATUS', ticker, r.status_code, r.text[:160].replace('\n', ' '))
+              if r.ok:
+                  obj = r.json()
+                  rows = obj.get('output', obj.get('OutBlock_1', []))
+                  codes = [str(x.get('ISU_SRT_CD', '')).strip() for x in rows]
+                  codes = list(dict.fromkeys([x for x in codes if len(x) == 6 and x.isdigit()]))
+                  print('KRX_PROBE_COUNT', ticker, 'expected', expected, 'count', len(codes), 'sample', codes[:12])
+          PY
+
       - name: Collect prices and HAA
         run: python pipeline/collect_market_data.py
 
