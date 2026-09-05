@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 import io
+import os
 
 import pandas as pd
 import requests
@@ -24,9 +25,18 @@ YF = {
     "macro_dxy": ("DX-Y.NYB", "DXY", "index"),
     "macro_gold": ("GC=F", "Gold futures", "USD/oz"),
 }
+# BOK ECOS market-rate daily table 817Y002.
+# Codes verified against public ECOS catalogue references.
+ECOS = {
+    "macro_kr3y": ("010200000", "한국 국고3년", "%"),
+    "macro_kr10y": ("010210000", "한국 국고10년", "%"),
+    "macro_cd91": ("010502000", "CD91일", "%"),
+}
 COLS = ["obs_date","series_id","category","indicator","value","unit","frequency","source","source_type","loaded_at","notes"]
 MIN_DAILY_OBS = 100
+KOREA_MIN_OBS = 65
 BACKFILL_START = "2025-09-01"
+KOREA_BACKFILL_START = "2026-04-01"
 
 
 def read_old() -> pd.DataFrame:
@@ -35,13 +45,13 @@ def read_old() -> pd.DataFrame:
     return pd.DataFrame(columns=COLS)
 
 
-def start_for_series(old: pd.DataFrame, series_id: str) -> str:
+def start_for_series(old: pd.DataFrame, series_id: str, minimum: int = MIN_DAILY_OBS, backfill_start: str = BACKFILL_START) -> str:
     z = old[old["series_id"].astype(str) == series_id] if not old.empty else pd.DataFrame()
-    if z.empty or len(z) < MIN_DAILY_OBS:
-        return BACKFILL_START
+    if z.empty or len(z) < minimum:
+        return backfill_start
     dates = pd.to_datetime(z["obs_date"], errors="coerce").dropna()
     if dates.empty:
-        return BACKFILL_START
+        return backfill_start
     return (dates.max().date() - timedelta(days=14)).isoformat()
 
 
@@ -87,6 +97,42 @@ def yf_series(series_id: str, ticker: str, label: str, unit: str, start: str) ->
     return out[COLS]
 
 
+def ecos_series(series_id: str, item_code: str, label: str, unit: str, start: str) -> pd.DataFrame:
+    # Prefer a real API key when configured; ECOS also exposes a documented sample key
+    # suitable for limited public queries, which lets CI perform a no-secret backfill test.
+    key = os.environ.get("BOK_ECOS_API_KEY", "sample")
+    start_compact = pd.Timestamp(start).strftime("%Y%m%d")
+    end_compact = datetime.now(KST).strftime("%Y%m%d")
+    url = (
+        f"https://ecos.bok.or.kr/api/StatisticSearch/{key}/json/kr/1/1000/"
+        f"817Y002/D/{start_compact}/{end_compact}/{item_code}"
+    )
+    r = requests.get(url, timeout=45)
+    r.raise_for_status()
+    payload = r.json()
+    if "RESULT" in payload:
+        raise RuntimeError(f"ECOS error {payload['RESULT']}")
+    rows = payload.get("StatisticSearch", {}).get("row", [])
+    if not rows:
+        raise RuntimeError("ECOS returned no rows")
+    out = pd.DataFrame({
+        "obs_date": [str(x.get("TIME", "")) for x in rows],
+        "value": [pd.to_numeric(x.get("DATA_VALUE"), errors="coerce") for x in rows],
+    })
+    out["obs_date"] = pd.to_datetime(out["obs_date"], format="%Y%m%d", errors="coerce").dt.strftime("%Y-%m-%d")
+    out = out.dropna(subset=["obs_date", "value"])
+    out["series_id"] = series_id
+    out["category"] = "방어자산"
+    out["indicator"] = label
+    out["unit"] = unit
+    out["frequency"] = "daily"
+    out["source"] = f"BOK ECOS 817Y002/{item_code}"
+    out["source_type"] = "official"
+    out["loaded_at"] = datetime.now(KST).isoformat()
+    out["notes"] = "official ECOS daily market-rate backfill/incremental collector"
+    return out[COLS]
+
+
 def main() -> None:
     old = read_old()
     frames = [old]
@@ -100,10 +146,26 @@ def main() -> None:
             frames.append(yf_series(sid, ticker, label, unit, start_for_series(old, sid)))
         except Exception as exc:
             print(f"Yahoo failed {sid}: {exc}")
+    for sid, (item_code, label, unit) in ECOS.items():
+        try:
+            start = start_for_series(old, sid, minimum=KOREA_MIN_OBS, backfill_start=KOREA_BACKFILL_START)
+            frames.append(ecos_series(sid, item_code, label, unit, start))
+        except Exception as exc:
+            print(f"ECOS failed {sid}: {exc}")
+
     z = pd.concat(frames, ignore_index=True)
     z["obs_date"] = pd.to_datetime(z["obs_date"], errors="coerce").dt.strftime("%Y-%m-%d")
-    z = z.dropna(subset=["obs_date","series_id"]).drop_duplicates(["obs_date","series_id"], keep="last")
+    z["value"] = pd.to_numeric(z["value"], errors="coerce")
+    z = z.dropna(subset=["obs_date","series_id","value"]).drop_duplicates(["obs_date","series_id"], keep="last")
     z = z.sort_values(["series_id","obs_date"])
+
+    # Never regress an already healthy series because a source call partially failed.
+    old_counts = old.groupby("series_id").size().to_dict() if not old.empty else {}
+    new_counts = z.groupby("series_id").size().to_dict() if not z.empty else {}
+    for sid, n in old_counts.items():
+        if new_counts.get(sid, 0) < n:
+            raise RuntimeError(f"macro archive regression for {sid}: old={n} new={new_counts.get(sid, 0)}")
+
     z.to_csv(OUT, index=False)
     print(z.groupby("series_id")["obs_date"].agg(["count","min","max"]).to_string())
 
