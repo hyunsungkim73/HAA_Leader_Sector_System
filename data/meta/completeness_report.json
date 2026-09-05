@@ -1,9 +1,9 @@
 {
-  "generated_at_kst": "2026-09-05T13:00:03.179299+09:00",
+  "generated_at_kst": "2026-09-05T13:02:15.180512+09:00",
   "registered_series": 80,
-  "ready_series": 54,
-  "not_ready_series": 26,
-  "completion_pct": 67.5,
+  "ready_series": 56,
+  "not_ready_series": 24,
+  "completion_pct": 70.0,
   "strict_complete": false,
   "not_ready": [
     {
@@ -105,20 +105,6 @@
       "reason": "matched native/proxy observations=0; 3 required for direction"
     },
     {
-      "series_id": "cons_promo",
-      "dataset": "Fundamental",
-      "sector": "소비재",
-      "indicator": "프로모션 강도 대체지표",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "cons_margin",
-      "dataset": "Fundamental",
-      "sector": "소비재",
-      "indicator": "원재료·물류비 대비 마진스프레드",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
       "series_id": "plat_mau",
       "dataset": "Fundamental",
       "sector": "미디어·플랫폼",
@@ -213,7 +199,7 @@
     {
       "dataset": "Fundamental",
       "count": 50,
-      "sum": 29
+      "sum": 31
     },
     {
       "dataset": "HAA_TIP",
