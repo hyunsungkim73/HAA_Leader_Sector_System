@@ -1,0 +1,43 @@
+name: Test PLUS holdings endpoint
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test-plus-holdings.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect product page source and scripts
+        run: |
+          python - <<'PY'
+          import re, requests
+          from urllib.parse import urljoin
+          url='https://www.plusetf.co.kr/product/detail?n=006318'
+          s=requests.Session(); s.headers['User-Agent']='Mozilla/5.0'
+          t=s.get(url,timeout=30).text
+          print('HTML',len(t))
+          for pat in ['excel','xlsx','portfolio','holding','pdf','component','006318','301400']:
+              print('\nPAT',pat)
+              for m in list(re.finditer(pat,t,re.I))[:20]:
+                  print(t[max(0,m.start()-180):m.start()+300].replace('\n',' '))
+          scripts=re.findall(r'<script[^>]+src=["\']([^"\']+)',t,re.I)
+          print('SCRIPTS',scripts)
+          for src in scripts:
+              if src.startswith('//'): src='https:'+src
+              elif src.startswith('/'): src=urljoin(url,src)
+              elif not src.startswith('http'): src=urljoin(url,src)
+              try:
+                  x=s.get(src,timeout=30).text
+              except Exception as e:
+                  print('SCRIPT FAIL',src,e); continue
+              hits=[]
+              for pat in ['excel','xlsx','portfolio','holding','pdf','component']:
+                  if re.search(pat,x,re.I): hits.append(pat)
+              if hits:
+                  print('\nSCRIPT',src,'LEN',len(x),'HITS',hits)
+                  for pat in hits:
+                      for m in list(re.finditer(pat,x,re.I))[:10]:
+                          print(x[max(0,m.start()-220):m.start()+350].replace('\n',' '))
+          PY
