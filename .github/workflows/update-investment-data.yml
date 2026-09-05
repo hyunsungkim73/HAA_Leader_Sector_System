@@ -8,12 +8,14 @@ on:
     paths:
       - 'pipeline/**'
       - 'data/raw/fundamentals/**'
+      - 'data/raw/macro/kofr_ksd_official.csv'
       - 'data/meta/series_registry_min.json'
       - '.github/workflows/update-investment-data.yml'
   pull_request:
     paths:
       - 'pipeline/**'
       - 'data/raw/fundamentals/**'
+      - 'data/raw/macro/kofr_ksd_official.csv'
       - 'data/meta/series_registry_min.json'
       - '.github/workflows/update-investment-data.yml'
   schedule:
@@ -54,6 +56,9 @@ jobs:
         env:
           BOK_ECOS_API_KEY: ${{ secrets.BOK_ECOS_API_KEY }}
         run: python pipeline/collect_macro.py
+
+      - name: Merge official KOFR seed
+        run: python pipeline/merge_kofr_official.py
 
       - name: Collect breadth
         continue-on-error: true
