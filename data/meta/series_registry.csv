@@ -1,0 +1,81 @@
+series_id,dataset,sector,subsector,indicator,frequency,primary_source,secondary_source,key_fields,last_observation_date,last_successful_update,status,notes
+price_semi_it,Price_Daily,반도체/IT,KODEX 반도체,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=091160
+price_auto,Price_Daily,자동차,KODEX 자동차,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=091180
+price_battery,Price_Daily,2차전지,KODEX 2차전지산업,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=305720
+price_bio,Price_Daily,바이오·헬스케어,KODEX 헬스케어,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=266420
+price_financial,Price_Daily,금융,KODEX 은행,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=091170
+price_ship_machinery,Price_Daily,조선·기계,KODEX 기계장비,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=102960
+price_steel,Price_Daily,철강·소재,KODEX 철강,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=117680
+price_consumer,Price_Daily,소비재,KODEX 필수소비재,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=266410
+price_media_platform,Price_Daily,미디어·플랫폼,KODEX K콘텐츠,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=266360
+price_construction,Price_Daily,건설·인프라,KODEX 건설,close,daily,운용사 공식 가격/NAV 다운로드,Naver fchart XML / KRX / yfinance cache crosscheck,date+code,,,initial_backfill_required,KODEX 건설 correct ticker 117700
+price_kbeauty,Price_Daily,소비재,HANARO K-뷰티,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=479850
+price_kfood,Price_Daily,소비재,HANARO Fn K-푸드,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=438900
+price_biosim_cdmo,Price_Daily,바이오·헬스케어,마이티 바이오시밀러&CDMO액티브,close,daily,운용사 공식 가격/NAV 다운로드,KRX/대체 시세; Naver fchart XML,date+code,,,initial_backfill_required,code=0001P0
+tip_tr,HAA_TIP,HAA,,TIP total return,daily,TIP 시장종가 2개 출처 + iShares 분배금,,dataset-specific,2026-09-04,2026-09-05T11:30:00+09:00,partial_backfill,252-observation TR history required
+bb350,Breadth,시장,,KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수,daily,구성종목 일별 종가,,dataset-specific,,2026-09-05T11:30:00+09:00,initial_backfill_required,
+eps_sector,EPS_Revisions,전섹터,,EPS revision,weekly,FnGuide/공개 EPS Live,,dataset-specific,2026-09-03,2026-09-05T12:35:00+09:00,active_partial_sector_coverage,
+price_kospi200,Price_Daily,시장,KOSPI200,close,daily,FinanceData/fdr_krx_data_cache KRX KOSPI200 yearly CSV,KRX official index / Naver index crosscheck,date+code,,,initial_backfill_required,
+semi_price,Fundamental,반도체/IT,,DRAM/NAND/HBM 현물·계약가격,daily/weekly,TrendForce 공개 가격,기업IR/공개 업계자료,obs_date+sector+subsector+indicator+source,2026-09-04,2026-09-05T11:30:00+09:00,active_partial_history,
+semi_spot_demand,Fundamental,반도체/IT,,현물 구매수요/거래강도,weekly,TrendForce 현물시장 코멘트,공개 업계자료,obs_date+sector+subsector+indicator+source,2026-09-02,2026-09-05T11:30:00+09:00,partial_backfill,
+semi_inventory,Fundamental,반도체/IT,,재고일수·채널재고,monthly/quarterly,삼성전자·SK하이닉스·Micron IR,업계자료,obs_date+sector+subsector+indicator+source,2026-07-29,2026-09-05T12:00:00+09:00,proxy_active,
+semi_supply_capex,Fundamental,반도체/IT,,가동률·공급증가·CAPEX,quarterly,기업 IR/사업보고서,산업자료,obs_date+sector+subsector+indicator+source,2026-06-01,2026-09-05T12:00:00+09:00,active_partial_history,
+semi_eps,Fundamental,반도체/IT,,EPS 수정,weekly,FnGuide FnConsensus,공개 EPS Live,obs_date+sector+subsector+indicator+source,2026-08-20,2026-09-05T12:35:00+09:00,proxy_active_partial_history,
+auto_inventory,Fundamental,자동차,,재고·days supply,monthly,Cox Automotive New-Vehicle Inventory,기업판매자료,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T12:20:00+09:00,active_partial_history,
+auto_incentive,Fundamental,자동차,,인센티브/할인,monthly,KBB/Cox ATP Report,현대·기아 공식 Offers proxy,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T12:20:00+09:00,active_partial_history,
+auto_asp_mix,Fundamental,자동차,,ASP·SUV·HEV·EV 믹스,monthly/quarterly,현대차·기아 IR/판매자료,Kia America By Model,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T12:20:00+09:00,active_partial_history,
+auto_sales_orders,Fundamental,자동차,,글로벌 판매/주문·백로그,monthly,현대차·기아 공식 판매자료,산업통계,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T12:20:00+09:00,active_partial_history,
+auto_eps,Fundamental,자동차,,EPS 수정,weekly,FnGuide FnConsensus,공개 EPS Live,obs_date+sector+subsector+indicator+source,2026-09-03,2026-09-05T12:35:00+09:00,proxy_active_partial_history,
+battery_ev_sales,Fundamental,2차전지,,글로벌 EV 판매,monthly,IEA/ACEA/중국 공식통계,SNE 공개요약,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T12:00:00+09:00,active_partial_history,
+battery_install,Fundamental,2차전지,,배터리 설치량/출하량,monthly,SNE 공개요약,기업 IR,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,active_partial_history,
+battery_util,Fundamental,2차전지,,셀·소재 가동률,quarterly,LGES·삼성SDI·SK온 공시/IR,사업보고서,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,active_partial_history,
+battery_customer_inventory,Fundamental,2차전지,,고객사/유통재고 대체지표,monthly/quarterly,Cox EV days supply + 기업 destocking 코멘트,판매·생산자료,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T11:30:00+09:00,active_partial_history,
+battery_cell_price_margin,Fundamental,2차전지,,셀 시장가격·원재료 대비 마진,monthly,TrendForce Li-Ion Battery Price Trends,광물가격+기업IR,obs_date+sector+subsector+indicator+source,2026-08-07,2026-09-05T11:30:00+09:00,active_partial_history,
+bio_rx_share,Fundamental,바이오·헬스케어,,처방량/시장점유율,monthly/quarterly,셀트리온 Newsroom IQVIA 공개치 + 삼성바이오에피스 Market Report,파트너사 자료,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T11:30:00+09:00,active_partial_history,
+bio_sales_volume,Fundamental,바이오·헬스케어,,바이오시밀러·신약 판매량,quarterly,기업 IR,공개 처방/판매자료,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T12:00:00+09:00,proxy_active,
+bio_orders,Fundamental,바이오·헬스케어,,CDMO/기술이전 신규수주·수주잔고,quarterly,기업 IR/공시,보도자료,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T12:00:00+09:00,active_partial_history,
+bio_approval,Fundamental,바이오·헬스케어,,FDA/EMA/식약처 허가·임상,event/monthly,FDA/EMA/식약처,기업 IR,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T12:00:00+09:00,active_partial_history,
+bio_eps,Fundamental,바이오·헬스케어,,EPS 수정,weekly,FnGuide FnConsensus,공개 EPS Live,obs_date+sector+subsector+indicator+source,,,initial_backfill_required,
+fin_nim,Fundamental,금융,,NIM,quarterly,금융지주 IR,은행 공시,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+fin_loans,Fundamental,금융,,대출성장률·대출믹스,quarterly,금융지주 IR,은행 공시,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+fin_npl,Fundamental,금융,,연체율/NPL,quarterly,금융지주 IR,금감원,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T12:00:00+09:00,active_partial_history,
+fin_credit_cost,Fundamental,금융,,대손비용률/충당금,quarterly,금융지주 IR,금감원,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+fin_eps,Fundamental,금융,,EPS 수정,weekly,FnGuide FnConsensus,공개 EPS Live,obs_date+sector+subsector+indicator+source,,,initial_backfill_required,
+ship_price,Fundamental,조선·기계,,신조선가,monthly,Clarksons 공개 인용/Global Shipbuilding Update,산업부,obs_date+sector+subsector+indicator+source,2026-08-31,2026-09-05T11:30:00+09:00,partial_backfill,
+ship_orders,Fundamental,조선·기계,,글로벌 신규수주,monthly,Clarksons 공개 인용,산업부/조선협회,obs_date+sector+subsector+indicator+source,2026-08-31,2026-09-05T11:30:00+09:00,partial_backfill,
+ship_backlog,Fundamental,조선·기계,,수주잔고/매출,quarterly,삼성중공업·HD현대중공업·한화오션 IR/DART,산업부,obs_date+sector+subsector+indicator+source,2026-08-31,2026-09-05T11:30:00+09:00,active_partial_history,
+ship_mix,Fundamental,조선·기계,,선종믹스,quarterly,조선3사 IR/DART,수주공시,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+ship_eps,Fundamental,조선·기계,,EPS 수정,weekly,FnGuide FnConsensus,공개 EPS Live,obs_date+sector+subsector+indicator+source,2026-09-03,2026-09-05T12:35:00+09:00,proxy_active_partial_history,
+steel_product_price,Fundamental,철강·소재,,주요 철강제품가격,10day,중국 NBS 생산재 가격,공개 업계가격,obs_date+sector+subsector+indicator+source,2026-08-31,2026-09-05T11:30:00+09:00,active_partial_history,
+steel_rawmat,Fundamental,철강·소재,,철광석·원료탄·스크랩,weekly/10day,Mysteel 공개 허브 + NBS,CISA,obs_date+sector+subsector+indicator+source,2026-08-21,2026-09-05T11:30:00+09:00,partial_backfill,
+steel_spread,Fundamental,철강·소재,,제품-원재료 스프레드,10day,NBS+Mysteel 계산,기업IR,obs_date+sector+subsector+indicator+source,,,initial_backfill_required,
+steel_inventory,Fundamental,철강·소재,,중국 완제품/유통재고,weekly,CISA/Mysteel 공개자료,선물사 주간자료,obs_date+sector+subsector+indicator+source,2026-09-04,2026-09-05T11:30:00+09:00,active_partial_history,
+steel_output,Fundamental,철강·소재,,중국 생산·가동률/감산,weekly/monthly,CISA + World Steel,중국 공식통계,obs_date+sector+subsector+indicator+source,2026-09-04,2026-09-05T11:30:00+09:00,partial_backfill,
+cons_volume,Fundamental,소비재,,판매량/트래픽,monthly,산업부 주요 유통업체 매출동향,KOSIS,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T11:30:00+09:00,active_partial_history,
+cons_ticket,Fundamental,소비재,,객단가·ASP,monthly,산업부 주요 유통업체 매출동향,KOSIS,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T11:30:00+09:00,partial_backfill,
+cons_inventory,Fundamental,소비재,,재고/재고회전 대체지표,monthly,KOSIS 도소매업/소매 재고액지수,소매판매지수,obs_date+sector+subsector+indicator+source,,,initial_backfill_required,
+cons_promo,Fundamental,소비재,,프로모션 강도 대체지표,monthly,KOSIS 경상/불변지수+CPI+산업부 구매단가,유통사 행사자료,obs_date+sector+subsector+indicator+source,,,initial_backfill_required,
+cons_margin,Fundamental,소비재,,원재료·물류비 대비 마진스프레드,monthly,aT FIS 원료가격 + 판매가격,KAMIS/기업IR,obs_date+sector+subsector+indicator+source,,,initial_backfill_required,
+plat_mau,Fundamental,미디어·플랫폼,,MAU/DAU/트래픽,monthly/quarterly,모바일인덱스 + 기업IR,서비스 공개지표,obs_date+sector+subsector+indicator+source,2026-08-31,2026-09-05T11:30:00+09:00,partial_backfill,
+plat_ads,Fundamental,미디어·플랫폼,,광고단가·광고주수요,quarterly,카카오 Fact Sheet/NAVER IR,광고시장자료,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+plat_gmv,Fundamental,미디어·플랫폼,,커머스 GMV,quarterly,카카오 GTV/NAVER Smartstore GMV,기업IR,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,active_partial_history,
+plat_monetize,Fundamental,미디어·플랫폼,,ARPU·take rate 대체지표,quarterly,카카오 매출/GTV + NAVER Financial Platform/TPV,기업IR,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+plat_eps,Fundamental,미디어·플랫폼,,EPS 수정,weekly,FnGuide FnConsensus,공개 EPS Live,obs_date+sector+subsector+indicator+source,,,initial_backfill_required,
+const_demand,Fundamental,건설·인프라,,분양률/청약경쟁률,monthly,한국부동산원 청약홈,국토부,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T12:00:00+09:00,active_partial_history,
+const_unsold,Fundamental,건설·인프라,,미분양·준공후미분양,monthly,국토부 통계누리,KOSIS,obs_date+sector+subsector+indicator+source,2026-07-31,2026-09-05T12:00:00+09:00,active_partial_history,
+const_orders,Fundamental,건설·인프라,,신규수주/수주잔고,monthly,CERIK 월간건설시장동향,통계청,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+const_pf,Fundamental,건설·인프라,,PF금리·연체/자금조달,quarterly,금융위·금감원 PF 점검회의,금융시장자료,obs_date+sector+subsector+indicator+source,2026-03-31,2026-09-05T11:30:00+09:00,active_partial_history,
+const_cost,Fundamental,건설·인프라,,원가율/공사비,monthly/quarterly,CERIK 공사비지수+건설사 IR,KOSIS,obs_date+sector+subsector+indicator+source,2026-06-30,2026-09-05T11:30:00+09:00,partial_backfill,
+macro_us2y,Macro_Market,방어자산,,미국2년 국채금리,daily,US Treasury/FRED,,obs_date+series_id,2026-09-03,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_us10y,Macro_Market,방어자산,,미국10년 국채금리,daily,US Treasury/FRED,,obs_date+series_id,2026-09-03,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_us30y,Macro_Market,방어자산,,미국30년 국채금리,daily,US Treasury/FRED,,obs_date+series_id,2026-09-02,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_kr3y,Macro_Market,방어자산,,한국 국고3년,daily,한국은행/금융투자협회,,obs_date+series_id,2026-09-04,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_kr10y,Macro_Market,방어자산,,한국 국고10년,daily,한국은행/금융투자협회,,obs_date+series_id,2026-09-04,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_real10y,Macro_Market,방어자산,,미국 10년 실질금리,daily,FRED TIPS real yield,,obs_date+series_id,2026-09-03,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_usdkrw,Macro_Market,방어자산,,USDKRW,daily,한국은행/공개 FX,,obs_date+series_id,2026-09-04,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_dxy,Macro_Market,방어자산,,DXY,daily,ICE 공개시세/Investing 대체,,obs_date+series_id,2026-09-04,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_gold,Macro_Market,방어자산,,금 가격,daily,LBMA/공개 금시세,,obs_date+series_id,2026-09-04,2026-09-05T11:50:00+09:00,active_partial_history,
+macro_kofr,Macro_Market,방어자산,,KOFR,daily,한국예탁결제원 KOFR,,obs_date+series_id,2026-09-04,2026-09-05T11:50:00+09:00,proxy_active,
+macro_cd91,Macro_Market,방어자산,,CD91일,daily,금융투자협회/한국은행,,obs_date+series_id,2026-09-04,2026-09-05T11:50:00+09:00,active_partial_history,
+account_snapshots,Account_Snapshots,계좌,IRP/개인연금/DC,보유수량·평가액·현금·분배금·납입·거래,weekly/user-update,사용자 최신 캡처/입력,,snapshot_date+account+instrument_name,2026-09-05,2026-09-05T11:30:00+09:00,active,private-data; keep outside public repo
+derived_weekly,Derived_Weekly,전섹터,,M21/M63/M126/RS/slope/accel/score/stage/state,weekly,누적 원천데이터 계산,,week_date+sector,,,initial_backfill_required,
