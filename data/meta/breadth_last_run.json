@@ -1,0 +1,26 @@
+{
+  "generated_at_kst": "2026-09-05T12:32:07.643040+09:00",
+  "start_requested": "2025-07-02",
+  "symbol_count": 349,
+  "price_rows": 98784,
+  "breadth_rows": 269,
+  "latest": {
+    "date": "2026-09-04",
+    "universe_count": 343,
+    "breakout_count": 9,
+    "breadth_pct": 0.026239067055393587,
+    "breadth_5dma": 0.025072886297376095,
+    "slope": -0.007580174927113697,
+    "acceleration": -0.008746355685131182
+  },
+  "source": "public_github_constituent_cache",
+  "kospi200_cache_updated_at": "2026-06-10",
+  "kosdaq150_cache_updated_at": "2026-06-10",
+  "kospi200_count": 199,
+  "kosdaq150_count": 150,
+  "combined_count": 349,
+  "urls": [
+    "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
+    "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
+  ]
+}

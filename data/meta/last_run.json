@@ -1,109 +1,109 @@
 {
-  "generated_at_kst": "2026-09-05T12:30:01.869853+09:00",
+  "generated_at_kst": "2026-09-05T12:31:40.568849+09:00",
   "collector_status": [
     {
       "series": "KOSPI200",
       "ticker_requested": "069500.KS",
       "ticker_used": "069500.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "semiconductor",
       "ticker_requested": "091160.KS",
       "ticker_used": "091160.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "auto",
       "ticker_requested": "091180.KS",
       "ticker_used": "091180.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "battery",
       "ticker_requested": "305720.KS",
       "ticker_used": "305720.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "bio_health",
       "ticker_requested": "266420.KS",
       "ticker_used": "266420.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "financial",
       "ticker_requested": "091170.KS",
       "ticker_used": "091170.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "shipbuilding",
       "ticker_requested": "466920.KS",
       "ticker_used": "466920.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "steel_materials",
       "ticker_requested": "117680.KS",
       "ticker_used": "117680.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "consumer",
       "ticker_requested": "266410.KS",
       "ticker_used": "266410.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "media_platform",
       "ticker_requested": "266360.KS",
       "ticker_used": "266360.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "construction",
       "ticker_requested": "117700.KS",
       "ticker_used": "117700.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "biosimilar_cdmo",
       "ticker_requested": "0001P0.KS",
       "ticker_used": "0001P0.KS",
-      "rows_new": 411,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "k_beauty",
       "ticker_requested": "479850.KS",
       "ticker_used": "479850.KS",
-      "rows_new": 565,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "k_food",
       "ticker_requested": "438900.KS",
       "ticker_used": "438900.KS",
-      "rows_new": 648,
+      "rows_new": 9,
       "error": null
     },
     {
       "series": "TIP",
       "ticker_requested": "TIP",
       "ticker_used": "TIP",
-      "rows_new": 672,
+      "rows_new": 9,
       "error": null
     }
   ]
