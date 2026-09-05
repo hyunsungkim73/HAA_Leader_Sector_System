@@ -154,7 +154,21 @@ def exact_universe() -> tuple[list[str], dict]:
     raise RuntimeError("Exact BB350 universe unavailable; refusing partial output. " + " | ".join(errors))
 
 
+_base_compute_breadth = cb.compute_breadth
+
+
+def strict_compute_breadth(prices: pd.DataFrame) -> pd.DataFrame:
+    breadth = _base_compute_breadth(prices)
+    if breadth.empty:
+        return breadth
+    latest_count = int(breadth.iloc[-1]["universe_count"])
+    if latest_count != 350:
+        raise RuntimeError(f"Latest BB350 eligible universe must be exactly 350, got {latest_count}; refusing partial output")
+    return breadth
+
+
 cb.fetch_universe = exact_universe
+cb.compute_breadth = strict_compute_breadth
 
 if __name__ == "__main__":
     cb.main()
