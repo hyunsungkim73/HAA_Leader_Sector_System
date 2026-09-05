@@ -1,9 +1,9 @@
 {
-  "generated_at_kst": "2026-09-06T05:22:07.261254+09:00",
+  "generated_at_kst": "2026-09-06T05:54:22.991060+09:00",
   "registered_series": 80,
-  "ready_series": 64,
-  "not_ready_series": 16,
-  "completion_pct": 80.0,
+  "ready_series": 78,
+  "not_ready_series": 2,
+  "completion_pct": 97.5,
   "strict_complete": false,
   "not_ready": [
     {
@@ -14,109 +14,11 @@
       "reason": "breadth rows=270; latest universe_count=347; strict target=350"
     },
     {
-      "series_id": "bio_orders",
-      "dataset": "Fundamental",
-      "sector": "바이오·헬스케어",
-      "indicator": "CDMO/기술이전 신규수주·수주잔고",
-      "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "ship_mix",
-      "dataset": "Fundamental",
-      "sector": "조선·기계",
-      "indicator": "선종믹스",
-      "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "steel_rawmat",
-      "dataset": "Fundamental",
-      "sector": "철강·소재",
-      "indicator": "철광석·원료탄·스크랩",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
-    },
-    {
-      "series_id": "steel_spread",
-      "dataset": "Fundamental",
-      "sector": "철강·소재",
-      "indicator": "제품-원재료 스프레드",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "cons_inventory",
-      "dataset": "Fundamental",
-      "sector": "소비재",
-      "indicator": "재고/재고회전 대체지표",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "plat_mau",
-      "dataset": "Fundamental",
-      "sector": "미디어·플랫폼",
-      "indicator": "MAU/DAU/트래픽",
-      "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "plat_ads",
-      "dataset": "Fundamental",
-      "sector": "미디어·플랫폼",
-      "indicator": "광고단가·광고주수요",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
-    },
-    {
-      "series_id": "plat_monetize",
-      "dataset": "Fundamental",
-      "sector": "미디어·플랫폼",
-      "indicator": "ARPU·take rate 대체지표",
-      "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "const_orders",
-      "dataset": "Fundamental",
-      "sector": "건설·인프라",
-      "indicator": "신규수주/수주잔고",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "const_pf",
-      "dataset": "Fundamental",
-      "sector": "건설·인프라",
-      "indicator": "PF금리·연체/자금조달",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "const_cost",
-      "dataset": "Fundamental",
-      "sector": "건설·인프라",
-      "indicator": "원가율/공사비",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "macro_kr3y",
-      "dataset": "Macro_Market",
-      "sector": "방어자산",
-      "indicator": "한국 국고3년",
-      "reason": "6 stored observations; 65 required for 3-month direction"
-    },
-    {
-      "series_id": "macro_kr10y",
-      "dataset": "Macro_Market",
-      "sector": "방어자산",
-      "indicator": "한국 국고10년",
-      "reason": "6 stored observations; 65 required for 3-month direction"
-    },
-    {
       "series_id": "macro_kofr",
       "dataset": "Macro_Market",
       "sector": "방어자산",
       "indicator": "KOFR",
       "reason": "2 stored observations; 65 required for 3-month direction"
-    },
-    {
-      "series_id": "macro_cd91",
-      "dataset": "Macro_Market",
-      "sector": "방어자산",
-      "indicator": "CD91일",
-      "reason": "7 stored observations; 65 required for 3-month direction"
     }
   ],
   "dataset_summary": [
@@ -143,7 +45,7 @@
     {
       "dataset": "Fundamental",
       "count": 50,
-      "sum": 39
+      "sum": 50
     },
     {
       "dataset": "HAA_TIP",
@@ -153,7 +55,7 @@
     {
       "dataset": "Macro_Market",
       "count": 11,
-      "sum": 7
+      "sum": 10
     },
     {
       "dataset": "Price_Daily",
