@@ -55,6 +55,9 @@ jobs:
 
       - name: Collect breadth
         continue-on-error: true
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
         run: python pipeline/collect_breadth_exact.py
 
       - name: Check completeness
