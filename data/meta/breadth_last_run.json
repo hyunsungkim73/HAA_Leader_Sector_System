@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-06T04:21:41.477420+09:00",
+  "generated_at_kst": "2026-09-06T04:29:49.134348+09:00",
   "start_requested": "2025-07-03",
   "symbol_count": 349,
   "price_rows": 98441,
@@ -23,6 +23,8 @@
       "261660.KQ",
       "403450.KQ"
     ],
+    "fdr_recovered_count": 0,
+    "fdr_recovered_symbols": [],
     "alternate_suffix_recovered_count": 0,
     "alternate_suffix_map": {},
     "unresolved_count": 6,
@@ -43,5 +45,8 @@
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
   ],
-  "official_plus_error": "PLUS Excel stock code-column mismatch PLUS 200: expected=200, selected=0, embedded=10, asof=2026-09-04, candidate_columns=[{'sheet': 0, 'column': '1', 'count': 198, 'ratio': 0.9801980198019802}]"
+  "fallback_errors": [
+    "PLUS:PLUS Excel stock code-column mismatch PLUS 200: expected=200, selected=0, asof=2026-09-04, candidate_columns=[{'sheet': 0, 'column': '1', 'count': 198, 'ratio': 0.9801980198019802}]",
+    "pykrx:index -1 is out of bounds for axis 0 with size 0"
+  ]
 }
