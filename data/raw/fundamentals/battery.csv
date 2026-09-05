@@ -1,0 +1,22 @@
+obs_date,sector,subsector,indicator,indicator_role,frequency,value,unit,direction,acceleration,source,source_type,is_proxy,confidence,loaded_at,notes
+2026-02-28,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,65.3,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Feb cumulative; +12.1% YoY
+2026-03-31,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,117.4,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Mar cumulative; +17.4% YoY
+2026-04-30,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,162.7,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Apr cumulative; +21.0% YoY
+2026-06-30,2차전지,,글로벌 EV 배터리 사용량(비중국 누적),leading,monthly,269,GWh,,,SNE Research public summary,public/official,False,high,2026-09-05T11:30:00+09:00,Jan-Jun cumulative; +26.3% YoY
+2022-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,73.6,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2023-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,69.3,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2024-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,57.8,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2025-12-31,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,47.6,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,2차전지,,LG에너지솔루션 생산설비 평균 가동률,leading,semiannual,52.8,%,,,LG Energy Solution business/half-year reports,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,2차전지,,EV 파우치 삼원계 셀 시장가격,leading,monthly,0.59,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,2차전지,,EV 각형 삼원계 셀 시장가격,leading,monthly,0.58,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-03-31,2차전지,,EV 각형 LFP 셀 시장가격,leading,monthly,0.38,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-07,2차전지,,EV 파우치 삼원계 셀 시장가격,leading,monthly,0.61,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-07,2차전지,,EV 각형 삼원계 셀 시장가격,leading,monthly,0.6,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-08-07,2차전지,,EV 각형 LFP 셀 시장가격,leading,monthly,0.39,RMB/Wh,,,TrendForce Li-Ion Battery Price Trends,public/official,False,high,2026-09-05T11:30:00+09:00,
+2026-06-30,2차전지,,미국 신차 EV days supply,leading,monthly,81,days,,,Cox Automotive EV Market Monitor,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-07-31,2차전지,,미국 신차 EV days supply,leading,monthly,80,days,,,Cox Automotive EV Market Monitor,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-07-31,2차전지,,현대 EV days supply,leading,monthly,52,days,,,Cox Automotive EV Market Monitor,public proxy,True,medium,2026-09-05T11:30:00+09:00,
+2026-03-31,2차전지,,글로벌 EV 판매,leading,quarterly,3.9,million units,,,IEA Global EV Outlook 2026,official,False,high,2026-09-05T12:00:00+09:00,Q1 2026 around 3.9m; YoY -8%
+2026-05-31,2차전지,,글로벌 EV 판매 누적,leading,monthly,7.754,million units,,,SNE Research Global EV & Battery Monthly Tracker,industry,False,high,2026-09-05T12:00:00+09:00,Jan-May 2026; YoY +3.5%
+2026-06-30,2차전지,,비중국 글로벌 EV 판매 누적,leading,monthly,4.598,million units,,,SNE Research,industry,False,high,2026-09-05T12:00:00+09:00,Jan-Jun 2026; YoY +30.3%; global market growth +5.5%
