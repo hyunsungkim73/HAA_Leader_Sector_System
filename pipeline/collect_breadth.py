@@ -3,104 +3,79 @@ from __future__ import annotations
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 import json
-
+import requests
 import numpy as np
 import pandas as pd
-from pykrx import stock
+import yfinance as yf
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / "data" / "raw"
 DERIVED = ROOT / "data" / "derived"
 META = ROOT / "data" / "meta"
-for p in (RAW, DERIVED, META):
+for p in (DERIVED, META):
     p.mkdir(parents=True, exist_ok=True)
 
 KST = timezone(timedelta(hours=9))
 
-# KRX index tickers commonly used by pykrx. If upstream changes, the collector logs failure.
-KOSPI200_INDEX = "1028"
-KOSDAQ150_INDEX = "2203"
+# Public 2026-06-10 KOSPI200/KOSDAQ150 caches. These are used as a login-free
+# fallback when KRX/pykrx index endpoints are unavailable in GitHub Actions.
+K200_URL = "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json"
+K150_URL = "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
 
 
-def get_constituents(index_code: str, date: str) -> list[str]:
-    return list(stock.get_index_portfolio_deposit_file(index_code, date))
+def fetch_universe() -> tuple[list[str], dict]:
+    k200 = requests.get(K200_URL, timeout=30).json()
+    k150 = requests.get(K150_URL, timeout=30).json()
+    a = [str(x["code"]).zfill(6) for x in k200.get("stocks", []) if x.get("code")]
+    b = [str(x["code"]).zfill(6) for x in k150.get("stocks", []) if x.get("code")]
+    symbols = [f"{x}.KS" for x in a] + [f"{x}.KQ" for x in b]
+    symbols = sorted(set(symbols))
+    meta = {
+        "source": "public_github_constituent_cache",
+        "kospi200_cache_updated_at": k200.get("updated_at"),
+        "kosdaq150_cache_updated_at": k150.get("updated_at"),
+        "kospi200_count": len(a),
+        "kosdaq150_count": len(b),
+        "combined_count": len(symbols),
+        "urls": [K200_URL, K150_URL],
+    }
+    (META / "breadth_universe.json").write_text(json.dumps(meta | {"symbols": symbols}, ensure_ascii=False, indent=2), encoding="utf-8")
+    return symbols, meta
 
 
-def latest_business_day(max_lookback: int = 10) -> str:
-    d = datetime.now(KST).date()
-    for _ in range(max_lookback):
-        s = d.strftime("%Y%m%d")
-        try:
-            if stock.get_market_ticker_list(s, market="ALL"):
-                return s
-        except Exception:
-            pass
-        d -= timedelta(days=1)
-    raise RuntimeError("Unable to resolve latest KRX business day")
-
-
-def load_or_build_universe(asof: str) -> tuple[list[str], dict]:
-    cache = META / "breadth_universe.json"
-    details = {"asof": asof, "source": "pykrx", "fallback": False}
-    try:
-        k200 = get_constituents(KOSPI200_INDEX, asof)
-        k150 = get_constituents(KOSDAQ150_INDEX, asof)
-        tickers = sorted(set(k200 + k150))
-        if len(tickers) < 300:
-            raise RuntimeError(f"unexpectedly small universe: {len(tickers)}")
-        payload = {"asof": asof, "kospi200": k200, "kosdaq150": k150, "combined_count": len(tickers)}
-        cache.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-        return tickers, details
-    except Exception as exc:
-        details["fallback"] = True
-        details["error"] = str(exc)
-        if not cache.exists():
-            raise
-        payload = json.loads(cache.read_text(encoding="utf-8"))
-        tickers = sorted(set(payload.get("kospi200", []) + payload.get("kosdaq150", [])))
-        details["source"] = "cached_universe"
-        details["cache_asof"] = payload.get("asof")
-        return tickers, details
-
-
-def collect_prices(tickers: list[str], start: str, end: str) -> pd.DataFrame:
-    frames = []
-    for i, ticker in enumerate(tickers, 1):
-        try:
-            x = stock.get_market_ohlcv_by_date(start, end, ticker)
-            if x is None or x.empty:
-                continue
-            x = x.reset_index().rename(columns={"날짜": "date", "종가": "close"})
-            if "date" not in x.columns:
-                x = x.rename(columns={x.columns[0]: "date"})
-            if "close" not in x.columns and "종가" in x.columns:
-                x = x.rename(columns={"종가": "close"})
-            x = x[["date", "close"]].copy()
-            x["ticker"] = ticker
-            frames.append(x)
-        except Exception:
-            continue
-    if not frames:
-        return pd.DataFrame(columns=["date", "close", "ticker"])
-    out = pd.concat(frames, ignore_index=True)
-    out["date"] = pd.to_datetime(out["date"])
-    out["close"] = pd.to_numeric(out["close"], errors="coerce")
-    return out.dropna(subset=["close"])
+def collect_prices(symbols: list[str], start: str) -> pd.DataFrame:
+    # Batch Yahoo request is much faster than one request per ticker.
+    px = yf.download(symbols, start=start, auto_adjust=False, progress=False, threads=True, group_by="column")
+    if px.empty:
+        return pd.DataFrame(columns=["date", "ticker", "close"])
+    if isinstance(px.columns, pd.MultiIndex):
+        if "Close" not in px.columns.get_level_values(0):
+            return pd.DataFrame(columns=["date", "ticker", "close"])
+        close = px["Close"].copy()
+    else:
+        close = px[["Close"]].copy()
+        close.columns = symbols[:1]
+    close.index = pd.to_datetime(close.index)
+    long = close.stack(future_stack=True).reset_index()
+    long.columns = ["date", "ticker", "close"]
+    long["close"] = pd.to_numeric(long["close"], errors="coerce")
+    return long.dropna(subset=["close"])
 
 
 def compute_breadth(prices: pd.DataFrame) -> pd.DataFrame:
     if prices.empty:
         return pd.DataFrame()
-    rows = []
+    parts = []
     for ticker, g in prices.groupby("ticker"):
         g = g.sort_values("date").copy()
         g["ma20"] = g["close"].rolling(20, min_periods=20).mean()
         g["sd20"] = g["close"].rolling(20, min_periods=20).std(ddof=0)
-        g["upper2"] = g["ma20"] + 2*g["sd20"]
-        g["breakout"] = g["close"] > g["upper2"]
-        rows.append(g[["date", "ticker", "breakout"]])
-    z = pd.concat(rows, ignore_index=True)
-    agg = z.groupby("date").agg(
+        g["upper2"] = g["ma20"] + 2 * g["sd20"]
+        g["eligible"] = g["upper2"].notna()
+        g["breakout"] = g["eligible"] & (g["close"] > g["upper2"])
+        parts.append(g[["date", "ticker", "eligible", "breakout"]])
+    z = pd.concat(parts, ignore_index=True)
+    eligible = z[z["eligible"]].copy()
+    agg = eligible.groupby("date").agg(
         universe_count=("ticker", "nunique"),
         breakout_count=("breakout", "sum"),
     ).reset_index()
@@ -120,23 +95,22 @@ def upsert(path: Path, new: pd.DataFrame, keys: list[str]) -> None:
 
 
 def main() -> None:
-    end = latest_business_day()
-    end_date = datetime.strptime(end, "%Y%m%d").date()
-    start_date = end_date - timedelta(days=430)
-    start = start_date.strftime("%Y%m%d")
-    universe, details = load_or_build_universe(end)
-    prices = collect_prices(universe, start, end)
+    symbols, meta = fetch_universe()
+    start = (datetime.now(KST).date() - timedelta(days=430)).isoformat()
+    prices = collect_prices(symbols, start)
     breadth = compute_breadth(prices)
-    if not breadth.empty:
-        upsert(DERIVED / "breadth_bb20_2sigma_daily.csv", breadth, ["date"])
+    if breadth.empty:
+        raise RuntimeError("Breadth calculation produced no rows")
+    upsert(DERIVED / "breadth_bb20_2sigma_daily.csv", breadth, ["date"])
+    latest = breadth.iloc[-1].to_dict()
     status = {
         "generated_at_kst": datetime.now(KST).isoformat(),
-        "start": start,
-        "end": end,
-        "universe_count": len(universe),
+        "start_requested": start,
+        "symbol_count": len(symbols),
         "price_rows": int(len(prices)),
         "breadth_rows": int(len(breadth)),
-        **details,
+        "latest": latest,
+        **meta,
     }
     (META / "breadth_last_run.json").write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
 
