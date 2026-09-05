@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-06T04:43:48.642527+09:00",
+  "generated_at_kst": "2026-09-06T05:00:41.695946+09:00",
   "registered_series": 80,
   "ready_series": 57,
   "not_ready_series": 23,
@@ -11,7 +11,7 @@
       "dataset": "Breadth",
       "sector": "시장",
       "indicator": "KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",
-      "reason": "breadth rows=269; latest universe_count=343; strict target=350"
+      "reason": "breadth rows=270; latest universe_count=347; strict target=350"
     },
     {
       "series_id": "bio_orders",

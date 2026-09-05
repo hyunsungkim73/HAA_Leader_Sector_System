@@ -1,52 +1,44 @@
 {
-  "generated_at_kst": "2026-09-06T04:29:49.134348+09:00",
+  "generated_at_kst": "2026-09-06T05:00:41.113886+09:00",
   "start_requested": "2025-07-03",
-  "symbol_count": 349,
-  "price_rows": 98441,
-  "breadth_rows": 268,
+  "symbol_count": 350,
+  "price_rows": 99411,
+  "breadth_rows": 269,
   "latest": {
     "date": "2026-09-04",
-    "universe_count": 343,
-    "breakout_count": 9,
-    "breadth_pct": 0.026239067055393587,
-    "breadth_5dma": 0.025072886297376095,
-    "slope": -0.007580174927113697,
-    "acceleration": -0.008746355685131182
+    "universe_count": 347,
+    "breakout_count": 12,
+    "breadth_pct": 0.0345821325648415,
+    "breadth_5dma": 0.029971181556195957,
+    "slope": -0.00403458213256485,
+    "acceleration": -0.0051873198847262325
   },
   "price_retry": {
-    "bulk_missing_count": 6,
-    "bulk_missing_symbols": [
-      "025070.KQ",
-      "041140.KQ",
-      "108600.KQ",
-      "239010.KQ",
-      "261660.KQ",
-      "403450.KQ"
-    ],
-    "fdr_recovered_count": 0,
-    "fdr_recovered_symbols": [],
-    "alternate_suffix_recovered_count": 0,
-    "alternate_suffix_map": {},
-    "unresolved_count": 6,
+    "provider": "FinanceDataReader_only",
+    "requested_count": 350,
+    "recovered_count": 348,
+    "unresolved_count": 2,
     "unresolved_symbols": [
-      "025070.KQ",
-      "041140.KQ",
-      "108600.KQ",
-      "239010.KQ",
-      "261660.KQ",
-      "403450.KQ"
-    ]
+      "000126.KS",
+      "000009.KQ"
+    ],
+    "double_check": false
   },
-  "source": "public_github_constituent_cache_fallback",
-  "kospi200_count": 199,
-  "kosdaq150_count": 150,
-  "combined_count": 349,
-  "urls": [
-    "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
-    "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
-  ],
-  "fallback_errors": [
-    "PLUS:PLUS Excel stock code-column mismatch PLUS 200: expected=200, selected=0, asof=2026-09-04, candidate_columns=[{'sheet': 0, 'column': '1', 'count': 198, 'ratio': 0.9801980198019802}]",
-    "pykrx:index -1 is out of bounds for axis 0 with size 0"
-  ]
+  "source": "FinanceDataReader_only",
+  "source_type": "user_approved_single_source_proxy",
+  "validation_policy": "user_approved_no_double_check",
+  "definition": "KOSPI top 200 + KOSDAQ top 150 by FDR market capitalization; operational BB350 proxy, not official index-membership exact universe",
+  "kospi200_proxy": {
+    "market": "KOSPI",
+    "selection": "top_200_by_FDR_market_cap",
+    "count": 200,
+    "asof_kst": "2026-09-06"
+  },
+  "kosdaq150_proxy": {
+    "market": "KOSDAQ",
+    "selection": "top_150_by_FDR_market_cap",
+    "count": 150,
+    "asof_kst": "2026-09-06"
+  },
+  "combined_count": 350
 }

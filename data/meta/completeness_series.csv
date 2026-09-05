@@ -13,7 +13,7 @@ price_kbeauty,Price_Daily,소비재,close,565,2026-09-04,True,direct/market,565 
 price_kfood,Price_Daily,소비재,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
 price_biosim_cdmo,Price_Daily,바이오·헬스케어,close,411,2026-09-04,True,direct/market,411 daily observations; 220 required
 tip_tr,HAA_TIP,HAA,TIP total return,672,2026-09-04,True,market total-return proxy,TIP observations=672; HAA rows=208
-bb350,Breadth,시장,"KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",269,2026-09-04,False,partial-universe,breadth rows=269; latest universe_count=343; strict target=350
+bb350,Breadth,시장,"KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",270,2026-09-04,False,partial-universe,breadth rows=270; latest universe_count=347; strict target=350
 eps_sector,EPS_Revisions,전섹터,EPS revision,30,2026-09-03,True,proxy-public,"market weeks=6; sector observations={'반도체/IT': 4, '자동차': 4, '2차전지': 3, '바이오·헬스케어': 3, '금융': 3, '조선·기계': 3, '미디어·플랫폼': 3}; need >=3 each"
 price_kospi200,Price_Daily,시장,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
 semi_price,Fundamental,반도체/IT,DRAM/NAND/HBM 현물·계약가격,9,2026-09-04,True,direct-or-standardized-proxy,matched native/proxy observations=9; 3 required for direction
