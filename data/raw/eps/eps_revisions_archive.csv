@@ -5,12 +5,27 @@ obs_date,sector,company,metric,value,unit,lookback,source,is_proxy,loaded_at,not
 2026-08-20,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,66.6,pct,weekly,Hanwha EPS LIVE #225,0,2026-09-05T12:35:00+09:00,direct public summary; semiconductor components upward
 2026-08-27,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,66,pct,weekly,Hanwha EPS LIVE #226,0,2026-09-05T12:35:00+09:00,direct public summary; cosmetics/food strength highlighted
 2026-09-03,시장전체,,MSCI_KOREA_12MF_EPS_GROWTH,65.8,pct,weekly,Hanwha EPS LIVE #227,0,2026-09-05T12:35:00+09:00,direct public summary; Kia upward Hyundai pressure
-2026-07-30,금융,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #222,1,2026-09-05T12:35:00+09:00,financials among annual earnings-upgrade sectors
-2026-07-30,조선·기계,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #222,1,2026-09-05T12:35:00+09:00,industrials upward sector proxy
+2026-05-28,반도체/IT,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #213,1,2026-09-05T13:05:00+09:00,Samsung Electronics +1.1%; SK Hynix +0.4% weekly operating-profit estimates
+2026-06-18,반도체/IT,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #216,1,2026-09-05T13:05:00+09:00,SK Hynix and Samsung Electronics entered EM EPS upgrade leaders
 2026-08-06,반도체/IT,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #223,1,2026-09-05T12:35:00+09:00,semiconductor/IT upward concentration
 2026-08-20,반도체/IT,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #225,1,2026-09-05T12:35:00+09:00,semiconductor materials/equipment upward
-2026-08-20,2차전지,,sector_revision_direction,-1,direction_score,weekly,Hanwha EPS LIVE #225,1,2026-09-05T12:35:00+09:00,LGES large negative EPS revision highlighted
+2026-05-28,자동차,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #213,1,2026-09-05T13:05:00+09:00,Kia +0.1%; Hyundai +0.1% weekly operating-profit estimates
+2026-06-18,자동차,,sector_revision_direction,-1,direction_score,weekly,Hanwha EPS LIVE #216,1,2026-09-05T13:05:00+09:00,Kia entered EM EPS downgrade leaders
 2026-08-20,자동차,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #225,1,2026-09-05T12:35:00+09:00,Kia breakout but aggregate mixed
-2026-08-27,소비재,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #226,1,2026-09-05T12:35:00+09:00,cosmetics KT&G Samyang Foods strength
 2026-09-03,자동차,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #227,1,2026-09-05T12:35:00+09:00,Kia upward while Hyundai downward pressure
+2026-05-28,2차전지,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #213,1,2026-09-05T13:05:00+09:00,LG Energy Solution +0.3% weekly operating-profit estimate
+2026-06-25,2차전지,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #217 public summary,1,2026-09-05T13:05:00+09:00,LG Energy Solution entered EM upward group
+2026-08-20,2차전지,,sector_revision_direction,-1,direction_score,weekly,Hanwha EPS LIVE #225,1,2026-09-05T12:35:00+09:00,LGES large negative EPS revision highlighted
+2026-06-04,바이오·헬스케어,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #214 public summary,1,2026-09-05T13:05:00+09:00,Samsung Biologics upward while Celltrion downward; mixed
+2026-07-09,바이오·헬스케어,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #218,1,2026-09-05T13:05:00+09:00,Samsung Epis Holdings/Daewoong upward; Celltrion annual estimate upper breakout
+2026-07-30,바이오·헬스케어,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #222,1,2026-09-05T13:05:00+09:00,Celltrion and Samsung Biologics entered EM EPS upgrade leaders
+2026-05-28,금융,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #213,1,2026-09-05T13:05:00+09:00,Shinhan/Hana/KB weekly estimates all upward
+2026-07-09,금융,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #218,1,2026-09-05T13:05:00+09:00,KB and multiple banks in upward groups
+2026-07-30,금융,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #222,1,2026-09-05T12:35:00+09:00,financials among annual earnings-upgrade sectors
+2026-05-28,조선·기계,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #213,1,2026-09-05T13:05:00+09:00,HD KSOE +0.9% but HD HHI/Hanwha Ocean downward; mixed
+2026-07-30,조선·기계,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #222,1,2026-09-05T12:35:00+09:00,industrials upward sector proxy
 2026-09-03,조선·기계,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #227,1,2026-09-05T12:35:00+09:00,Hanwha Ocean among estimate upgrades
+2026-05-28,미디어·플랫폼,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #213,1,2026-09-05T13:05:00+09:00,Kakao +0.2% while NAVER -0.2%; mixed
+2026-06-18,미디어·플랫폼,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #216,1,2026-09-05T13:05:00+09:00,NAVER entered EM EPS upgrade leaders
+2026-07-09,미디어·플랫폼,,sector_revision_direction,0,direction_score,weekly,Hanwha EPS LIVE #218,1,2026-09-05T13:05:00+09:00,Studio Dragon upward while Kakao lower breakout; mixed media/platform signal
+2026-08-27,소비재,,sector_revision_direction,1,direction_score,weekly,Hanwha EPS LIVE #226,1,2026-09-05T12:35:00+09:00,cosmetics KT&G Samyang Foods strength
