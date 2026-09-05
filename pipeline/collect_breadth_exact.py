@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import json
@@ -33,15 +34,29 @@ def _norm_name(value: object) -> str:
     return s
 
 
+def _normalize_code(value: object) -> str | None:
+    s = str(value).strip()
+    if s.endswith(".0"):
+        s = s[:-2]
+    if s.isdigit() and 1 <= len(s) <= 6:
+        return s.zfill(6)
+    return None
+
+
 def _clean_codes(values: list[object]) -> list[str]:
-    codes: list[str] = []
-    for value in values:
-        s = str(value).strip()
-        if s.endswith(".0"):
-            s = s[:-2]
-        if s.isdigit() and 1 <= len(s) <= 6:
-            codes.append(s.zfill(6))
+    codes = [code for value in values if (code := _normalize_code(value))]
     return list(dict.fromkeys(codes))
+
+
+def _describe_raw_codes(values: list[object]) -> str:
+    normalized = [_normalize_code(v) for v in values]
+    valid = [v for v in normalized if v]
+    duplicates = sorted(code for code, count in Counter(valid).items() if count > 1)
+    invalid = [str(v).strip() for v, code in zip(values, normalized) if not code]
+    return (
+        f"raw={len(values)} valid={len(valid)} unique={len(set(valid))} "
+        f"duplicates={duplicates[:10]} invalid={invalid[:10]}"
+    )
 
 
 def _pykrx_exact_universe() -> tuple[list[str], dict]:
@@ -55,11 +70,13 @@ def _pykrx_exact_universe() -> tuple[list[str], dict]:
         detail: dict[str, dict] = {}
         try:
             for key, cfg in INDEXES.items():
-                raw = stock.get_index_portfolio_deposit_file(cfg["code"], date=d, alternative=True)
-                codes = _clean_codes(list(raw))
+                raw = list(stock.get_index_portfolio_deposit_file(cfg["code"], date=d, alternative=True))
+                codes = _clean_codes(raw)
                 expected = int(cfg["expected"])
                 if len(codes) != expected:
-                    raise RuntimeError(f"{key} expected={expected}, got={len(codes)}")
+                    raise RuntimeError(
+                        f"{key} expected={expected}, got={len(codes)}; {_describe_raw_codes(raw)}"
+                    )
                 pieces.extend([f"{code}.{cfg['suffix']}" for code in codes])
                 detail[key] = {
                     "index_code": cfg["code"],
