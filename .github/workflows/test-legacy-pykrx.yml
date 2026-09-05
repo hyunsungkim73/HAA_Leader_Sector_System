@@ -1,0 +1,27 @@
+name: Test legacy pykrx constituents
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test-legacy-pykrx.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'pykrx==1.0.51'
+      - name: Fetch index constituents
+        run: |
+          python - <<'PY'
+          from pykrx import stock
+          for code in ['1028','2203']:
+              try:
+                  x=stock.get_index_portfolio_deposit_file(code,'20260904')
+                  print(code, len(x), x[:10], x[-10:])
+              except Exception as e:
+                  print('FAIL',code,repr(e))
+                  raise
+          PY
