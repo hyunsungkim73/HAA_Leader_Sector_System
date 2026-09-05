@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-06T05:54:22.991060+09:00",
+  "generated_at_kst": "2026-09-06T06:00:40.442068+09:00",
   "registered_series": 80,
   "ready_series": 78,
   "not_ready_series": 2,
@@ -18,7 +18,7 @@
       "dataset": "Macro_Market",
       "sector": "방어자산",
       "indicator": "KOFR",
-      "reason": "2 stored observations; 65 required for 3-month direction"
+      "reason": "0 direct stored observations (2 total rows); 65 direct observations required for 3-month direction"
     }
   ],
   "dataset_summary": [
