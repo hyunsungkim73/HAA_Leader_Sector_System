@@ -1,9 +1,9 @@
 {
-  "generated_at_kst": "2026-09-05T12:55:31.690617+09:00",
+  "generated_at_kst": "2026-09-05T13:00:03.179299+09:00",
   "registered_series": 80,
-  "ready_series": 52,
-  "not_ready_series": 28,
-  "completion_pct": 65.0,
+  "ready_series": 54,
+  "not_ready_series": 26,
+  "completion_pct": 67.5,
   "strict_complete": false,
   "not_ready": [
     {
@@ -95,20 +95,6 @@
       "dataset": "Fundamental",
       "sector": "철강·소재",
       "indicator": "중국 생산·가동률/감산",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
-    },
-    {
-      "series_id": "cons_volume",
-      "dataset": "Fundamental",
-      "sector": "소비재",
-      "indicator": "판매량/트래픽",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
-    },
-    {
-      "series_id": "cons_ticket",
-      "dataset": "Fundamental",
-      "sector": "소비재",
-      "indicator": "객단가·ASP",
       "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
@@ -227,7 +213,7 @@
     {
       "dataset": "Fundamental",
       "count": 50,
-      "sum": 27
+      "sum": 29
     },
     {
       "dataset": "HAA_TIP",

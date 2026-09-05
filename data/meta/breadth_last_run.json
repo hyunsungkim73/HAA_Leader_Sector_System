@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-05T12:55:31.105330+09:00",
+  "generated_at_kst": "2026-09-05T13:00:02.503371+09:00",
   "start_requested": "2025-07-02",
   "symbol_count": 349,
   "price_rows": 98784,
@@ -13,14 +13,13 @@
     "slope": -0.007580174927113697,
     "acceleration": -0.008746355685131182
   },
-  "source": "public_github_constituent_cache",
-  "kospi200_cache_updated_at": "2026-06-10",
-  "kosdaq150_cache_updated_at": "2026-06-10",
+  "source": "public_github_constituent_cache_fallback",
   "kospi200_count": 199,
   "kosdaq150_count": 150,
   "combined_count": 349,
   "urls": [
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
-  ]
+  ],
+  "official_plus_error": "PLUS basket count mismatch https://www.plusetf.co.kr/product/detail?n=006184: expected=200, six-digit=10, raw=10"
 }

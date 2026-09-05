@@ -51,8 +51,8 @@ steel_rawmat,Fundamental,철강·소재,철광석·원료탄·스크랩,1,2026-0
 steel_spread,Fundamental,철강·소재,제품-원재료 스프레드,0,,False,partial,matched native/proxy observations=0; 3 required for direction
 steel_inventory,Fundamental,철강·소재,중국 완제품/유통재고,0,,False,partial,matched native/proxy observations=0; 3 required for direction
 steel_output,Fundamental,철강·소재,중국 생산·가동률/감산,1,2026-09-04,False,partial,matched native/proxy observations=1; 3 required for direction
-cons_volume,Fundamental,소비재,판매량/트래픽,1,2026-07-31,False,partial,matched native/proxy observations=1; 3 required for direction
-cons_ticket,Fundamental,소비재,객단가·ASP,1,2026-07-31,False,partial,matched native/proxy observations=1; 3 required for direction
+cons_volume,Fundamental,소비재,판매량/트래픽,4,2026-07-31,True,direct-or-standardized-proxy,matched native/proxy observations=4; 3 required for direction
+cons_ticket,Fundamental,소비재,객단가·ASP,4,2026-07-31,True,direct-or-standardized-proxy,matched native/proxy observations=4; 3 required for direction
 cons_inventory,Fundamental,소비재,재고/재고회전 대체지표,0,,False,partial,matched native/proxy observations=0; 3 required for direction
 cons_promo,Fundamental,소비재,프로모션 강도 대체지표,0,,False,partial,matched native/proxy observations=0; 3 required for direction
 cons_margin,Fundamental,소비재,원재료·물류비 대비 마진스프레드,0,,False,partial,matched native/proxy observations=0; 3 required for direction

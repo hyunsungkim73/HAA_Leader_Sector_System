@@ -1,7 +1,5 @@
 {
-  "source": "public_github_constituent_cache",
-  "kospi200_cache_updated_at": "2026-06-10",
-  "kosdaq150_cache_updated_at": "2026-06-10",
+  "source": "public_github_constituent_cache_fallback",
   "kospi200_count": 199,
   "kosdaq150_count": 150,
   "combined_count": 349,
@@ -9,6 +7,7 @@
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json",
     "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
   ],
+  "official_plus_error": "PLUS basket count mismatch https://www.plusetf.co.kr/product/detail?n=006184: expected=200, six-digit=10, raw=10",
   "symbols": [
     "000080.KS",
     "000100.KS",
