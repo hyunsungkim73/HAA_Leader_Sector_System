@@ -1,0 +1,103 @@
+name: Parallel completion lanes
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'pipeline/**'
+      - '.github/workflows/parallel-completion.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  bb350:
+    name: Stage 2 - BB350
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+      - name: Run exact breadth collector
+        run: python pipeline/collect_breadth_exact.py
+      - name: Report BB350 lane
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/meta/breadth_last_run.json')
+          d=json.loads(p.read_text())
+          u=d.get('latest',{}).get('universe_count')
+          print(f'BB350_STATUS {u}/350')
+          PY
+
+  rates:
+    name: Stage 3 - Korean rates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+      - name: Run macro/rates collector
+        run: python pipeline/collect_macro.py
+      - name: Report rates lane
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          x=pd.read_csv('data/raw/macro/macro_market_archive.csv')
+          for sid in ['macro_kr3y','macro_kr10y','macro_kofr','macro_cd91']:
+              print('RATE_STATUS', sid, int((x.series_id.astype(str)==sid).sum()), '/65')
+          PY
+
+  fundamentals:
+    name: Stage 4 - Fundamentals
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+      - name: Re-evaluate fundamental coverage
+        run: python pipeline/check_completeness.py
+      - name: Report fundamentals lane
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/meta/completeness_report.json').read_text())
+          miss=[x['series_id'] for x in d.get('not_ready',[]) if x.get('dataset')=='Fundamental']
+          print('FUNDAMENTAL_STATUS missing', len(miss), miss)
+          PY
+
+  report:
+    name: Parallel status report
+    needs: [bb350, rates, fundamentals]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pandas
+      - name: Build status snapshot
+        run: python pipeline/parallel_status.py
+      - name: Summarize lane results
+        run: |
+          echo '## Parallel completion lanes' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Stage 2 BB350: ${{ needs.bb350.result }}' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Stage 3 Korean rates: ${{ needs.rates.result }}' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Stage 4 Fundamentals: ${{ needs.fundamentals.result }}' >> "$GITHUB_STEP_SUMMARY"
