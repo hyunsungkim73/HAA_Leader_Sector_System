@@ -1,0 +1,6 @@
+pandas>=2.2,<3
+numpy>=1.26,<3
+yfinance>=0.2.65
+pykrx>=1.0.51
+pyarrow>=17
+requests>=2.32
