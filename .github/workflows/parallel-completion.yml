@@ -25,16 +25,23 @@ jobs:
           cache-dependency-path: pipeline/requirements.txt
       - run: pip install -r pipeline/requirements.txt
       - name: Run exact breadth collector
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
         run: python pipeline/collect_breadth_exact.py
-      - name: Report BB350 lane
+      - name: Validate exact BB350 gate
         run: |
+          python pipeline/check_completeness.py
           python - <<'PY'
-          import json
-          from pathlib import Path
-          p=Path('data/meta/breadth_last_run.json')
-          d=json.loads(p.read_text())
-          u=d.get('latest',{}).get('universe_count')
-          print(f'BB350_STATUS {u}/350')
+          import pandas as pd
+          s = pd.read_csv('data/meta/completeness_series.csv').set_index('series_id')
+          if 'bb350' not in s.index:
+              raise SystemExit('STAGE2_INCOMPLETE missing bb350 row')
+          row = s.loc['bb350']
+          ready = str(row['ready']).lower() in {'true','1'}
+          if not ready or str(row['quality']) != 'exact':
+              raise SystemExit(f"STAGE2_INCOMPLETE exact BB350 required: {row['reason']} quality={row['quality']}")
+          print('STAGE2_COMPLETE exact BB350')
           PY
 
   rates:
@@ -49,14 +56,28 @@ jobs:
           cache-dependency-path: pipeline/requirements.txt
       - run: pip install -r pipeline/requirements.txt
       - name: Run macro/rates collector
+        env:
+          BOK_ECOS_API_KEY: ${{ secrets.BOK_ECOS_API_KEY }}
         run: python pipeline/collect_macro.py
-      - name: Report rates lane
+      - name: Validate direct Korean-rate gate
         run: |
+          python pipeline/check_completeness.py
           python - <<'PY'
           import pandas as pd
-          x=pd.read_csv('data/raw/macro/macro_market_archive.csv')
-          for sid in ['macro_kr3y','macro_kr10y','macro_kofr','macro_cd91']:
-              print('RATE_STATUS', sid, int((x.series_id.astype(str)==sid).sum()), '/65')
+          s = pd.read_csv('data/meta/completeness_series.csv').set_index('series_id')
+          required = ['macro_kr3y','macro_kr10y','macro_kofr','macro_cd91']
+          bad = []
+          for sid in required:
+              if sid not in s.index:
+                  bad.append(f'{sid}:missing')
+                  continue
+              row = s.loc[sid]
+              ready = str(row['ready']).lower() in {'true','1'}
+              if not ready:
+                  bad.append(f"{sid}:{row['reason']}")
+          if bad:
+              raise SystemExit('STAGE3_INCOMPLETE ' + ' | '.join(bad))
+          print('STAGE3_COMPLETE direct Korean rates')
           PY
 
   fundamentals:
@@ -72,14 +93,19 @@ jobs:
       - run: pip install -r pipeline/requirements.txt
       - name: Re-evaluate fundamental coverage
         run: python pipeline/check_completeness.py
-      - name: Report fundamentals lane
+      - name: Validate Fundamental 50/50 gate
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
           d=json.loads(Path('data/meta/completeness_report.json').read_text())
-          miss=[x['series_id'] for x in d.get('not_ready',[]) if x.get('dataset')=='Fundamental']
-          print('FUNDAMENTAL_STATUS missing', len(miss), miss)
+          summary={r['dataset']:r for r in d.get('dataset_summary',[])}
+          fund=summary.get('Fundamental',{})
+          count=int(fund.get('count',0) or 0)
+          ready=int(fund.get('sum',0) or 0)
+          if count != 50 or ready != 50:
+              raise SystemExit(f'STAGE4_INCOMPLETE Fundamental={ready}/{count}; required 50/50')
+          print('STAGE4_COMPLETE Fundamental 50/50 ready')
           PY
 
   report:
@@ -93,11 +119,11 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pandas
-      - name: Build status snapshot
+      - name: Build exact/direct status snapshot
         run: python pipeline/parallel_status.py
       - name: Summarize lane results
         run: |
           echo '## Parallel completion lanes' >> "$GITHUB_STEP_SUMMARY"
-          echo '- Stage 2 BB350: ${{ needs.bb350.result }}' >> "$GITHUB_STEP_SUMMARY"
-          echo '- Stage 3 Korean rates: ${{ needs.rates.result }}' >> "$GITHUB_STEP_SUMMARY"
-          echo '- Stage 4 Fundamentals: ${{ needs.fundamentals.result }}' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Stage 2 exact BB350: ${{ needs.bb350.result }}' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Stage 3 direct Korean rates: ${{ needs.rates.result }}' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Stage 4 Fundamental 50/50: ${{ needs.fundamentals.result }}' >> "$GITHUB_STEP_SUMMARY"
