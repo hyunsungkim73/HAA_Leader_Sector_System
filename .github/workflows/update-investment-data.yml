@@ -71,7 +71,7 @@ jobs:
           print(cov.to_string(index=False))
           PY
 
-      - name: Commit accumulated data
+      - name: Commit accumulated data safely
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -81,4 +81,7 @@ jobs:
             exit 0
           fi
           git commit -m "data: update investment archive $(date -u +%Y-%m-%d)"
-          git push
+          # Manual research commits can land while this job is running. Rebase the data commit
+          # onto the newest main so automated accumulation is not lost to non-fast-forward.
+          git pull --rebase origin main
+          git push origin HEAD:main
