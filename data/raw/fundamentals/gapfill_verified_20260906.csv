@@ -1,0 +1,24 @@
+obs_date,sector,subsector,indicator,indicator_role,frequency,value,unit,direction,acceleration,source,source_type,is_proxy,confidence,loaded_at,notes
+2025-12-31,금융,KB금융,KB은행 NIM,leading,quarterly,1.75,%,,,KB Financial Group FY2025 earnings,official,False,high,2026-09-06T05:15:00+09:00,4Q25 bank NIM; official KB earnings transcript
+2026-03-31,금융,KB금융,KB은행 NIM,leading,quarterly,1.77,%,,,KB Financial Group 1Q26 earnings,official,False,high,2026-09-06T05:15:00+09:00,1Q26 bank NIM; official KB earnings transcript
+2026-06-30,금융,KB금융,KB은행 NIM,leading,quarterly,1.74,%,,,KB Financial Group 1H26 earnings,official,False,high,2026-09-06T05:15:00+09:00,2Q26 bank NIM; official KB earnings transcript
+2025-12-31,금융,KB금융,KB은행 원화대출 QoQ growth,leading,quarterly,0.5,%,,,KB Financial Group FY2025 earnings,official,False,high,2026-09-06T05:15:00+09:00,4Q25 total won-loan growth QoQ
+2026-03-31,금융,KB금융,KB은행 원화대출 QoQ growth,leading,quarterly,0.4,%,,,KB Financial Group 1Q26 earnings,official,False,high,2026-09-06T05:15:00+09:00,1Q26 total won-loan growth versus year-end; used as quarterly growth observation
+2026-06-30,금융,KB금융,KB은행 원화대출 QoQ growth,leading,quarterly,1.6,%,,,KB Financial Group 1H26 earnings,official,False,high,2026-09-06T05:15:00+09:00,2Q26 total won-loan growth QoQ
+2025-12-31,금융,KB금융,KB group credit cost,leading,quarterly,48,bp,,,KB Financial Group FY2025 earnings,official,False,high,2026-09-06T05:15:00+09:00,FY2025 group credit cost ratio 48bp; year-end anchor
+2026-03-31,금융,KB금융,KB group credit cost,leading,quarterly,40,bp,,,KB Financial Group 1Q26 earnings,official,False,high,2026-09-06T05:15:00+09:00,1Q26 group credit cost ratio 40bp
+2026-06-30,금융,KB금융,KB group credit cost,leading,quarterly,38,bp,,,KB Financial Group 1H26 earnings,official,False,high,2026-09-06T05:15:00+09:00,2Q26 group credit cost ratio 38bp
+2026-05-31,조선·기계,글로벌,Clarksons 신조선가지수,leading,monthly,185.01,index,,,Clarksons Research cited public monthly report,public proxy,True,medium,2026-09-06T05:15:00+09:00,May 2026 month-end Newbuilding Price Index
+2026-06-30,조선·기계,글로벌,Clarksons 신조선가지수,leading,monthly,185.15,index,,,Clarksons Research cited public monthly report,public proxy,True,medium,2026-09-06T05:15:00+09:00,June 2026 month-end Newbuilding Price Index
+2026-07-31,조선·기계,글로벌,Clarksons 신조선가지수,leading,monthly,185.49,index,,,Clarksons Research cited public monthly report,public proxy,True,medium,2026-09-06T05:15:00+09:00,July 2026 month-end Newbuilding Price Index
+2026-08-31,조선·기계,글로벌,Clarksons 신조선가지수,leading,monthly,186.34,index,,,Clarksons Research cited public monthly report,public proxy,True,medium,2026-09-06T05:15:00+09:00,August 2026 month-end Newbuilding Price Index
+2026-04-30,조선·기계,글로벌,글로벌 신규수주 누적,leading,monthly,26.1,million CGT,,,Clarksons Research Global Shipbuilding Update,public proxy,True,medium,2026-09-06T05:15:00+09:00,Jan-Apr 2026 cumulative contracting
+2026-05-31,조선·기계,글로벌,글로벌 신규수주 누적,leading,monthly,33.6,million CGT,,,Clarksons Research Global Shipbuilding Update,public proxy,True,medium,2026-09-06T05:15:00+09:00,Jan-May 2026 cumulative contracting
+2026-06-30,조선·기계,글로벌,글로벌 신규수주 누적,leading,monthly,42.95,million CGT,,,Clarksons Research cited public monthly report,public proxy,True,medium,2026-09-06T05:15:00+09:00,Jan-Jun 2026 cumulative contracting
+2026-07-31,조선·기계,글로벌,글로벌 신규수주 누적,leading,monthly,50.93,million CGT,,,Clarksons Research cited public monthly report,public proxy,True,medium,2026-09-06T05:15:00+09:00,Jan-Jul 2026 cumulative contracting
+2026-08-06,철강·소재,중국,중국 건축강재 사회재고,leading,weekly,175.03,10k tons,,,Mysteel public data,industry proxy,True,medium,2026-09-06T05:15:00+09:00,132-city wire-rod social inventory; public Mysteel table
+2026-08-20,철강·소재,중국,중국 건축강재 사회재고,leading,weekly,168.73,10k tons,,,Mysteel public data,industry proxy,True,medium,2026-09-06T05:15:00+09:00,132-city prior-week wire-rod social inventory shown in Aug27 table
+2026-08-27,철강·소재,중국,중국 건축강재 사회재고,leading,weekly,169.09,10k tons,,,Mysteel public data,industry proxy,True,medium,2026-09-06T05:15:00+09:00,132-city wire-rod social inventory
+2026-05-31,철강·소재,중국,중국 조강생산,leading,monthly,8436,10k tons,,,National Bureau of Statistics of China,official,False,high,2026-09-06T05:15:00+09:00,May 2026 crude steel output
+2026-06-30,철강·소재,중국,중국 조강생산,leading,monthly,8367,10k tons,,,National Bureau of Statistics of China,official,False,high,2026-09-06T05:15:00+09:00,June 2026 crude steel output
+2026-07-31,철강·소재,중국,중국 조강생산,leading,monthly,7693,10k tons,,,National Bureau of Statistics of China,official,False,high,2026-09-06T05:15:00+09:00,July 2026 crude steel output
