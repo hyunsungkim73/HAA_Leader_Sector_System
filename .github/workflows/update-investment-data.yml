@@ -1,0 +1,71 @@
+name: Update investment data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 18:40 KST on weekdays = 09:40 UTC
+    - cron: '40 9 * * 1-5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: investment-data-update
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Collect prices and HAA
+        run: python pipeline/collect_market_data.py
+
+      - name: Collect breadth
+        continue-on-error: true
+        run: python pipeline/collect_breadth.py
+
+      - name: Validate outputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import pandas as pd
+          required = [
+              Path('data/meta/price_coverage.csv'),
+              Path('data/derived/momentum_weekly.csv'),
+              Path('data/derived/relative_strength_weekly.csv'),
+              Path('data/derived/tip_haa_weekly.csv'),
+          ]
+          missing = [str(p) for p in required if not p.exists()]
+          if missing:
+              raise SystemExit(f'Missing required outputs: {missing}')
+          cov = pd.read_csv('data/meta/price_coverage.csv')
+          print(cov.to_string(index=False))
+          PY
+
+      - name: Commit accumulated data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data
+          if git diff --cached --quiet; then
+            echo 'No data changes'
+            exit 0
+          fi
+          git commit -m "data: update market archive $(date -u +%Y-%m-%d)"
+          git push
