@@ -51,10 +51,15 @@ jobs:
 
       - name: Collect macro market
         continue-on-error: true
+        env:
+          BOK_ECOS_API_KEY: ${{ secrets.BOK_ECOS_API_KEY }}
         run: python pipeline/collect_macro.py
 
       - name: Collect breadth
         continue-on-error: true
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
         run: python pipeline/collect_breadth_exact.py
 
       - name: Check completeness
@@ -98,6 +103,37 @@ jobs:
             raise SystemExit(f'Missing required outputs: {missing}')
           cov = pd.read_csv('data/meta/price_coverage.csv')
           print(cov.to_string(index=False))
+          PY
+
+      - name: Validate Stage 2 3 4 data gates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+
+          report = json.loads(Path('data/meta/completeness_report.json').read_text(encoding='utf-8'))
+          summary = {r['dataset']: r for r in report.get('dataset_summary', [])}
+          fund = summary.get('Fundamental', {})
+          if int(fund.get('count', 0)) != 50 or int(fund.get('sum', 0)) != 50:
+              raise SystemExit(f"STAGE4_INCOMPLETE Fundamental={fund.get('sum', 0)}/{fund.get('count', 0)}; required 50/50")
+
+          series = pd.read_csv('data/meta/completeness_series.csv').set_index('series_id')
+          if 'bb350' not in series.index or not bool(series.loc['bb350', 'ready']):
+              reason = series.loc['bb350', 'reason'] if 'bb350' in series.index else 'missing bb350 row'
+              raise SystemExit(f"STAGE2_INCOMPLETE exact BB350 required: {reason}")
+          if str(series.loc['bb350', 'quality']) != 'exact':
+              raise SystemExit(f"STAGE2_INVALID_QUALITY expected exact, got {series.loc['bb350', 'quality']}")
+
+          required_rates = ['macro_kr3y', 'macro_kr10y', 'macro_kofr', 'macro_cd91']
+          bad = []
+          for sid in required_rates:
+              if sid not in series.index or not bool(series.loc[sid, 'ready']):
+                  bad.append(f"{sid}:{series.loc[sid, 'reason'] if sid in series.index else 'missing'}")
+          if bad:
+              raise SystemExit('STAGE3_INCOMPLETE ' + ' | '.join(bad))
+
+          print('DATA_GATES_COMPLETE Stage2=exact BB350 Stage3=Korean rates Stage4=Fundamental 50/50')
           PY
 
       - name: Commit accumulated data safely
