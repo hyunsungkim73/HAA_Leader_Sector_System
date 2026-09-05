@@ -11,6 +11,8 @@ import requests
 import numpy as np
 import pandas as pd
 import yfinance as yf
+import FinanceDataReader as fdr
+from pykrx import stock
 
 ROOT = Path(__file__).resolve().parents[1]
 DERIVED = ROOT / "data" / "derived"
@@ -24,19 +26,19 @@ PLUS_PRODUCTS = {
     "k200": {"n": "006184", "title": "PLUS 200", "suffix": "KS", "expected": 200},
     "k150": {"n": "006318", "title": "PLUS 코스닥150", "suffix": "KQ", "expected": 150},
 }
+INDEX_CODES = {"k200": ("1028", "KS", 200), "k150": ("2203", "KQ", 150)}
 K200_FALLBACK = "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kospi200_cache.json"
 K150_FALLBACK = "https://raw.githubusercontent.com/thebigone9414/stock/dev/data/kosdaq150_cache.json"
 UA = {"User-Agent": "Mozilla/5.0 (compatible; HAA-Leader-Sector-System/1.0)"}
 
 
 def extract_asof(page_text: str) -> str:
-    patterns = [
+    for pat in [
         r'id="pdfDate"[^>]*data-max-date="([0-9-]+)"',
         r'id="pdfDate"[^>]*value="([0-9-]+)"',
         r'pdfDate[^0-9]{0,100}([0-9]{4}\.[0-9]{2}\.[0-9]{2})',
         r'([0-9]{4}\.[0-9]{2}\.[0-9]{2})',
-    ]
-    for pat in patterns:
+    ]:
         m = re.search(pat, page_text, re.S)
         if m:
             return m.group(1).replace('.', '-')
@@ -61,12 +63,11 @@ def code_column_candidates(frames: list[pd.DataFrame], etf_ticker: str | None) -
             if not codes:
                 continue
             non_null = int(df[col].notna().sum())
-            ratio = len(codes) / max(non_null, 1)
             candidates.append({
                 "sheet": sheet_index,
                 "column": str(col),
                 "count": len(codes),
-                "ratio": ratio,
+                "ratio": len(codes) / max(non_null, 1),
                 "codes": codes,
             })
     return candidates
@@ -78,16 +79,6 @@ def choose_stock_codes(frames: list[pd.DataFrame], expected: int, etf_ticker: st
     if exact:
         exact.sort(key=lambda c: c["ratio"], reverse=True)
         return exact[0]["codes"], candidates
-
-    # Some workbooks can carry one header/footer value that is also six digits. Prefer the
-    # column closest to the target only when it has strong code-column density, then trim
-    # only a leading ETF self-ticker already handled above. Never silently pad a universe.
-    dense = [c for c in candidates if c["ratio"] >= 0.80]
-    if dense:
-        dense.sort(key=lambda c: (abs(c["count"] - expected), -c["ratio"]))
-        best = dense[0]
-        if best["count"] == expected:
-            return best["codes"], candidates
     return [], candidates
 
 
@@ -103,10 +94,8 @@ def download_plus_basket(n: str, title: str, suffix: str, expected: int) -> tupl
     r = session.get(excel_url, timeout=60)
     r.raise_for_status()
     if len(r.content) < 500:
-        raise RuntimeError(f"PLUS excel payload too small: {len(r.content)} bytes; url={excel_url}")
-
-    errors = []
-    frames = []
+        raise RuntimeError(f"PLUS excel payload too small: {len(r.content)} bytes")
+    errors, frames = [], []
     for engine in ["openpyxl", "xlrd", None]:
         try:
             book = pd.read_excel(BytesIO(r.content), sheet_name=None, header=None, engine=engine)
@@ -117,43 +106,43 @@ def download_plus_basket(n: str, title: str, suffix: str, expected: int) -> tupl
             errors.append(f"{engine}:{exc}")
     if not frames:
         raise RuntimeError("PLUS Excel parse failed: " + " | ".join(errors))
-
     etf_ticker = {"006184": "152100", "006318": "301400"}.get(n)
     codes, candidates = choose_stock_codes(frames, expected, etf_ticker)
     if len(codes) != expected:
-        m = re.search(r"(?:const|let|var)\s+etfPdfList\s*=\s*(\[.*?\]);", page.text, re.S)
-        embedded = []
-        if m:
-            try:
-                embedded = [str(x.get("jmCd", "")).strip() for x in json.loads(m.group(1))]
-                embedded = list(dict.fromkeys([x for x in embedded if re.fullmatch(r"\d{6}", x)]))
-            except Exception:
-                pass
         diagnostic = sorted(
             [{k: v for k, v in c.items() if k != "codes"} for c in candidates],
             key=lambda x: abs(x["count"] - expected),
-        )[:12]
+        )[:8]
         raise RuntimeError(
             f"PLUS Excel stock code-column mismatch {title}: expected={expected}, selected={len(codes)}, "
-            f"embedded={len(embedded)}, asof={asof}, candidate_columns={diagnostic}"
+            f"asof={asof}, candidate_columns={diagnostic}"
         )
-
-    symbols = [f"{c}.{suffix}" for c in codes]
-    selected_meta = next(
-        ({k: v for k, v in c.items() if k != "codes"} for c in candidates if c["codes"] == codes),
-        None,
-    )
-    return symbols, {
+    return [f"{c}.{suffix}" for c in codes], {
+        "source": "PLUS_official_excel_pdf_baskets",
         "product_url": product_url,
         "excel_url": excel_url,
         "asof": asof,
         "stock_rows": len(codes),
-        "payload_bytes": len(r.content),
-        "selected_code_column": selected_meta,
     }
 
 
-def fallback_universe() -> tuple[list[str], dict]:
+def pykrx_universe() -> tuple[list[str], dict]:
+    pieces, meta = [], {"source": "pykrx_KRX_index_constituents"}
+    for key, (idx, suffix, expected) in INDEX_CODES.items():
+        codes = stock.get_index_portfolio_deposit_file(idx, alternative=True)
+        codes = list(dict.fromkeys([str(x).zfill(6) for x in codes if re.fullmatch(r"\d{6}", str(x).zfill(6))]))
+        if len(codes) != expected:
+            raise RuntimeError(f"pykrx {key} expected={expected}, got={len(codes)}")
+        pieces.extend([f"{c}.{suffix}" for c in codes])
+        meta[f"{key}_count"] = len(codes)
+    symbols = list(dict.fromkeys(pieces))
+    if len(symbols) != 350:
+        raise RuntimeError(f"pykrx combined universe expected=350, got={len(symbols)}")
+    meta["combined_count"] = len(symbols)
+    return symbols, meta
+
+
+def cache_universe() -> tuple[list[str], dict]:
     k200 = requests.get(K200_FALLBACK, timeout=30).json()
     k150 = requests.get(K150_FALLBACK, timeout=30).json()
     a = [str(x["code"]).zfill(6) for x in k200.get("stocks", []) if x.get("code")]
@@ -169,42 +158,30 @@ def fallback_universe() -> tuple[list[str], dict]:
 
 
 def fetch_universe() -> tuple[list[str], dict]:
+    errors = []
     try:
         k200, m200 = download_plus_basket(**PLUS_PRODUCTS["k200"])
         k150, m150 = download_plus_basket(**PLUS_PRODUCTS["k150"])
         symbols = k200 + k150
         if len(symbols) != 350 or len(set(symbols)) != 350:
-            raise RuntimeError(
-                f"combined PLUS stock universe must equal 350, got {len(symbols)} / unique {len(set(symbols))}"
-            )
-        meta = {
-            "source": "PLUS_official_excel_pdf_baskets",
-            "kospi200_count": 200,
-            "kosdaq150_count": 150,
-            "combined_count": 350,
-            "kospi200": m200,
-            "kosdaq150": m150,
-        }
+            raise RuntimeError(f"PLUS combined universe expected=350, got={len(symbols)} unique={len(set(symbols))}")
+        meta = {"source": "PLUS_official_excel_pdf_baskets", "combined_count": 350, "kospi200": m200, "kosdaq150": m150}
     except Exception as exc:
-        symbols, meta = fallback_universe()
-        meta["official_plus_error"] = str(exc)
-    (META / "breadth_universe.json").write_text(
-        json.dumps(meta | {"symbols": symbols}, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+        errors.append(f"PLUS:{exc}")
+        try:
+            symbols, meta = pykrx_universe()
+        except Exception as exc2:
+            errors.append(f"pykrx:{exc2}")
+            symbols, meta = cache_universe()
+    meta["fallback_errors"] = errors
+    (META / "breadth_universe.json").write_text(json.dumps(meta | {"symbols": symbols}, ensure_ascii=False, indent=2), encoding="utf-8")
     return symbols, meta
 
 
-def _download_close(symbols: list[str], start: str) -> pd.DataFrame:
+def _download_close_yf(symbols: list[str], start: str) -> pd.DataFrame:
     if not symbols:
         return pd.DataFrame(columns=["date", "ticker", "close"])
-    px = yf.download(
-        symbols,
-        start=start,
-        auto_adjust=False,
-        progress=False,
-        threads=True,
-        group_by="column",
-    )
+    px = yf.download(symbols, start=start, auto_adjust=False, progress=False, threads=True, group_by="column")
     if px.empty:
         return pd.DataFrame(columns=["date", "ticker", "close"])
     if isinstance(px.columns, pd.MultiIndex):
@@ -221,6 +198,22 @@ def _download_close(symbols: list[str], start: str) -> pd.DataFrame:
     return long.dropna(subset=["close"])
 
 
+def _download_close_fdr(symbol: str, start: str) -> pd.DataFrame:
+    code = symbol.split(".")[0]
+    try:
+        df = fdr.DataReader(code, start)
+    except Exception:
+        return pd.DataFrame(columns=["date", "ticker", "close"])
+    if df is None or df.empty or "Close" not in df.columns:
+        return pd.DataFrame(columns=["date", "ticker", "close"])
+    out = df[["Close"]].reset_index()
+    out.columns = ["date", "close"]
+    out["date"] = pd.to_datetime(out["date"])
+    out["close"] = pd.to_numeric(out["close"], errors="coerce")
+    out["ticker"] = symbol
+    return out[["date", "ticker", "close"]].dropna(subset=["close"])
+
+
 def alternate_exchange_symbol(symbol: str) -> str | None:
     m = re.fullmatch(r"(\d{6})\.(KS|KQ)", symbol)
     if not m:
@@ -230,39 +223,46 @@ def alternate_exchange_symbol(symbol: str) -> str | None:
 
 
 def collect_prices(symbols: list[str], start: str) -> tuple[pd.DataFrame, dict]:
-    prices = _download_close(symbols, start)
+    prices = _download_close_yf(symbols, start)
     present = set(prices["ticker"].astype(str).unique()) if not prices.empty else set()
-    missing = [s for s in symbols if s not in present]
+    missing_after_yf = [s for s in symbols if s not in present]
 
-    recovered = {}
-    retry_frames = []
-    for original in missing:
+    fdr_frames, fdr_recovered = [], []
+    for s in missing_after_yf:
+        trial = _download_close_fdr(s, start)
+        if not trial.empty:
+            fdr_frames.append(trial)
+            fdr_recovered.append(s)
+    if fdr_frames:
+        prices = pd.concat([prices, *fdr_frames], ignore_index=True).drop_duplicates(["date", "ticker"], keep="last")
+
+    present = set(prices["ticker"].astype(str).unique()) if not prices.empty else set()
+    missing_after_fdr = [s for s in symbols if s not in present]
+    alt_frames, alt_map = [], {}
+    for original in missing_after_fdr:
         alternate = alternate_exchange_symbol(original)
         if alternate is None:
             continue
-        trial = _download_close([alternate], start)
+        trial = _download_close_yf([alternate], start)
         if trial.empty:
             continue
-        trial = trial.copy()
-        trial["ticker"] = original
-        retry_frames.append(trial)
-        recovered[original] = alternate
-
-    if retry_frames:
-        prices = pd.concat([prices, *retry_frames], ignore_index=True)
-        prices = prices.drop_duplicates(["date", "ticker"], keep="last")
+        trial = trial.copy(); trial["ticker"] = original
+        alt_frames.append(trial); alt_map[original] = alternate
+    if alt_frames:
+        prices = pd.concat([prices, *alt_frames], ignore_index=True).drop_duplicates(["date", "ticker"], keep="last")
 
     final_present = set(prices["ticker"].astype(str).unique()) if not prices.empty else set()
     unresolved = [s for s in symbols if s not in final_present]
-    retry_meta = {
-        "bulk_missing_count": len(missing),
-        "bulk_missing_symbols": missing,
-        "alternate_suffix_recovered_count": len(recovered),
-        "alternate_suffix_map": recovered,
+    return prices, {
+        "bulk_missing_count": len(missing_after_yf),
+        "bulk_missing_symbols": missing_after_yf,
+        "fdr_recovered_count": len(fdr_recovered),
+        "fdr_recovered_symbols": fdr_recovered,
+        "alternate_suffix_recovered_count": len(alt_map),
+        "alternate_suffix_map": alt_map,
         "unresolved_count": len(unresolved),
         "unresolved_symbols": unresolved,
     }
-    return prices, retry_meta
 
 
 def compute_breadth(prices: pd.DataFrame) -> pd.DataFrame:
@@ -279,9 +279,7 @@ def compute_breadth(prices: pd.DataFrame) -> pd.DataFrame:
         parts.append(g[["date", "ticker", "eligible", "breakout"]])
     z = pd.concat(parts, ignore_index=True)
     eligible = z[z["eligible"]].copy()
-    agg = eligible.groupby("date").agg(
-        universe_count=("ticker", "nunique"), breakout_count=("breakout", "sum")
-    ).reset_index()
+    agg = eligible.groupby("date").agg(universe_count=("ticker", "nunique"), breakout_count=("breakout", "sum")).reset_index()
     agg["breadth_pct"] = agg["breakout_count"] / agg["universe_count"]
     agg["breadth_5dma"] = agg["breadth_pct"].rolling(5, min_periods=1).mean()
     agg["slope"] = agg["breadth_5dma"].diff()
@@ -316,9 +314,7 @@ def main() -> None:
         "price_retry": retry_meta,
         **meta,
     }
-    (META / "breadth_last_run.json").write_text(
-        json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    (META / "breadth_last_run.json").write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":
