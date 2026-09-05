@@ -30,6 +30,8 @@ EPS_SERIES = {
     "fin_eps": "금융", "ship_eps": "조선·기계", "plat_eps": "미디어·플랫폼",
 }
 
+DIRECT_KOREAN_RATE_IDS = {"macro_kofr", "macro_cd91", "macro_kr3y", "macro_kr10y"}
+
 FUND_KEYWORDS = {
     "semi_price": ["DDR", "NAND", "HBM"],
     "semi_spot_demand": ["현물 구매수요", "현물 거래", "spot demand"],
@@ -123,6 +125,18 @@ def match_fund(fund: pd.DataFrame, sid: str, sector: str) -> pd.DataFrame:
     return z[mask]
 
 
+def direct_rate_rows(macro: pd.DataFrame, sid: str) -> tuple[pd.DataFrame, int]:
+    z = macro[macro["series_id"].astype(str) == sid].copy() if not macro.empty else pd.DataFrame()
+    total = len(z)
+    if z.empty or sid not in DIRECT_KOREAN_RATE_IDS:
+        return z, total
+    if "source_type" not in z.columns:
+        return pd.DataFrame(columns=z.columns), total
+    source_type = z["source_type"].fillna("").astype(str).str.lower()
+    proxy_mask = source_type.str.contains("proxy", regex=False)
+    return z[~proxy_mask].copy(), total
+
+
 def main() -> None:
     reg = load_registry()
     price_cov = safe_csv(META / "price_coverage.csv")
@@ -158,11 +172,16 @@ def main() -> None:
                 ready = u >= 350 and obs >= 20; quality = "exact" if ready else "partial-universe"
                 reason = f"breadth rows={obs}; latest universe_count={u}; strict target=350"
         elif ds == "Macro_Market":
-            z = macro[macro["series_id"].astype(str) == sid] if not macro.empty else pd.DataFrame(); obs = len(z)
+            z, total_rows = direct_rate_rows(macro, sid); obs = len(z)
             if obs:
                 latest = str(z["obs_date"].max())
-                required = 90 if sid not in {"macro_kofr", "macro_cd91", "macro_kr3y", "macro_kr10y"} else 65
-                ready = obs >= required; quality = "proxy" if sid == "macro_kofr" else "direct/official-or-market"
+            required = 90 if sid not in DIRECT_KOREAN_RATE_IDS else 65
+            ready = obs >= required
+            if sid in DIRECT_KOREAN_RATE_IDS:
+                quality = "direct/official-or-market" if ready else ("proxy-only" if total_rows and obs == 0 else "partial-direct")
+                reason = f"{obs} direct stored observations ({total_rows} total rows); {required} direct observations required for 3-month direction"
+            elif obs:
+                quality = "direct/official-or-market"
                 reason = f"{obs} stored observations; {required} required for 3-month direction"
         elif sid == "eps_sector":
             obs = len(eps); latest = str(eps["obs_date"].max()) if obs else None
