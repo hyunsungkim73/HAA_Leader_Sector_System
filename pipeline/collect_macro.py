@@ -25,12 +25,24 @@ YF = {
     "macro_gold": ("GC=F", "Gold futures", "USD/oz"),
 }
 COLS = ["obs_date","series_id","category","indicator","value","unit","frequency","source","source_type","loaded_at","notes"]
+MIN_DAILY_OBS = 100
+BACKFILL_START = "2025-09-01"
 
 
 def read_old() -> pd.DataFrame:
     if OUT.exists() and OUT.stat().st_size:
         return pd.read_csv(OUT)
     return pd.DataFrame(columns=COLS)
+
+
+def start_for_series(old: pd.DataFrame, series_id: str) -> str:
+    z = old[old["series_id"].astype(str) == series_id] if not old.empty else pd.DataFrame()
+    if z.empty or len(z) < MIN_DAILY_OBS:
+        return BACKFILL_START
+    dates = pd.to_datetime(z["obs_date"], errors="coerce").dropna()
+    if dates.empty:
+        return BACKFILL_START
+    return (dates.max().date() - timedelta(days=14)).isoformat()
 
 
 def fred_series(series_id: str, fred_id: str, label: str, unit: str, start: str) -> pd.DataFrame:
@@ -61,8 +73,7 @@ def yf_series(series_id: str, ticker: str, label: str, unit: str, start: str) ->
         x.columns = [c[0] for c in x.columns]
     x = x.reset_index()
     date_col = "Date" if "Date" in x.columns else x.columns[0]
-    close_col = "Close"
-    out = pd.DataFrame({"obs_date": pd.to_datetime(x[date_col]).dt.strftime("%Y-%m-%d"), "value": pd.to_numeric(x[close_col], errors="coerce")})
+    out = pd.DataFrame({"obs_date": pd.to_datetime(x[date_col]).dt.strftime("%Y-%m-%d"), "value": pd.to_numeric(x["Close"], errors="coerce")})
     out = out.dropna(subset=["value"])
     out["series_id"] = series_id
     out["category"] = "방어자산"
@@ -78,20 +89,15 @@ def yf_series(series_id: str, ticker: str, label: str, unit: str, start: str) ->
 
 def main() -> None:
     old = read_old()
-    if old.empty:
-        start = "2024-01-01"
-    else:
-        dates = pd.to_datetime(old["obs_date"], errors="coerce").dropna()
-        start = (dates.max().date() - timedelta(days=14)).isoformat() if not dates.empty else "2024-01-01"
     frames = [old]
     for sid, (fid, label, unit) in FRED.items():
         try:
-            frames.append(fred_series(sid, fid, label, unit, start))
+            frames.append(fred_series(sid, fid, label, unit, start_for_series(old, sid)))
         except Exception as exc:
             print(f"FRED failed {sid}: {exc}")
     for sid, (ticker, label, unit) in YF.items():
         try:
-            frames.append(yf_series(sid, ticker, label, unit, start))
+            frames.append(yf_series(sid, ticker, label, unit, start_for_series(old, sid)))
         except Exception as exc:
             print(f"Yahoo failed {sid}: {exc}")
     z = pd.concat(frames, ignore_index=True)
