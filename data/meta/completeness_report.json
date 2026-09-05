@@ -1,19 +1,11 @@
 {
-  "generated_at_kst": "2026-09-06T06:44:02.385194+09:00",
+  "generated_at_kst": "2026-09-06T07:10:38.330754+09:00",
   "registered_series": 80,
-  "ready_series": 79,
-  "not_ready_series": 1,
-  "completion_pct": 98.75,
-  "strict_complete": false,
-  "not_ready": [
-    {
-      "series_id": "macro_kofr",
-      "dataset": "Macro_Market",
-      "sector": "방어자산",
-      "indicator": "KOFR",
-      "reason": "0 direct stored observations (2 total rows); 65 direct observations required for 3-month direction"
-    }
-  ],
+  "ready_series": 80,
+  "not_ready_series": 0,
+  "completion_pct": 100.0,
+  "strict_complete": true,
+  "not_ready": [],
   "dataset_summary": [
     {
       "dataset": "Account_Snapshots",
@@ -48,7 +40,7 @@
     {
       "dataset": "Macro_Market",
       "count": 11,
-      "sum": 10
+      "sum": 11
     },
     {
       "dataset": "Price_Daily",
