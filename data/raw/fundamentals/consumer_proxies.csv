@@ -1,0 +1,7 @@
+obs_date,sector,subsector,indicator,indicator_role,frequency,value,unit,direction,acceleration,source,source_type,is_proxy,confidence,loaded_at,notes
+2026-05-31,소비재,편의점,판매량/트래픽 proxy,leading,monthly,2.8,% YoY,,,MOTIR Major Retailers Sales Trends July 2026 table,official,True,high,2026-09-05T13:20:00+09:00,Convenience-store purchase-count growth; standardized channel traffic proxy
+2026-06-30,소비재,편의점,판매량/트래픽 proxy,leading,monthly,3.1,% YoY,,,MOTIR Major Retailers Sales Trends July 2026 table,official,True,high,2026-09-05T13:20:00+09:00,Convenience-store purchase-count growth; standardized channel traffic proxy
+2026-07-31,소비재,편의점,판매량/트래픽 proxy,leading,monthly,-0.5,% YoY,,,MOTIR Major Retailers Sales Trends July 2026 table,official,True,high,2026-09-05T13:20:00+09:00,Convenience-store purchase-count growth; standardized channel traffic proxy
+2026-05-31,소비재,편의점,객단가·ASP proxy,leading,monthly,3.1,% YoY,,,MOTIR Major Retailers Sales Trends July 2026 table,official,True,high,2026-09-05T13:20:00+09:00,Convenience-store purchase-ticket growth; standardized channel ticket proxy
+2026-06-30,소비재,편의점,객단가·ASP proxy,leading,monthly,2.0,% YoY,,,MOTIR Major Retailers Sales Trends July 2026 table,official,True,high,2026-09-05T13:20:00+09:00,Convenience-store purchase-ticket growth; standardized channel ticket proxy
+2026-07-31,소비재,편의점,객단가·ASP proxy,leading,monthly,1.6,% YoY,,,MOTIR Major Retailers Sales Trends July 2026 table,official,True,high,2026-09-05T13:20:00+09:00,Convenience-store purchase-ticket growth; standardized channel ticket proxy
