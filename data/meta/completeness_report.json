@@ -1,9 +1,9 @@
 {
-  "generated_at_kst": "2026-09-06T05:13:07.883234+09:00",
+  "generated_at_kst": "2026-09-06T05:16:19.812015+09:00",
   "registered_series": 80,
-  "ready_series": 57,
-  "not_ready_series": 23,
-  "completion_pct": 71.25,
+  "ready_series": 64,
+  "not_ready_series": 16,
+  "completion_pct": 80.0,
   "strict_complete": false,
   "not_ready": [
     {
@@ -19,41 +19,6 @@
       "sector": "바이오·헬스케어",
       "indicator": "CDMO/기술이전 신규수주·수주잔고",
       "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "fin_nim",
-      "dataset": "Fundamental",
-      "sector": "금융",
-      "indicator": "NIM",
-      "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "fin_loans",
-      "dataset": "Fundamental",
-      "sector": "금융",
-      "indicator": "대출성장률·대출믹스",
-      "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "fin_credit_cost",
-      "dataset": "Fundamental",
-      "sector": "금융",
-      "indicator": "대손비용률/충당금",
-      "reason": "matched native/proxy observations=2; 3 required for direction"
-    },
-    {
-      "series_id": "ship_price",
-      "dataset": "Fundamental",
-      "sector": "조선·기계",
-      "indicator": "신조선가",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
-    },
-    {
-      "series_id": "ship_orders",
-      "dataset": "Fundamental",
-      "sector": "조선·기계",
-      "indicator": "글로벌 신규수주",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "ship_mix",
@@ -75,20 +40,6 @@
       "sector": "철강·소재",
       "indicator": "제품-원재료 스프레드",
       "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "steel_inventory",
-      "dataset": "Fundamental",
-      "sector": "철강·소재",
-      "indicator": "중국 완제품/유통재고",
-      "reason": "matched native/proxy observations=0; 3 required for direction"
-    },
-    {
-      "series_id": "steel_output",
-      "dataset": "Fundamental",
-      "sector": "철강·소재",
-      "indicator": "중국 생산·가동률/감산",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "cons_inventory",
@@ -192,7 +143,7 @@
     {
       "dataset": "Fundamental",
       "count": 50,
-      "sum": 32
+      "sum": 39
     },
     {
       "dataset": "HAA_TIP",
