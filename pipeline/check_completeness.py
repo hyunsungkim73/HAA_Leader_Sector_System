@@ -43,13 +43,23 @@ def safe_csv(path: Path) -> pd.DataFrame:
 
 
 def fundamental_counts() -> pd.DataFrame:
-    f = safe_csv(RAW / "fundamentals" / "all_observations.csv")
-    if f.empty:
+    folder = RAW / "fundamentals"
+    frames = []
+    for path in sorted(folder.glob("*.csv")):
+        f = safe_csv(path)
+        if not f.empty and {"obs_date", "sector", "indicator"}.issubset(f.columns):
+            f["_source_file"] = path.name
+            frames.append(f)
+    if not frames:
         return pd.DataFrame()
-    for c in ["obs_date","sector","subsector","indicator"]:
+    f = pd.concat(frames, ignore_index=True, sort=False)
+    for c in ["obs_date","sector","subsector","indicator","source"]:
         if c not in f.columns:
             f[c] = ""
     f["obs_date"] = pd.to_datetime(f["obs_date"], errors="coerce")
+    # The all_observations seed and sector-specific files may overlap. Deduplicate semantic observations.
+    keys = ["obs_date","sector","subsector","indicator","source"]
+    f = f.drop_duplicates(keys, keep="last")
     return f
 
 
@@ -103,7 +113,6 @@ def main() -> None:
             obs = len(z)
             if obs:
                 latest = str(z["obs_date"].max())
-                # daily macro: five observations are enough for active ingestion; longer history remains desirable.
                 ready = obs >= 5
                 quality = "proxy" if sid == "macro_kofr" else "direct/official-or-market"
                 reason = f"{obs} stored observations"
@@ -121,9 +130,10 @@ def main() -> None:
             if not fund.empty:
                 sector = str(r.get("sector", ""))
                 indicator = str(r.get("indicator", ""))
-                # Flexible matching because historical seed indicators are sometimes more specific than registry labels.
-                z = fund[fund["sector"].astype(str).isin([sector, sector.replace("바이오·헬스케어","바이오·헬스")])]
-                tokens = [t for t in indicator.replace("·","/").replace("/"," ").split() if len(t) >= 2]
+                sector_aliases = [sector]
+                if sector == "바이오·헬스케어": sector_aliases.append("바이오·헬스")
+                z = fund[fund["sector"].astype(str).isin(sector_aliases)]
+                tokens = [t for t in indicator.replace("·","/").replace("/"," ").replace("-"," ").split() if len(t) >= 2]
                 if tokens:
                     mask = pd.Series(False, index=z.index)
                     for t in tokens:
@@ -131,8 +141,8 @@ def main() -> None:
                     z = z[mask]
                 obs = len(z)
                 if obs:
-                    latest = z["obs_date"].max().strftime("%Y-%m-%d") if pd.notna(z["obs_date"].max()) else None
-                # Direction requires >=3 native-frequency observations, but an established standardized proxy also counts for pipeline completeness.
+                    latest_dt = z["obs_date"].max()
+                    latest = latest_dt.strftime("%Y-%m-%d") if pd.notna(latest_dt) else None
                 status = str(r.get("status", ""))
                 standardized_proxy = ("proxy_active" in status) or ("active_partial_history" in status)
                 ready = obs >= 3 or (obs >= 1 and standardized_proxy)
