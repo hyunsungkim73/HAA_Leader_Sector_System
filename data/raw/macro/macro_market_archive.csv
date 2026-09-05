@@ -95,17 +95,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-18,macro_cd91,방어자산,CD91일,2.93,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T05:54:04.723470+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-08-19,macro_cd91,방어자산,CD91일,2.94,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T05:54:04.723470+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-08-20,macro_cd91,방어자산,CD91일,2.94,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T05:54:04.723470+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-21,macro_cd91,방어자산,CD91일,2.95,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-24,macro_cd91,방어자산,CD91일,2.96,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-25,macro_cd91,방어자산,CD91일,2.95,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-26,macro_cd91,방어자산,CD91일,2.97,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-27,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-28,macro_cd91,방어자산,CD91일,3.13,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-31,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-01,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-02,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-03,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-04,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:36:22.712493+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-21,macro_cd91,방어자산,CD91일,2.95,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-24,macro_cd91,방어자산,CD91일,2.96,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-25,macro_cd91,방어자산,CD91일,2.95,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-26,macro_cd91,방어자산,CD91일,2.97,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-27,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-28,macro_cd91,방어자산,CD91일,3.13,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-31,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-01,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-02,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-03,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-04,macro_cd91,방어자산,CD91일,3.12,%,daily,BOK ECOS 817Y002/010502000,official,2026-09-06T06:38:54.524735+09:00,official ECOS daily market-rate backfill/incremental collector
 2025-09-02,macro_dxy,방어자산,DXY,98.4000015258789,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_dxy,방어자산,DXY,98.13999938964844,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_dxy,방어자산,DXY,98.3499984741211,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
@@ -350,17 +350,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-18,macro_dxy,방어자산,DXY,99.6500015258789,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
 2026-08-19,macro_dxy,방어자산,DXY,98.83000183105467,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
 2026-08-20,macro_dxy,방어자산,DXY,98.9000015258789,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
-2026-08-21,macro_dxy,방어자산,DXY,98.80000305175781,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-08-24,macro_dxy,방어자산,DXY,99.0,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-08-25,macro_dxy,방어자산,DXY,98.91999816894531,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-08-26,macro_dxy,방어자산,DXY,99.16999816894531,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-08-27,macro_dxy,방어자산,DXY,99.16000366210938,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-08-28,macro_dxy,방어자산,DXY,99.69999694824219,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-08-31,macro_dxy,방어자산,DXY,99.43000030517578,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-09-01,macro_dxy,방어자산,DXY,99.66999816894531,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-09-02,macro_dxy,방어자산,DXY,99.55999755859375,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-09-03,macro_dxy,방어자산,DXY,99.0,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
-2026-09-04,macro_dxy,방어자산,DXY,99.16000366210938,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:36:18.304100+09:00,automated GitHub Actions incremental collector
+2026-08-21,macro_dxy,방어자산,DXY,98.80000305175781,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-08-24,macro_dxy,방어자산,DXY,99.0,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-08-25,macro_dxy,방어자산,DXY,98.91999816894531,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-08-26,macro_dxy,방어자산,DXY,99.16999816894531,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-08-27,macro_dxy,방어자산,DXY,99.16000366210938,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-08-28,macro_dxy,방어자산,DXY,99.69999694824219,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-08-31,macro_dxy,방어자산,DXY,99.43000030517578,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-09-01,macro_dxy,방어자산,DXY,99.66999816894531,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-09-02,macro_dxy,방어자산,DXY,99.55999755859375,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-09-03,macro_dxy,방어자산,DXY,99.0,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
+2026-09-04,macro_dxy,방어자산,DXY,99.16000366210938,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-06T06:38:50.472097+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_gold,방어자산,Gold futures,3549.39990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_gold,방어자산,Gold futures,3593.199951171875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_gold,방어자산,Gold futures,3565.800048828125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
@@ -605,17 +605,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-18,macro_gold,방어자산,Gold futures,4366.0,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
 2026-08-19,macro_gold,방어자산,Gold futures,4489.39990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
 2026-08-20,macro_gold,방어자산,Gold futures,4516.2998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
-2026-08-21,macro_gold,방어자산,Gold futures,4624.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-08-24,macro_gold,방어자산,Gold futures,4640.7998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-08-25,macro_gold,방어자산,Gold futures,4638.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-08-26,macro_gold,방어자산,Gold futures,4598.2001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-08-27,macro_gold,방어자산,Gold futures,4609.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-08-28,macro_gold,방어자산,Gold futures,4478.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-08-31,macro_gold,방어자산,Gold futures,4431.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-09-01,macro_gold,방어자산,Gold futures,4348.0,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-09-02,macro_gold,방어자산,Gold futures,4366.2998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-09-03,macro_gold,방어자산,Gold futures,4491.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
-2026-09-04,macro_gold,방어자산,Gold futures,4429.7998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:36:18.389334+09:00,automated GitHub Actions incremental collector
+2026-08-21,macro_gold,방어자산,Gold futures,4624.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-08-24,macro_gold,방어자산,Gold futures,4640.7998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-08-25,macro_gold,방어자산,Gold futures,4638.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-08-26,macro_gold,방어자산,Gold futures,4598.2001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-08-27,macro_gold,방어자산,Gold futures,4609.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-08-28,macro_gold,방어자산,Gold futures,4478.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-08-31,macro_gold,방어자산,Gold futures,4431.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-09-01,macro_gold,방어자산,Gold futures,4348.0,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-09-02,macro_gold,방어자산,Gold futures,4366.2998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-09-03,macro_gold,방어자산,Gold futures,4491.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
+2026-09-04,macro_gold,방어자산,Gold futures,4429.7998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-06T06:38:50.873547+09:00,automated GitHub Actions incremental collector
 2026-09-03,macro_kofr,방어자산,KOFR proxy ETF NAV,106364.42,KRW NAV,daily,RISE KOFR금리액티브 official product page,official proxy,2026-09-05T11:50:00+09:00,Direct KOFR rate not exposed; ETF NAV proxy
 2026-09-04,macro_kofr,방어자산,KOFR proxy ETF NAV,106374.0,KRW NAV,daily,RISE KOFR금리액티브 official product page,official proxy,2026-09-05T11:50:00+09:00,Direct KOFR rate not exposed; ETF NAV proxy
 2026-04-01,macro_kr10y,방어자산,한국 국고10년,3.689,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T05:53:58.469236+09:00,official ECOS daily market-rate backfill/incremental collector
@@ -714,17 +714,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-18,macro_kr10y,방어자산,한국 국고10년,4.382,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T05:53:58.469236+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-08-19,macro_kr10y,방어자산,한국 국고10년,4.337,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T05:53:58.469236+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-08-20,macro_kr10y,방어자산,한국 국고10년,4.323,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T05:53:58.469236+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-21,macro_kr10y,방어자산,한국 국고10년,4.376,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-24,macro_kr10y,방어자산,한국 국고10년,4.335,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-25,macro_kr10y,방어자산,한국 국고10년,4.32,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-26,macro_kr10y,방어자산,한국 국고10년,4.288,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-27,macro_kr10y,방어자산,한국 국고10년,4.238,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-28,macro_kr10y,방어자산,한국 국고10년,4.284,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-31,macro_kr10y,방어자산,한국 국고10년,4.313,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-01,macro_kr10y,방어자산,한국 국고10년,4.371,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-02,macro_kr10y,방어자산,한국 국고10년,4.418,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-03,macro_kr10y,방어자산,한국 국고10년,4.367,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-04,macro_kr10y,방어자산,한국 국고10년,4.36,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:36:21.269034+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-21,macro_kr10y,방어자산,한국 국고10년,4.376,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-24,macro_kr10y,방어자산,한국 국고10년,4.335,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-25,macro_kr10y,방어자산,한국 국고10년,4.32,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-26,macro_kr10y,방어자산,한국 국고10년,4.288,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-27,macro_kr10y,방어자산,한국 국고10년,4.238,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-28,macro_kr10y,방어자산,한국 국고10년,4.284,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-31,macro_kr10y,방어자산,한국 국고10년,4.313,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-01,macro_kr10y,방어자산,한국 국고10년,4.371,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-02,macro_kr10y,방어자산,한국 국고10년,4.418,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-03,macro_kr10y,방어자산,한국 국고10년,4.367,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-04,macro_kr10y,방어자산,한국 국고10년,4.36,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T06:38:53.396627+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-04-01,macro_kr3y,방어자산,한국 국고3년,3.37,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-04-02,macro_kr3y,방어자산,한국 국고3년,3.477,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-04-03,macro_kr3y,방어자산,한국 국고3년,3.448,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
@@ -821,17 +821,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-18,macro_kr3y,방어자산,한국 국고3년,3.847,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-08-19,macro_kr3y,방어자산,한국 국고3년,3.798,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-08-20,macro_kr3y,방어자산,한국 국고3년,3.811,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-21,macro_kr3y,방어자산,한국 국고3년,3.854,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-24,macro_kr3y,방어자산,한국 국고3년,3.836,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-25,macro_kr3y,방어자산,한국 국고3년,3.83,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-26,macro_kr3y,방어자산,한국 국고3년,3.816,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-27,macro_kr3y,방어자산,한국 국고3년,3.755,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-28,macro_kr3y,방어자산,한국 국고3년,3.788,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-08-31,macro_kr3y,방어자산,한국 국고3년,3.838,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-01,macro_kr3y,방어자산,한국 국고3년,3.878,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-02,macro_kr3y,방어자산,한국 국고3년,3.93,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-03,macro_kr3y,방어자산,한국 국고3년,3.888,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-04,macro_kr3y,방어자산,한국 국고3년,3.884,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:36:20.011487+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-21,macro_kr3y,방어자산,한국 국고3년,3.854,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-24,macro_kr3y,방어자산,한국 국고3년,3.836,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-25,macro_kr3y,방어자산,한국 국고3년,3.83,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-26,macro_kr3y,방어자산,한국 국고3년,3.816,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-27,macro_kr3y,방어자산,한국 국고3년,3.755,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-28,macro_kr3y,방어자산,한국 국고3년,3.788,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-08-31,macro_kr3y,방어자산,한국 국고3년,3.838,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-01,macro_kr3y,방어자산,한국 국고3년,3.878,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-02,macro_kr3y,방어자산,한국 국고3년,3.93,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-03,macro_kr3y,방어자산,한국 국고3년,3.888,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-04,macro_kr3y,방어자산,한국 국고3년,3.884,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T06:38:52.070645+09:00,official ECOS daily market-rate backfill/incremental collector
 2025-09-02,macro_real10y,방어자산,미국 10년 실질금리,1.87,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_real10y,방어자산,미국 10년 실질금리,1.82,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_real10y,방어자산,미국 10년 실질금리,1.79,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
@@ -1074,17 +1074,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-17,macro_real10y,방어자산,미국 10년 실질금리,2.44,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
 2026-08-18,macro_real10y,방어자산,미국 10년 실질금리,2.41,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
 2026-08-19,macro_real10y,방어자산,미국 10년 실질금리,2.35,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
-2026-08-20,macro_real10y,방어자산,미국 10년 실질금리,2.35,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-08-21,macro_real10y,방어자산,미국 10년 실질금리,2.4,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-08-24,macro_real10y,방어자산,미국 10년 실질금리,2.38,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-08-25,macro_real10y,방어자산,미국 10년 실질금리,2.32,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-08-26,macro_real10y,방어자산,미국 10년 실질금리,2.34,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-08-27,macro_real10y,방어자산,미국 10년 실질금리,2.34,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-08-28,macro_real10y,방어자산,미국 10년 실질금리,2.42,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-08-31,macro_real10y,방어자산,미국 10년 실질금리,2.44,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-09-01,macro_real10y,방어자산,미국 10년 실질금리,2.44,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-09-02,macro_real10y,방어자산,미국 10년 실질금리,2.45,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
-2026-09-03,macro_real10y,방어자산,미국 10년 실질금리,2.42,%,daily,FRED DFII10,official,2026-09-06T06:36:18.040637+09:00,automated GitHub Actions incremental collector
+2026-08-20,macro_real10y,방어자산,미국 10년 실질금리,2.35,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-08-21,macro_real10y,방어자산,미국 10년 실질금리,2.4,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-08-24,macro_real10y,방어자산,미국 10년 실질금리,2.38,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-08-25,macro_real10y,방어자산,미국 10년 실질금리,2.32,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-08-26,macro_real10y,방어자산,미국 10년 실질금리,2.34,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-08-27,macro_real10y,방어자산,미국 10년 실질금리,2.34,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-08-28,macro_real10y,방어자산,미국 10년 실질금리,2.42,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-08-31,macro_real10y,방어자산,미국 10년 실질금리,2.44,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-09-01,macro_real10y,방어자산,미국 10년 실질금리,2.44,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-09-02,macro_real10y,방어자산,미국 10년 실질금리,2.45,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
+2026-09-03,macro_real10y,방어자산,미국 10년 실질금리,2.42,%,daily,FRED DFII10,official,2026-09-06T06:38:49.376774+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_us10y,방어자산,미국 10년 국채금리,4.28,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_us10y,방어자산,미국 10년 국채금리,4.22,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_us10y,방어자산,미국 10년 국채금리,4.17,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
@@ -1327,17 +1327,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-17,macro_us10y,방어자산,미국 10년 국채금리,4.72,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
 2026-08-18,macro_us10y,방어자산,미국 10년 국채금리,4.71,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
 2026-08-19,macro_us10y,방어자산,미국 10년 국채금리,4.65,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
-2026-08-20,macro_us10y,방어자산,미국 10년 국채금리,4.69,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-08-21,macro_us10y,방어자산,미국 10년 국채금리,4.74,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-08-24,macro_us10y,방어자산,미국 10년 국채금리,4.7,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-08-25,macro_us10y,방어자산,미국 10년 국채금리,4.64,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-08-26,macro_us10y,방어자산,미국 10년 국채금리,4.66,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-08-27,macro_us10y,방어자산,미국 10년 국채금리,4.67,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-08-28,macro_us10y,방어자산,미국 10년 국채금리,4.73,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-08-31,macro_us10y,방어자산,미국 10년 국채금리,4.75,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-09-01,macro_us10y,방어자산,미국 10년 국채금리,4.79,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-09-02,macro_us10y,방어자산,미국 10년 국채금리,4.79,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
-2026-09-03,macro_us10y,방어자산,미국 10년 국채금리,4.77,%,daily,FRED DGS10,official,2026-09-06T06:36:17.847251+09:00,automated GitHub Actions incremental collector
+2026-08-20,macro_us10y,방어자산,미국 10년 국채금리,4.69,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-08-21,macro_us10y,방어자산,미국 10년 국채금리,4.74,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-08-24,macro_us10y,방어자산,미국 10년 국채금리,4.7,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-08-25,macro_us10y,방어자산,미국 10년 국채금리,4.64,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-08-26,macro_us10y,방어자산,미국 10년 국채금리,4.66,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-08-27,macro_us10y,방어자산,미국 10년 국채금리,4.67,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-08-28,macro_us10y,방어자산,미국 10년 국채금리,4.73,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-08-31,macro_us10y,방어자산,미국 10년 국채금리,4.75,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-09-01,macro_us10y,방어자산,미국 10년 국채금리,4.79,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-09-02,macro_us10y,방어자산,미국 10년 국채금리,4.79,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
+2026-09-03,macro_us10y,방어자산,미국 10년 국채금리,4.77,%,daily,FRED DGS10,official,2026-09-06T06:38:46.208296+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_us2y,방어자산,미국 2년 국채금리,3.66,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_us2y,방어자산,미국 2년 국채금리,3.61,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_us2y,방어자산,미국 2년 국채금리,3.59,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
@@ -1580,17 +1580,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-17,macro_us2y,방어자산,미국 2년 국채금리,4.19,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
 2026-08-18,macro_us2y,방어자산,미국 2년 국채금리,4.19,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
 2026-08-19,macro_us2y,방어자산,미국 2년 국채금리,4.19,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
-2026-08-20,macro_us2y,방어자산,미국 2년 국채금리,4.19,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-08-21,macro_us2y,방어자산,미국 2년 국채금리,4.24,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-08-24,macro_us2y,방어자산,미국 2년 국채금리,4.24,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-08-25,macro_us2y,방어자산,미국 2년 국채금리,4.17,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-08-26,macro_us2y,방어자산,미국 2년 국채금리,4.19,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-08-27,macro_us2y,방어자산,미국 2년 국채금리,4.2,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-08-28,macro_us2y,방어자산,미국 2년 국채금리,4.34,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-08-31,macro_us2y,방어자산,미국 2년 국채금리,4.34,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-09-01,macro_us2y,방어자산,미국 2년 국채금리,4.39,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-09-02,macro_us2y,방어자산,미국 2년 국채금리,4.39,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
-2026-09-03,macro_us2y,방어자산,미국 2년 국채금리,4.34,%,daily,FRED DGS2,official,2026-09-06T06:36:17.799970+09:00,automated GitHub Actions incremental collector
+2026-08-20,macro_us2y,방어자산,미국 2년 국채금리,4.19,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-08-21,macro_us2y,방어자산,미국 2년 국채금리,4.24,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-08-24,macro_us2y,방어자산,미국 2년 국채금리,4.24,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-08-25,macro_us2y,방어자산,미국 2년 국채금리,4.17,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-08-26,macro_us2y,방어자산,미국 2년 국채금리,4.19,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-08-27,macro_us2y,방어자산,미국 2년 국채금리,4.2,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-08-28,macro_us2y,방어자산,미국 2년 국채금리,4.34,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-08-31,macro_us2y,방어자산,미국 2년 국채금리,4.34,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-09-01,macro_us2y,방어자산,미국 2년 국채금리,4.39,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-09-02,macro_us2y,방어자산,미국 2년 국채금리,4.39,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
+2026-09-03,macro_us2y,방어자산,미국 2년 국채금리,4.34,%,daily,FRED DGS2,official,2026-09-06T06:38:44.965095+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_us30y,방어자산,미국 30년 국채금리,4.97,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_us30y,방어자산,미국 30년 국채금리,4.9,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_us30y,방어자산,미국 30년 국채금리,4.86,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
@@ -1833,17 +1833,17 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-17,macro_us30y,방어자산,미국 30년 국채금리,5.31,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
 2026-08-18,macro_us30y,방어자산,미국 30년 국채금리,5.28,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
 2026-08-19,macro_us30y,방어자산,미국 30년 국채금리,5.19,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
-2026-08-20,macro_us30y,방어자산,미국 30년 국채금리,5.23,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-08-21,macro_us30y,방어자산,미국 30년 국채금리,5.27,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-08-24,macro_us30y,방어자산,미국 30년 국채금리,5.23,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-08-25,macro_us30y,방어자산,미국 30년 국채금리,5.17,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-08-26,macro_us30y,방어자산,미국 30년 국채금리,5.18,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-08-27,macro_us30y,방어자산,미국 30년 국채금리,5.19,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-08-28,macro_us30y,방어자산,미국 30년 국채금리,5.22,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-08-31,macro_us30y,방어자산,미국 30년 국채금리,5.25,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-09-01,macro_us30y,방어자산,미국 30년 국채금리,5.27,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-09-02,macro_us30y,방어자산,미국 30년 국채금리,5.27,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
-2026-09-03,macro_us30y,방어자산,미국 30년 국채금리,5.25,%,daily,FRED DGS30,official,2026-09-06T06:36:17.893351+09:00,automated GitHub Actions incremental collector
+2026-08-20,macro_us30y,방어자산,미국 30년 국채금리,5.23,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-08-21,macro_us30y,방어자산,미국 30년 국채금리,5.27,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-08-24,macro_us30y,방어자산,미국 30년 국채금리,5.23,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-08-25,macro_us30y,방어자산,미국 30년 국채금리,5.17,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-08-26,macro_us30y,방어자산,미국 30년 국채금리,5.18,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-08-27,macro_us30y,방어자산,미국 30년 국채금리,5.19,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-08-28,macro_us30y,방어자산,미국 30년 국채금리,5.22,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-08-31,macro_us30y,방어자산,미국 30년 국채금리,5.25,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-09-01,macro_us30y,방어자산,미국 30년 국채금리,5.27,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-09-02,macro_us30y,방어자산,미국 30년 국채금리,5.27,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
+2026-09-03,macro_us30y,방어자산,미국 30년 국채금리,5.25,%,daily,FRED DGS30,official,2026-09-06T06:38:47.220510+09:00,automated GitHub Actions incremental collector
 2025-09-01,macro_usdkrw,방어자산,USD/KRW,1388.8399658203125,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_usdkrw,방어자산,USD/KRW,1392.93994140625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_usdkrw,방어자산,USD/KRW,1394.5699462890625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
@@ -2097,14 +2097,14 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-08-19,macro_usdkrw,방어자산,USD/KRW,1413.5799560546875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
 2026-08-20,macro_usdkrw,방어자산,USD/KRW,1389.4000244140625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
 2026-08-21,macro_usdkrw,방어자산,USD/KRW,1390.7900390625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
-2026-08-24,macro_usdkrw,방어자산,USD/KRW,1384.97998046875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-08-25,macro_usdkrw,방어자산,USD/KRW,1380.760009765625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-08-26,macro_usdkrw,방어자산,USD/KRW,1381.489990234375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-08-27,macro_usdkrw,방어자산,USD/KRW,1383.489990234375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-08-28,macro_usdkrw,방어자산,USD/KRW,1380.449951171875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-08-31,macro_usdkrw,방어자산,USD/KRW,1377.1099853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-09-01,macro_usdkrw,방어자산,USD/KRW,1366.6199951171875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-09-02,macro_usdkrw,방어자산,USD/KRW,1372.8599853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-09-03,macro_usdkrw,방어자산,USD/KRW,1358.3900146484375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-09-04,macro_usdkrw,방어자산,USD/KRW,1355.4100341796875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
-2026-09-05,macro_usdkrw,방어자산,USD/KRW,1351.0999755859375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:36:18.213997+09:00,automated GitHub Actions incremental collector
+2026-08-24,macro_usdkrw,방어자산,USD/KRW,1384.97998046875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-08-25,macro_usdkrw,방어자산,USD/KRW,1380.760009765625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-08-26,macro_usdkrw,방어자산,USD/KRW,1381.489990234375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-08-27,macro_usdkrw,방어자산,USD/KRW,1383.489990234375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-08-28,macro_usdkrw,방어자산,USD/KRW,1380.449951171875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-08-31,macro_usdkrw,방어자산,USD/KRW,1377.1099853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-09-01,macro_usdkrw,방어자산,USD/KRW,1366.6199951171875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-09-02,macro_usdkrw,방어자산,USD/KRW,1372.8599853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-09-03,macro_usdkrw,방어자산,USD/KRW,1358.3900146484375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-09-04,macro_usdkrw,방어자산,USD/KRW,1355.4100341796875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
+2026-09-05,macro_usdkrw,방어자산,USD/KRW,1351.0999755859375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-06T06:38:50.047124+09:00,automated GitHub Actions incremental collector
