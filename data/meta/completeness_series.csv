@@ -16,8 +16,8 @@ tip_tr,HAA_TIP,HAA,TIP total return,672,2026-09-04,True,market total-return prox
 bb350,Breadth,시장,"KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",269,2026-09-04,False,partial-universe,breadth rows=269; latest universe_count=343; strict target=350
 eps_sector,EPS_Revisions,전섹터,EPS revision,30,2026-09-03,True,proxy-public,"market weeks=6; sector observations={'반도체/IT': 4, '자동차': 4, '2차전지': 3, '바이오·헬스케어': 3, '금융': 3, '조선·기계': 3, '미디어·플랫폼': 3}; need >=3 each"
 price_kospi200,Price_Daily,시장,close,648,2026-09-04,True,direct/market,648 daily observations; 220 required
-semi_price,Fundamental,반도체/IT,DRAM/NAND/HBM 현물·계약가격,8,2026-09-04,True,direct-or-standardized-proxy,matched native/proxy observations=8; 3 required for direction
-semi_spot_demand,Fundamental,반도체/IT,현물 구매수요/거래강도,1,2026-09-02,False,partial,matched native/proxy observations=1; 3 required for direction
+semi_price,Fundamental,반도체/IT,DRAM/NAND/HBM 현물·계약가격,9,2026-09-04,True,direct-or-standardized-proxy,matched native/proxy observations=9; 3 required for direction
+semi_spot_demand,Fundamental,반도체/IT,현물 구매수요/거래강도,4,2026-09-02,True,direct-or-standardized-proxy,matched native/proxy observations=4; 3 required for direction
 semi_inventory,Fundamental,반도체/IT,재고일수·채널재고,5,2026-07-29,True,direct-or-standardized-proxy,matched native/proxy observations=5; 3 required for direction
 semi_supply_capex,Fundamental,반도체/IT,가동률·공급증가·CAPEX,3,2026-06-01,True,direct-or-standardized-proxy,matched native/proxy observations=3; 3 required for direction
 semi_eps,Fundamental,반도체/IT,EPS 수정,4,2026-08-20,True,proxy-public,sector EPS observations=4; 3 required

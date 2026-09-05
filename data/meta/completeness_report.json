@@ -1,9 +1,9 @@
 {
-  "generated_at_kst": "2026-09-05T22:48:03.176003+09:00",
+  "generated_at_kst": "2026-09-06T01:41:45.739936+09:00",
   "registered_series": 80,
-  "ready_series": 56,
-  "not_ready_series": 24,
-  "completion_pct": 70.0,
+  "ready_series": 57,
+  "not_ready_series": 23,
+  "completion_pct": 71.25,
   "strict_complete": false,
   "not_ready": [
     {
@@ -12,13 +12,6 @@
       "sector": "시장",
       "indicator": "KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",
       "reason": "breadth rows=269; latest universe_count=343; strict target=350"
-    },
-    {
-      "series_id": "semi_spot_demand",
-      "dataset": "Fundamental",
-      "sector": "반도체/IT",
-      "indicator": "현물 구매수요/거래강도",
-      "reason": "matched native/proxy observations=1; 3 required for direction"
     },
     {
       "series_id": "bio_orders",
@@ -199,7 +192,7 @@
     {
       "dataset": "Fundamental",
       "count": 50,
-      "sum": 31
+      "sum": 32
     },
     {
       "dataset": "HAA_TIP",

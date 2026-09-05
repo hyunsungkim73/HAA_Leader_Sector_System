@@ -1,9 +1,9 @@
 {
-  "generated_at_kst": "2026-09-05T22:48:02.460108+09:00",
-  "start_requested": "2025-07-02",
+  "generated_at_kst": "2026-09-06T01:41:45.050769+09:00",
+  "start_requested": "2025-07-03",
   "symbol_count": 349,
-  "price_rows": 98784,
-  "breadth_rows": 269,
+  "price_rows": 98441,
+  "breadth_rows": 268,
   "latest": {
     "date": "2026-09-04",
     "universe_count": 343,
