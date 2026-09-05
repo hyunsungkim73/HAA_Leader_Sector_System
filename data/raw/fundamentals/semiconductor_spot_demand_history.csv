@@ -1,0 +1,4 @@
+obs_date,sector,subsector,indicator,indicator_role,frequency,value,unit,direction,acceleration,source,source_type,is_proxy,confidence,loaded_at,notes
+2026-07-08,반도체/IT,메모리,현물 거래활동 정성점수,leading,weekly,-1,score(-2~2),,,TrendForce DRAM Market Bulletin Jul. 8 2026,industry,True,medium,2026-09-06T00:53:34+09:00,"Muted spot market; buyers remained on sidelines and transaction volumes were limited"
+2026-07-22,반도체/IT,메모리,현물 거래활동 정성점수,leading,weekly,-1,score(-2~2),,,TrendForce DRAM Market Bulletin Jul. 22 2026,industry,True,medium,2026-09-06T00:53:34+09:00,"DDR4 inquiries were concentrated but thin; buyers resisted chasing prices and transactions stayed light"
+2026-08-19,반도체/IT,메모리,현물 거래활동 정성점수,leading,weekly,-1,score(-2~2),,,TrendForce DRAM Market Bulletin Aug. 19 2026,industry,True,medium,2026-09-06T00:53:34+09:00,"High prices continued to suppress spot demand and actual transactions remained limited"
