@@ -43,14 +43,52 @@ def extract_asof(page_text: str) -> str:
     return datetime.now(KST).date().isoformat()
 
 
-def six_digit_codes_from_frame(df: pd.DataFrame) -> list[str]:
-    codes = []
-    for col in df.columns:
-        for v in df[col].astype(str):
-            s = v.strip().replace(".0", "")
-            if re.fullmatch(r"\d{6}", s):
-                codes.append(s)
-    return list(dict.fromkeys(codes))
+def normalize_six_digit_code(value: object) -> str | None:
+    s = str(value).strip()
+    if s.endswith(".0"):
+        s = s[:-2]
+    return s if re.fullmatch(r"\d{6}", s) else None
+
+
+def code_column_candidates(frames: list[pd.DataFrame], etf_ticker: str | None) -> list[dict]:
+    candidates = []
+    for sheet_index, df in enumerate(frames):
+        for col in df.columns:
+            raw = [normalize_six_digit_code(v) for v in df[col].tolist()]
+            codes = list(dict.fromkeys([x for x in raw if x]))
+            if etf_ticker in codes:
+                codes.remove(etf_ticker)
+            if not codes:
+                continue
+            non_null = int(df[col].notna().sum())
+            ratio = len(codes) / max(non_null, 1)
+            candidates.append({
+                "sheet": sheet_index,
+                "column": str(col),
+                "count": len(codes),
+                "ratio": ratio,
+                "codes": codes,
+            })
+    return candidates
+
+
+def choose_stock_codes(frames: list[pd.DataFrame], expected: int, etf_ticker: str | None) -> tuple[list[str], list[dict]]:
+    candidates = code_column_candidates(frames, etf_ticker)
+    exact = [c for c in candidates if c["count"] == expected]
+    if exact:
+        exact.sort(key=lambda c: c["ratio"], reverse=True)
+        return exact[0]["codes"], candidates
+
+    # Some workbooks can carry one header/footer value that is also six digits. Prefer the
+    # column closest to the target only when it has strong code-column density, then trim
+    # only a leading ETF self-ticker already handled above. Never silently pad a universe.
+    dense = [c for c in candidates if c["ratio"] >= 0.80]
+    if dense:
+        dense.sort(key=lambda c: (abs(c["count"] - expected), -c["ratio"]))
+        best = dense[0]
+        if best["count"] == expected:
+            return best["codes"], candidates
+    return [], candidates
 
 
 def download_plus_basket(n: str, title: str, suffix: str, expected: int) -> tuple[list[str], dict]:
@@ -79,13 +117,9 @@ def download_plus_basket(n: str, title: str, suffix: str, expected: int) -> tupl
             errors.append(f"{engine}:{exc}")
     if not frames:
         raise RuntimeError("PLUS Excel parse failed: " + " | ".join(errors))
-    codes = []
-    for df in frames:
-        codes.extend(six_digit_codes_from_frame(df))
-    codes = list(dict.fromkeys(codes))
+
     etf_ticker = {"006184": "152100", "006318": "301400"}.get(n)
-    if etf_ticker in codes:
-        codes.remove(etf_ticker)
+    codes, candidates = choose_stock_codes(frames, expected, etf_ticker)
     if len(codes) != expected:
         m = re.search(r"(?:const|let|var)\s+etfPdfList\s*=\s*(\[.*?\]);", page.text, re.S)
         embedded = []
@@ -95,17 +129,27 @@ def download_plus_basket(n: str, title: str, suffix: str, expected: int) -> tupl
                 embedded = list(dict.fromkeys([x for x in embedded if re.fullmatch(r"\d{6}", x)]))
             except Exception:
                 pass
+        diagnostic = sorted(
+            [{k: v for k, v in c.items() if k != "codes"} for c in candidates],
+            key=lambda x: abs(x["count"] - expected),
+        )[:12]
         raise RuntimeError(
-            f"PLUS Excel stock count mismatch {title}: expected={expected}, got={len(codes)}, "
-            f"embedded={len(embedded)}, asof={asof}, codes_head={codes[:12]}"
+            f"PLUS Excel stock code-column mismatch {title}: expected={expected}, selected={len(codes)}, "
+            f"embedded={len(embedded)}, asof={asof}, candidate_columns={diagnostic}"
         )
+
     symbols = [f"{c}.{suffix}" for c in codes]
+    selected_meta = next(
+        ({k: v for k, v in c.items() if k != "codes"} for c in candidates if c["codes"] == codes),
+        None,
+    )
     return symbols, {
         "product_url": product_url,
         "excel_url": excel_url,
         "asof": asof,
         "stock_rows": len(codes),
         "payload_bytes": len(r.content),
+        "selected_code_column": selected_meta,
     }
 
 
