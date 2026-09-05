@@ -7,10 +7,14 @@ on:
       - main
     paths:
       - 'pipeline/**'
+      - 'data/raw/fundamentals/**'
+      - 'data/meta/series_registry_min.json'
       - '.github/workflows/update-investment-data.yml'
   pull_request:
     paths:
       - 'pipeline/**'
+      - 'data/raw/fundamentals/**'
+      - 'data/meta/series_registry_min.json'
       - '.github/workflows/update-investment-data.yml'
   schedule:
     # 18:40 KST on weekdays = 09:40 UTC
@@ -57,6 +61,36 @@ jobs:
       - name: Check completeness
         run: python pipeline/check_completeness.py
 
+      - name: Prevent completeness regression
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          current = json.loads(Path('data/meta/completeness_report.json').read_text(encoding='utf-8'))
+          try:
+              base_text = subprocess.check_output(
+                  ['git', 'show', 'origin/main:data/meta/completeness_report.json'],
+                  text=True,
+              )
+              base = json.loads(base_text)
+          except Exception as exc:
+              print(f'Baseline completeness unavailable; continuing with current validation only: {exc}')
+          else:
+              if int(current['registered_series']) != int(base['registered_series']):
+                  raise SystemExit(
+                      f"Registered series changed unexpectedly: base={base['registered_series']} current={current['registered_series']}"
+                  )
+              if int(current['ready_series']) < int(base['ready_series']):
+                  raise SystemExit(
+                      f"Completeness regression: base ready={base['ready_series']} current ready={current['ready_series']}"
+                  )
+              print(
+                  f"COMPLETENESS_NON_REGRESSION_OK base={base['ready_series']} current={current['ready_series']}"
+              )
+          PY
+
       - name: Validate core outputs
         run: |
           python - <<'PY'
@@ -72,7 +106,7 @@ jobs:
           ]
           missing = [str(p) for p in required if not p.exists()]
           if missing:
-              raise SystemExit(f'Missing required outputs: {missing}')
+            raise SystemExit(f'Missing required outputs: {missing}')
           cov = pd.read_csv('data/meta/price_coverage.csv')
           print(cov.to_string(index=False))
           PY
