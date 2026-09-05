@@ -1,0 +1,24 @@
+name: Test ECOS sample key
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test-ecos-sample.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test ECOS sample endpoints
+        run: |
+          python - <<'PY'
+          import requests, json
+          for item in ['010200000','010210000']:
+              url=f'https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/100/817Y002/D/20250601/20260905/{item}'
+              r=requests.get(url,timeout=30)
+              print('\nITEM',item,'STATUS',r.status_code,'LEN',len(r.text))
+              print(r.text[:1200])
+          PY
