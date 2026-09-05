@@ -4,3 +4,5 @@ yfinance>=0.2.65
 pykrx>=1.0.51
 pyarrow>=17
 requests>=2.32
+openpyxl>=3.1
+xlrd>=2.0
