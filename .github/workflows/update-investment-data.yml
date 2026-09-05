@@ -105,6 +105,24 @@ jobs:
           print(cov.to_string(index=False))
           PY
 
+      - name: Commit accumulated data safely
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo 'Main advanced during collection; skip stale data commit. A later run will regenerate from the newest main.'
+            exit 0
+          fi
+          git add data
+          if git diff --cached --quiet; then
+            echo 'No data changes'
+            exit 0
+          fi
+          git commit -m "data: update investment archive $(date -u +%Y-%m-%d)"
+          git push origin HEAD:main
+
       - name: Validate Stage 2 3 4 data gates
         run: |
           python - <<'PY'
@@ -135,21 +153,3 @@ jobs:
 
           print('DATA_GATES_COMPLETE Stage2=exact BB350 Stage3=Korean rates Stage4=Fundamental 50/50')
           PY
-
-      - name: Commit accumulated data safely
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git fetch origin main
-          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-            echo 'Main advanced during collection; skip stale data commit. A later run will regenerate from the newest main.'
-            exit 0
-          fi
-          git add data
-          if git diff --cached --quiet; then
-            echo 'No data changes'
-            exit 0
-          fi
-          git commit -m "data: update investment archive $(date -u +%Y-%m-%d)"
-          git push origin HEAD:main
