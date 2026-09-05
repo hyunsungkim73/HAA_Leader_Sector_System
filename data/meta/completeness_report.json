@@ -1,18 +1,11 @@
 {
-  "generated_at_kst": "2026-09-06T06:38:58.056935+09:00",
+  "generated_at_kst": "2026-09-06T06:44:02.385194+09:00",
   "registered_series": 80,
-  "ready_series": 78,
-  "not_ready_series": 2,
-  "completion_pct": 97.5,
+  "ready_series": 79,
+  "not_ready_series": 1,
+  "completion_pct": 98.75,
   "strict_complete": false,
   "not_ready": [
-    {
-      "series_id": "bb350",
-      "dataset": "Breadth",
-      "sector": "시장",
-      "indicator": "KOSPI200+KOSDAQ150 BB(20,+2σ) 돌파수",
-      "reason": "breadth rows=270; latest universe_count=347; strict target=350"
-    },
     {
       "series_id": "macro_kofr",
       "dataset": "Macro_Market",
@@ -30,7 +23,7 @@
     {
       "dataset": "Breadth",
       "count": 1,
-      "sum": 0
+      "sum": 1
     },
     {
       "dataset": "Derived_Weekly",
