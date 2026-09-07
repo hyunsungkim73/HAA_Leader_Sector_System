@@ -371,6 +371,8 @@
     }
   },
   "prior_attempt_errors": [
+    "20260907:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
+    "20260906:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
     "20260905:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
     "20260904:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
     "20260903:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",

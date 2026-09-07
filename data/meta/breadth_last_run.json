@@ -1,17 +1,17 @@
 {
-  "generated_at_kst": "2026-09-06T07:12:47.866588+09:00",
-  "start_requested": "2025-07-03",
+  "generated_at_kst": "2026-09-08T00:12:37.693688+09:00",
+  "start_requested": "2025-07-05",
   "symbol_count": 350,
-  "price_rows": 100567,
-  "breadth_rows": 269,
+  "price_rows": 100223,
+  "breadth_rows": 268,
   "latest": {
-    "date": "2026-09-04",
+    "date": "2026-09-07",
     "universe_count": 350,
-    "breakout_count": 10,
-    "breadth_pct": 0.02857142857142857,
-    "breadth_5dma": 0.02342857142857143,
-    "slope": -0.006285714285714283,
-    "acceleration": -0.006857142857142853
+    "breakout_count": 15,
+    "breadth_pct": 0.04285714285714286,
+    "breadth_5dma": 0.026285714285714284,
+    "slope": 0.0028571428571428532,
+    "acceleration": 0.009142857142857137
   },
   "price_retry": {
     "source_policy": "FinanceDataReader prices for exact KRX constituent universe",
@@ -745,6 +745,8 @@
     }
   },
   "prior_attempt_errors": [
+    "20260907:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
+    "20260906:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
     "20260905:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
     "20260904:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
     "20260903:RuntimeError:kospi200 expected=200, got=201, raw=201, invalid=[]",
