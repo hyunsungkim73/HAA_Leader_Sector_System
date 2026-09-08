@@ -1,17 +1,17 @@
 {
-  "generated_at_kst": "2026-09-08T00:12:37.693688+09:00",
+  "generated_at_kst": "2026-09-08T22:50:24.957830+09:00",
   "start_requested": "2025-07-05",
   "symbol_count": 350,
-  "price_rows": 100223,
-  "breadth_rows": 268,
+  "price_rows": 100573,
+  "breadth_rows": 269,
   "latest": {
-    "date": "2026-09-07",
+    "date": "2026-09-08",
     "universe_count": 350,
-    "breakout_count": 15,
-    "breadth_pct": 0.04285714285714286,
-    "breadth_5dma": 0.026285714285714284,
-    "slope": 0.0028571428571428532,
-    "acceleration": 0.009142857142857137
+    "breakout_count": 10,
+    "breadth_pct": 0.02857142857142857,
+    "breadth_5dma": 0.029142857142857144,
+    "slope": 0.00285714285714286,
+    "acceleration": 6.938893903907228e-18
   },
   "price_retry": {
     "source_policy": "FinanceDataReader prices for exact KRX constituent universe",
