@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-08T22:49:24.208835+09:00",
+  "generated_at_kst": "2026-09-09T22:52:32.015331+09:00",
   "collector_status": [
     {
       "series": "KOSPI200",
@@ -103,7 +103,7 @@
       "series": "TIP",
       "ticker_requested": "TIP",
       "ticker_used": "TIP",
-      "rows_new": 10,
+      "rows_new": 7,
       "error": null
     }
   ]
