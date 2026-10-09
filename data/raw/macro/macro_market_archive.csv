@@ -119,14 +119,14 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-21,macro_cd91,방어자산,CD91일,3.2,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-07T01:14:02.740189+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-09-22,macro_cd91,방어자산,CD91일,3.21,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-09-23,macro_cd91,방어자산,CD91일,3.21,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-28,macro_cd91,방어자산,CD91일,3.22,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-29,macro_cd91,방어자산,CD91일,3.22,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-30,macro_cd91,방어자산,CD91일,3.22,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-01,macro_cd91,방어자산,CD91일,3.21,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-02,macro_cd91,방어자산,CD91일,3.21,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-06,macro_cd91,방어자산,CD91일,3.24,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-07,macro_cd91,방어자산,CD91일,3.24,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-08,macro_cd91,방어자산,CD91일,3.24,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-09T01:52:42.814559+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-28,macro_cd91,방어자산,CD91일,3.22,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-29,macro_cd91,방어자산,CD91일,3.22,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-30,macro_cd91,방어자산,CD91일,3.22,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-01,macro_cd91,방어자산,CD91일,3.21,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-02,macro_cd91,방어자산,CD91일,3.21,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-06,macro_cd91,방어자산,CD91일,3.24,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-07,macro_cd91,방어자산,CD91일,3.24,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-08,macro_cd91,방어자산,CD91일,3.24,%,daily,BOK ECOS 817Y002/010502000,official,2026-10-10T01:30:52.198483+09:00,official ECOS daily market-rate backfill/incremental collector
 2025-09-02,macro_dxy,방어자산,DXY,98.4000015258789,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_dxy,방어자산,DXY,98.13999938964844,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_dxy,방어자산,DXY,98.3499984741211,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-09-05T12:55:05.345253+09:00,automated GitHub Actions incremental collector
@@ -395,17 +395,18 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-21,macro_dxy,방어자산,DXY,100.43000030517578,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-07T01:14:00.653459+09:00,automated GitHub Actions incremental collector
 2026-09-22,macro_dxy,방어자산,DXY,100.5999984741211,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
 2026-09-23,macro_dxy,방어자산,DXY,101.0999984741211,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-09-24,macro_dxy,방어자산,DXY,101.29000091552734,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-09-25,macro_dxy,방어자산,DXY,100.97000122070312,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-09-28,macro_dxy,방어자산,DXY,101.1999969482422,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-09-29,macro_dxy,방어자산,DXY,101.37000274658205,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-09-30,macro_dxy,방어자산,DXY,101.4499969482422,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-10-01,macro_dxy,방어자산,DXY,102.0999984741211,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-10-02,macro_dxy,방어자산,DXY,101.93000030517578,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-10-05,macro_dxy,방어자산,DXY,102.16999816894533,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-10-06,macro_dxy,방어자산,DXY,101.83000183105467,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-10-07,macro_dxy,방어자산,DXY,102.23999786376952,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
-2026-10-08,macro_dxy,방어자산,DXY,102.28199768066406,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-09T01:52:41.198860+09:00,automated GitHub Actions incremental collector
+2026-09-24,macro_dxy,방어자산,DXY,101.29000091552734,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-09-25,macro_dxy,방어자산,DXY,100.97000122070312,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-09-28,macro_dxy,방어자산,DXY,101.1999969482422,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-09-29,macro_dxy,방어자산,DXY,101.37000274658205,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-09-30,macro_dxy,방어자산,DXY,101.4499969482422,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-10-01,macro_dxy,방어자산,DXY,102.0999984741211,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-10-02,macro_dxy,방어자산,DXY,101.93000030517578,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-10-05,macro_dxy,방어자산,DXY,102.16999816894533,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-10-06,macro_dxy,방어자산,DXY,101.83000183105467,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-10-07,macro_dxy,방어자산,DXY,102.23999786376952,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-10-08,macro_dxy,방어자산,DXY,102.13999938964844,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
+2026-10-09,macro_dxy,방어자산,DXY,102.31999969482422,index,daily,Yahoo Finance DX-Y.NYB,public market,2026-10-10T01:30:50.155942+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_gold,방어자산,Gold futures,3549.39990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_gold,방어자산,Gold futures,3593.199951171875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_gold,방어자산,Gold futures,3565.800048828125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-09-05T12:55:05.804753+09:00,automated GitHub Actions incremental collector
@@ -674,259 +675,260 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-21,macro_gold,방어자산,Gold futures,4383.89990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-07T01:14:00.766932+09:00,automated GitHub Actions incremental collector
 2026-09-22,macro_gold,방어자산,Gold futures,4376.39990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
 2026-09-23,macro_gold,방어자산,Gold futures,4318.39990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-09-24,macro_gold,방어자산,Gold futures,4298.0,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-09-25,macro_gold,방어자산,Gold futures,4321.2001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-09-28,macro_gold,방어자산,Gold futures,4168.39990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-09-29,macro_gold,방어자산,Gold futures,4179.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-09-30,macro_gold,방어자산,Gold futures,4186.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-10-01,macro_gold,방어자산,Gold futures,4202.2998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-10-02,macro_gold,방어자산,Gold futures,4162.2998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-10-05,macro_gold,방어자산,Gold futures,4156.7998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-10-06,macro_gold,방어자산,Gold futures,4187.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-10-07,macro_gold,방어자산,Gold futures,4140.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2026-10-08,macro_gold,방어자산,Gold futures,4145.0,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-09T01:52:41.323380+09:00,automated GitHub Actions incremental collector
-2025-09-08,macro_kofr,방어자산,KOFR,2.524,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-09,macro_kofr,방어자산,KOFR,2.584,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-10,macro_kofr,방어자산,KOFR,2.584,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-11,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-12,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-15,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-16,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-17,macro_kofr,방어자산,KOFR,2.512,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-18,macro_kofr,방어자산,KOFR,2.514,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-19,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-22,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-23,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-24,macro_kofr,방어자산,KOFR,2.533,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-25,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-26,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-29,macro_kofr,방어자산,KOFR,2.544,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-09-30,macro_kofr,방어자산,KOFR,2.572,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-01,macro_kofr,방어자산,KOFR,2.535,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-02,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-10,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-13,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-14,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-15,macro_kofr,방어자산,KOFR,2.496,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-16,macro_kofr,방어자산,KOFR,2.505,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-17,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-20,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-21,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-22,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-23,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-24,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-27,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-28,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-29,macro_kofr,방어자산,KOFR,2.494,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-30,macro_kofr,방어자산,KOFR,2.502,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-10-31,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-03,macro_kofr,방어자산,KOFR,2.491,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-04,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-05,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-06,macro_kofr,방어자산,KOFR,2.495,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-07,macro_kofr,방어자산,KOFR,2.524,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-10,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-11,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-12,macro_kofr,방어자산,KOFR,2.512,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-13,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-14,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-17,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-18,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-19,macro_kofr,방어자산,KOFR,2.502,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-20,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-21,macro_kofr,방어자산,KOFR,2.523,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-24,macro_kofr,방어자산,KOFR,2.524,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-25,macro_kofr,방어자산,KOFR,2.523,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-26,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-27,macro_kofr,방어자산,KOFR,2.533,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-11-28,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-01,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-02,macro_kofr,방어자산,KOFR,2.514,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-03,macro_kofr,방어자산,KOFR,2.505,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-04,macro_kofr,방어자산,KOFR,2.516,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-05,macro_kofr,방어자산,KOFR,2.514,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-08,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-09,macro_kofr,방어자산,KOFR,2.57,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-10,macro_kofr,방어자산,KOFR,2.569,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-11,macro_kofr,방어자산,KOFR,2.553,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-12,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-15,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-16,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-17,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-18,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-19,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-22,macro_kofr,방어자산,KOFR,2.562,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-23,macro_kofr,방어자산,KOFR,2.563,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-24,macro_kofr,방어자산,KOFR,2.553,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-26,macro_kofr,방어자산,KOFR,2.563,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-29,macro_kofr,방어자산,KOFR,2.563,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-30,macro_kofr,방어자산,KOFR,2.562,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2025-12-31,macro_kofr,방어자산,KOFR,2.687,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-02,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-05,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-06,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-07,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-08,macro_kofr,방어자산,KOFR,2.544,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-09,macro_kofr,방어자산,KOFR,2.571,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-12,macro_kofr,방어자산,KOFR,2.581,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-13,macro_kofr,방어자산,KOFR,2.58,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-14,macro_kofr,방어자산,KOFR,2.589,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-15,macro_kofr,방어자산,KOFR,2.567,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-16,macro_kofr,방어자산,KOFR,2.557,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-19,macro_kofr,방어자산,KOFR,2.548,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-20,macro_kofr,방어자산,KOFR,2.549,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-21,macro_kofr,방어자산,KOFR,2.559,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-22,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-23,macro_kofr,방어자산,KOFR,2.57,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-26,macro_kofr,방어자산,KOFR,2.578,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-27,macro_kofr,방어자산,KOFR,2.547,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-28,macro_kofr,방어자산,KOFR,2.496,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-29,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-01-30,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-02,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-03,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-04,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-05,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-06,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-09,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-10,macro_kofr,방어자산,KOFR,2.58,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-11,macro_kofr,방어자산,KOFR,2.58,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-12,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-13,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-19,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-20,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-23,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-24,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-25,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-26,macro_kofr,방어자산,KOFR,2.562,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-02-27,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-03,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-04,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-05,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-06,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-09,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-10,macro_kofr,방어자산,KOFR,2.566,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-11,macro_kofr,방어자산,KOFR,2.565,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-12,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-13,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-16,macro_kofr,방어자산,KOFR,2.529,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-17,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-18,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-19,macro_kofr,방어자산,KOFR,2.52,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-20,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-23,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-24,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-25,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-26,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-27,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-30,macro_kofr,방어자산,KOFR,2.512,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-03-31,macro_kofr,방어자산,KOFR,2.584,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-01,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-02,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-03,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-06,macro_kofr,방어자산,KOFR,2.488,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-07,macro_kofr,방어자산,KOFR,2.473,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-08,macro_kofr,방어자산,KOFR,2.474,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-09,macro_kofr,방어자산,KOFR,2.503,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-10,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-13,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-14,macro_kofr,방어자산,KOFR,2.51,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-15,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-16,macro_kofr,방어자산,KOFR,2.476,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-17,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-20,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-21,macro_kofr,방어자산,KOFR,2.52,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-22,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-23,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-24,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-27,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-28,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-29,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-04-30,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-04,macro_kofr,방어자산,KOFR,2.546,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-06,macro_kofr,방어자산,KOFR,2.544,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-07,macro_kofr,방어자산,KOFR,2.529,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-08,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-11,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-12,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-13,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-14,macro_kofr,방어자산,KOFR,2.518,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-15,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-18,macro_kofr,방어자산,KOFR,2.509,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-19,macro_kofr,방어자산,KOFR,2.506,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-20,macro_kofr,방어자산,KOFR,2.508,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-21,macro_kofr,방어자산,KOFR,2.52,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-22,macro_kofr,방어자산,KOFR,2.53,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-26,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-27,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-28,macro_kofr,방어자산,KOFR,2.538,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-05-29,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-01,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-02,macro_kofr,방어자산,KOFR,2.529,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-04,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-05,macro_kofr,방어자산,KOFR,2.509,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-08,macro_kofr,방어자산,KOFR,2.51,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-09,macro_kofr,방어자산,KOFR,2.565,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-10,macro_kofr,방어자산,KOFR,2.573,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-11,macro_kofr,방어자산,KOFR,2.555,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-12,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-15,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-16,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-17,macro_kofr,방어자산,KOFR,2.53,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-18,macro_kofr,방어자산,KOFR,2.53,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-19,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-22,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-23,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-24,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-25,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-26,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-29,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-06-30,macro_kofr,방어자산,KOFR,2.603,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-01,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-02,macro_kofr,방어자산,KOFR,2.506,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-03,macro_kofr,방어자산,KOFR,2.449,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-06,macro_kofr,방어자산,KOFR,2.444,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-07,macro_kofr,방어자산,KOFR,2.468,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-08,macro_kofr,방어자산,KOFR,2.467,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-09,macro_kofr,방어자산,KOFR,2.501,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-10,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-13,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-14,macro_kofr,방어자산,KOFR,2.574,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-15,macro_kofr,방어자산,KOFR,2.546,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-16,macro_kofr,방어자산,KOFR,2.749,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-20,macro_kofr,방어자산,KOFR,2.698,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-21,macro_kofr,방어자산,KOFR,2.679,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-22,macro_kofr,방어자산,KOFR,2.676,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-23,macro_kofr,방어자산,KOFR,2.668,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-24,macro_kofr,방어자산,KOFR,2.672,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-27,macro_kofr,방어자산,KOFR,2.682,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-28,macro_kofr,방어자산,KOFR,2.677,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-29,macro_kofr,방어자산,KOFR,2.674,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-30,macro_kofr,방어자산,KOFR,2.706,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-07-31,macro_kofr,방어자산,KOFR,2.781,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-03,macro_kofr,방어자산,KOFR,2.786,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-04,macro_kofr,방어자산,KOFR,2.774,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-05,macro_kofr,방어자산,KOFR,2.771,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-06,macro_kofr,방어자산,KOFR,2.754,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-07,macro_kofr,방어자산,KOFR,2.733,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-10,macro_kofr,방어자산,KOFR,2.771,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-11,macro_kofr,방어자산,KOFR,2.774,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-12,macro_kofr,방어자산,KOFR,2.785,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-13,macro_kofr,방어자산,KOFR,2.768,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-14,macro_kofr,방어자산,KOFR,2.746,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-18,macro_kofr,방어자산,KOFR,2.738,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-19,macro_kofr,방어자산,KOFR,2.737,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-20,macro_kofr,방어자산,KOFR,2.726,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-21,macro_kofr,방어자산,KOFR,2.727,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-24,macro_kofr,방어자산,KOFR,2.74,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-25,macro_kofr,방어자산,KOFR,2.74,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-26,macro_kofr,방어자산,KOFR,2.738,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-27,macro_kofr,방어자산,KOFR,2.988,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-28,macro_kofr,방어자산,KOFR,2.99,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-08-31,macro_kofr,방어자산,KOFR,3.064,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-09-01,macro_kofr,방어자산,KOFR,3.052,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-09-02,macro_kofr,방어자산,KOFR,2.98,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
-2026-09-03,macro_kofr,방어자산,KOFR,2.948,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-09T01:52:43.334667+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-09-24,macro_gold,방어자산,Gold futures,4298.0,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-09-25,macro_gold,방어자산,Gold futures,4321.2001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-09-28,macro_gold,방어자산,Gold futures,4168.39990234375,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-09-29,macro_gold,방어자산,Gold futures,4179.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-09-30,macro_gold,방어자산,Gold futures,4186.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-10-01,macro_gold,방어자산,Gold futures,4202.2998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-10-02,macro_gold,방어자산,Gold futures,4162.2998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-10-05,macro_gold,방어자산,Gold futures,4156.7998046875,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-10-06,macro_gold,방어자산,Gold futures,4187.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-10-07,macro_gold,방어자산,Gold futures,4140.7001953125,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-10-08,macro_gold,방어자산,Gold futures,4157.0,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2026-10-09,macro_gold,방어자산,Gold futures,4215.10009765625,USD/oz,daily,Yahoo Finance GC=F,public market,2026-10-10T01:30:50.332405+09:00,automated GitHub Actions incremental collector
+2025-09-08,macro_kofr,방어자산,KOFR,2.524,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-09,macro_kofr,방어자산,KOFR,2.584,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-10,macro_kofr,방어자산,KOFR,2.584,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-11,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-12,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-15,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-16,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-17,macro_kofr,방어자산,KOFR,2.512,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-18,macro_kofr,방어자산,KOFR,2.514,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-19,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-22,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-23,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-24,macro_kofr,방어자산,KOFR,2.533,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-25,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-26,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-29,macro_kofr,방어자산,KOFR,2.544,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-09-30,macro_kofr,방어자산,KOFR,2.572,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-01,macro_kofr,방어자산,KOFR,2.535,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-02,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-10,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-13,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-14,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-15,macro_kofr,방어자산,KOFR,2.496,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-16,macro_kofr,방어자산,KOFR,2.505,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-17,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-20,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-21,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-22,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-23,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-24,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-27,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-28,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-29,macro_kofr,방어자산,KOFR,2.494,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-30,macro_kofr,방어자산,KOFR,2.502,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-10-31,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-03,macro_kofr,방어자산,KOFR,2.491,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-04,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-05,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-06,macro_kofr,방어자산,KOFR,2.495,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-07,macro_kofr,방어자산,KOFR,2.524,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-10,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-11,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-12,macro_kofr,방어자산,KOFR,2.512,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-13,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-14,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-17,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-18,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-19,macro_kofr,방어자산,KOFR,2.502,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-20,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-21,macro_kofr,방어자산,KOFR,2.523,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-24,macro_kofr,방어자산,KOFR,2.524,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-25,macro_kofr,방어자산,KOFR,2.523,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-26,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-27,macro_kofr,방어자산,KOFR,2.533,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-11-28,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-01,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-02,macro_kofr,방어자산,KOFR,2.514,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-03,macro_kofr,방어자산,KOFR,2.505,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-04,macro_kofr,방어자산,KOFR,2.516,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-05,macro_kofr,방어자산,KOFR,2.514,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-08,macro_kofr,방어자산,KOFR,2.534,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-09,macro_kofr,방어자산,KOFR,2.57,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-10,macro_kofr,방어자산,KOFR,2.569,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-11,macro_kofr,방어자산,KOFR,2.553,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-12,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-15,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-16,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-17,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-18,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-19,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-22,macro_kofr,방어자산,KOFR,2.562,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-23,macro_kofr,방어자산,KOFR,2.563,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-24,macro_kofr,방어자산,KOFR,2.553,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-26,macro_kofr,방어자산,KOFR,2.563,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-29,macro_kofr,방어자산,KOFR,2.563,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-30,macro_kofr,방어자산,KOFR,2.562,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2025-12-31,macro_kofr,방어자산,KOFR,2.687,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-02,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-05,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-06,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-07,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-08,macro_kofr,방어자산,KOFR,2.544,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-09,macro_kofr,방어자산,KOFR,2.571,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-12,macro_kofr,방어자산,KOFR,2.581,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-13,macro_kofr,방어자산,KOFR,2.58,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-14,macro_kofr,방어자산,KOFR,2.589,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-15,macro_kofr,방어자산,KOFR,2.567,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-16,macro_kofr,방어자산,KOFR,2.557,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-19,macro_kofr,방어자산,KOFR,2.548,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-20,macro_kofr,방어자산,KOFR,2.549,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-21,macro_kofr,방어자산,KOFR,2.559,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-22,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-23,macro_kofr,방어자산,KOFR,2.57,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-26,macro_kofr,방어자산,KOFR,2.578,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-27,macro_kofr,방어자산,KOFR,2.547,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-28,macro_kofr,방어자산,KOFR,2.496,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-29,macro_kofr,방어자산,KOFR,2.513,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-01-30,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-02,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-03,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-04,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-05,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-06,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-09,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-10,macro_kofr,방어자산,KOFR,2.58,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-11,macro_kofr,방어자산,KOFR,2.58,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-12,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-13,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-19,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-20,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-23,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-24,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-25,macro_kofr,방어자산,KOFR,2.552,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-26,macro_kofr,방어자산,KOFR,2.562,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-02-27,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-03,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-04,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-05,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-06,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-09,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-10,macro_kofr,방어자산,KOFR,2.566,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-11,macro_kofr,방어자산,KOFR,2.565,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-12,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-13,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-16,macro_kofr,방어자산,KOFR,2.529,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-17,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-18,macro_kofr,방어자산,KOFR,2.499,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-19,macro_kofr,방어자산,KOFR,2.52,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-20,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-23,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-24,macro_kofr,방어자산,KOFR,2.532,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-25,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-26,macro_kofr,방어자산,KOFR,2.531,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-27,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-30,macro_kofr,방어자산,KOFR,2.512,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-03-31,macro_kofr,방어자산,KOFR,2.584,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-01,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-02,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-03,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-06,macro_kofr,방어자산,KOFR,2.488,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-07,macro_kofr,방어자산,KOFR,2.473,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-08,macro_kofr,방어자산,KOFR,2.474,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-09,macro_kofr,방어자산,KOFR,2.503,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-10,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-13,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-14,macro_kofr,방어자산,KOFR,2.51,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-15,macro_kofr,방어자산,KOFR,2.49,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-16,macro_kofr,방어자산,KOFR,2.476,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-17,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-20,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-21,macro_kofr,방어자산,KOFR,2.52,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-22,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-23,macro_kofr,방어자산,KOFR,2.522,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-24,macro_kofr,방어자산,KOFR,2.541,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-27,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-28,macro_kofr,방어자산,KOFR,2.521,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-29,macro_kofr,방어자산,KOFR,2.511,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-04-30,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-04,macro_kofr,방어자산,KOFR,2.546,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-06,macro_kofr,방어자산,KOFR,2.544,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-07,macro_kofr,방어자산,KOFR,2.529,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-08,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-11,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-12,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-13,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-14,macro_kofr,방어자산,KOFR,2.518,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-15,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-18,macro_kofr,방어자산,KOFR,2.509,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-19,macro_kofr,방어자산,KOFR,2.506,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-20,macro_kofr,방어자산,KOFR,2.508,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-21,macro_kofr,방어자산,KOFR,2.52,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-22,macro_kofr,방어자산,KOFR,2.53,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-26,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-27,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-28,macro_kofr,방어자산,KOFR,2.538,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-05-29,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-01,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-02,macro_kofr,방어자산,KOFR,2.529,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-04,macro_kofr,방어자산,KOFR,2.519,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-05,macro_kofr,방어자산,KOFR,2.509,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-08,macro_kofr,방어자산,KOFR,2.51,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-09,macro_kofr,방어자산,KOFR,2.565,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-10,macro_kofr,방어자산,KOFR,2.573,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-11,macro_kofr,방어자산,KOFR,2.555,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-12,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-15,macro_kofr,방어자산,KOFR,2.542,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-16,macro_kofr,방어자산,KOFR,2.539,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-17,macro_kofr,방어자산,KOFR,2.53,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-18,macro_kofr,방어자산,KOFR,2.53,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-19,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-22,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-23,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-24,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-25,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-26,macro_kofr,방어자산,KOFR,2.55,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-29,macro_kofr,방어자산,KOFR,2.551,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-06-30,macro_kofr,방어자산,KOFR,2.603,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-01,macro_kofr,방어자산,KOFR,2.54,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-02,macro_kofr,방어자산,KOFR,2.506,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-03,macro_kofr,방어자산,KOFR,2.449,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-06,macro_kofr,방어자산,KOFR,2.444,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-07,macro_kofr,방어자산,KOFR,2.468,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-08,macro_kofr,방어자산,KOFR,2.467,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-09,macro_kofr,방어자산,KOFR,2.501,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-10,macro_kofr,방어자산,KOFR,2.543,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-13,macro_kofr,방어자산,KOFR,2.56,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-14,macro_kofr,방어자산,KOFR,2.574,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-15,macro_kofr,방어자산,KOFR,2.546,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-16,macro_kofr,방어자산,KOFR,2.749,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-20,macro_kofr,방어자산,KOFR,2.698,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-21,macro_kofr,방어자산,KOFR,2.679,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-22,macro_kofr,방어자산,KOFR,2.676,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-23,macro_kofr,방어자산,KOFR,2.668,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-24,macro_kofr,방어자산,KOFR,2.672,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-27,macro_kofr,방어자산,KOFR,2.682,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-28,macro_kofr,방어자산,KOFR,2.677,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-29,macro_kofr,방어자산,KOFR,2.674,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-30,macro_kofr,방어자산,KOFR,2.706,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-07-31,macro_kofr,방어자산,KOFR,2.781,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-03,macro_kofr,방어자산,KOFR,2.786,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-04,macro_kofr,방어자산,KOFR,2.774,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-05,macro_kofr,방어자산,KOFR,2.771,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-06,macro_kofr,방어자산,KOFR,2.754,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-07,macro_kofr,방어자산,KOFR,2.733,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-10,macro_kofr,방어자산,KOFR,2.771,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-11,macro_kofr,방어자산,KOFR,2.774,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-12,macro_kofr,방어자산,KOFR,2.785,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-13,macro_kofr,방어자산,KOFR,2.768,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-14,macro_kofr,방어자산,KOFR,2.746,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-18,macro_kofr,방어자산,KOFR,2.738,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-19,macro_kofr,방어자산,KOFR,2.737,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-20,macro_kofr,방어자산,KOFR,2.726,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-21,macro_kofr,방어자산,KOFR,2.727,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-24,macro_kofr,방어자산,KOFR,2.74,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-25,macro_kofr,방어자산,KOFR,2.74,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-26,macro_kofr,방어자산,KOFR,2.738,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-27,macro_kofr,방어자산,KOFR,2.988,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-28,macro_kofr,방어자산,KOFR,2.99,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-08-31,macro_kofr,방어자산,KOFR,3.064,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-09-01,macro_kofr,방어자산,KOFR,3.052,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-09-02,macro_kofr,방어자산,KOFR,2.98,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
+2026-09-03,macro_kofr,방어자산,KOFR,2.948,%,daily,KSD KOFR official export https://www.kofr.kr/rate/rate.jsp,official,2026-10-10T01:30:52.761282+09:00,official KSD KOFR Excel export; source file KOFR_20260906.xlsx
 2026-09-04,macro_kofr,방어자산,KOFR proxy ETF NAV,106374.0,KRW NAV,daily,RISE KOFR금리액티브 official product page,official proxy,2026-09-05T11:50:00+09:00,Direct KOFR rate not exposed; ETF NAV proxy
 2026-04-01,macro_kr10y,방어자산,한국 국고10년,3.689,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T05:53:58.469236+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-04-02,macro_kr10y,방어자산,한국 국고10년,3.804,%,daily,BOK ECOS 817Y002/010210000,official,2026-09-06T05:53:58.469236+09:00,official ECOS daily market-rate backfill/incremental collector
@@ -1048,14 +1050,14 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-21,macro_kr10y,방어자산,한국 국고10년,4.457,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-07T01:14:02.114510+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-09-22,macro_kr10y,방어자산,한국 국고10년,4.461,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-09-23,macro_kr10y,방어자산,한국 국고10년,4.392,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-28,macro_kr10y,방어자산,한국 국고10년,4.539,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-29,macro_kr10y,방어자산,한국 국고10년,4.476,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-30,macro_kr10y,방어자산,한국 국고10년,4.407,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-01,macro_kr10y,방어자산,한국 국고10년,4.436,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-02,macro_kr10y,방어자산,한국 국고10년,4.365,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-06,macro_kr10y,방어자산,한국 국고10년,4.369,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-07,macro_kr10y,방어자산,한국 국고10년,4.376,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-08,macro_kr10y,방어자산,한국 국고10년,4.395,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-09T01:52:42.349166+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-28,macro_kr10y,방어자산,한국 국고10년,4.539,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-29,macro_kr10y,방어자산,한국 국고10년,4.476,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-30,macro_kr10y,방어자산,한국 국고10년,4.407,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-01,macro_kr10y,방어자산,한국 국고10년,4.436,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-02,macro_kr10y,방어자산,한국 국고10년,4.365,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-06,macro_kr10y,방어자산,한국 국고10년,4.369,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-07,macro_kr10y,방어자산,한국 국고10년,4.376,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-08,macro_kr10y,방어자산,한국 국고10년,4.395,%,daily,BOK ECOS 817Y002/010210000,official,2026-10-10T01:30:51.583904+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-04-01,macro_kr3y,방어자산,한국 국고3년,3.37,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-04-02,macro_kr3y,방어자산,한국 국고3년,3.477,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-04-03,macro_kr3y,방어자산,한국 국고3년,3.448,%,daily,BOK ECOS 817Y002/010200000,official,2026-09-06T05:53:51.825805+09:00,official ECOS daily market-rate backfill/incremental collector
@@ -1176,14 +1178,14 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-21,macro_kr3y,방어자산,한국 국고3년,4.056,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-07T01:14:01.448160+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-09-22,macro_kr3y,방어자산,한국 국고3년,4.04,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
 2026-09-23,macro_kr3y,방어자산,한국 국고3년,4.006,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-28,macro_kr3y,방어자산,한국 국고3년,4.119,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-29,macro_kr3y,방어자산,한국 국고3년,4.076,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-09-30,macro_kr3y,방어자산,한국 국고3년,4.011,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-01,macro_kr3y,방어자산,한국 국고3년,4.01,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-02,macro_kr3y,방어자산,한국 국고3년,3.937,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-06,macro_kr3y,방어자산,한국 국고3년,3.933,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-07,macro_kr3y,방어자산,한국 국고3년,3.961,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
-2026-10-08,macro_kr3y,방어자산,한국 국고3년,3.983,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-09T01:52:41.835771+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-28,macro_kr3y,방어자산,한국 국고3년,4.119,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-29,macro_kr3y,방어자산,한국 국고3년,4.076,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-09-30,macro_kr3y,방어자산,한국 국고3년,4.011,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-01,macro_kr3y,방어자산,한국 국고3년,4.01,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-02,macro_kr3y,방어자산,한국 국고3년,3.937,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-06,macro_kr3y,방어자산,한국 국고3년,3.933,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-07,macro_kr3y,방어자산,한국 국고3년,3.961,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
+2026-10-08,macro_kr3y,방어자산,한국 국고3년,3.983,%,daily,BOK ECOS 817Y002/010200000,official,2026-10-10T01:30:50.964182+09:00,official ECOS daily market-rate backfill/incremental collector
 2025-09-02,macro_real10y,방어자산,미국 10년 실질금리,1.87,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_real10y,방어자산,미국 10년 실질금리,1.82,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_real10y,방어자산,미국 10년 실질금리,1.79,%,daily,FRED DFII10,official,2026-09-05T12:55:04.679448+09:00,automated GitHub Actions incremental collector
@@ -1448,17 +1450,18 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-17,macro_real10y,방어자산,미국 10년 실질금리,2.61,%,daily,FRED DFII10,official,2026-10-07T01:14:00.248415+09:00,automated GitHub Actions incremental collector
 2026-09-18,macro_real10y,방어자산,미국 10년 실질금리,2.68,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
 2026-09-21,macro_real10y,방어자산,미국 10년 실질금리,2.62,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-09-22,macro_real10y,방어자산,미국 10년 실질금리,2.63,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-09-23,macro_real10y,방어자산,미국 10년 실질금리,2.76,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-09-24,macro_real10y,방어자산,미국 10년 실질금리,2.85,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-09-25,macro_real10y,방어자산,미국 10년 실질금리,2.83,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-09-28,macro_real10y,방어자산,미국 10년 실질금리,2.9,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-09-29,macro_real10y,방어자산,미국 10년 실질금리,2.91,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-09-30,macro_real10y,방어자산,미국 10년 실질금리,2.93,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-10-01,macro_real10y,방어자산,미국 10년 실질금리,2.88,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-10-02,macro_real10y,방어자산,미국 10년 실질금리,2.92,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-10-05,macro_real10y,방어자산,미국 10년 실질금리,2.95,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
-2026-10-06,macro_real10y,방어자산,미국 10년 실질금리,2.91,%,daily,FRED DFII10,official,2026-10-09T01:52:40.689057+09:00,automated GitHub Actions incremental collector
+2026-09-22,macro_real10y,방어자산,미국 10년 실질금리,2.63,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-09-23,macro_real10y,방어자산,미국 10년 실질금리,2.76,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-09-24,macro_real10y,방어자산,미국 10년 실질금리,2.85,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-09-25,macro_real10y,방어자산,미국 10년 실질금리,2.83,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-09-28,macro_real10y,방어자산,미국 10년 실질금리,2.9,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-09-29,macro_real10y,방어자산,미국 10년 실질금리,2.91,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-09-30,macro_real10y,방어자산,미국 10년 실질금리,2.93,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-10-01,macro_real10y,방어자산,미국 10년 실질금리,2.88,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-10-02,macro_real10y,방어자산,미국 10년 실질금리,2.92,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-10-05,macro_real10y,방어자산,미국 10년 실질금리,2.95,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-10-06,macro_real10y,방어자산,미국 10년 실질금리,2.91,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
+2026-10-07,macro_real10y,방어자산,미국 10년 실질금리,2.92,%,daily,FRED DFII10,official,2026-10-10T01:30:49.624969+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_us10y,방어자산,미국 10년 국채금리,4.28,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_us10y,방어자산,미국 10년 국채금리,4.22,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_us10y,방어자산,미국 10년 국채금리,4.17,%,daily,FRED DGS10,official,2026-09-05T12:55:04.029790+09:00,automated GitHub Actions incremental collector
@@ -1723,17 +1726,18 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-17,macro_us10y,방어자산,미국 10년 국채금리,4.94,%,daily,FRED DGS10,official,2026-10-07T01:13:59.559532+09:00,automated GitHub Actions incremental collector
 2026-09-18,macro_us10y,방어자산,미국 10년 국채금리,5.01,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
 2026-09-21,macro_us10y,방어자산,미국 10년 국채금리,4.96,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-09-22,macro_us10y,방어자산,미국 10년 국채금리,4.96,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-09-23,macro_us10y,방어자산,미국 10년 국채금리,5.11,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-09-24,macro_us10y,방어자산,미국 10년 국채금리,5.18,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-09-25,macro_us10y,방어자산,미국 10년 국채금리,5.17,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-09-28,macro_us10y,방어자산,미국 10년 국채금리,5.24,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-09-29,macro_us10y,방어자산,미국 10년 국채금리,5.26,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-09-30,macro_us10y,방어자산,미국 10년 국채금리,5.29,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-10-01,macro_us10y,방어자산,미국 10년 국채금리,5.24,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-10-02,macro_us10y,방어자산,미국 10년 국채금리,5.28,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-10-05,macro_us10y,방어자산,미국 10년 국채금리,5.31,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
-2026-10-06,macro_us10y,방어자산,미국 10년 국채금리,5.27,%,daily,FRED DGS10,official,2026-10-09T01:52:39.925800+09:00,automated GitHub Actions incremental collector
+2026-09-22,macro_us10y,방어자산,미국 10년 국채금리,4.96,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-09-23,macro_us10y,방어자산,미국 10년 국채금리,5.11,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-09-24,macro_us10y,방어자산,미국 10년 국채금리,5.18,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-09-25,macro_us10y,방어자산,미국 10년 국채금리,5.17,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-09-28,macro_us10y,방어자산,미국 10년 국채금리,5.24,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-09-29,macro_us10y,방어자산,미국 10년 국채금리,5.26,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-09-30,macro_us10y,방어자산,미국 10년 국채금리,5.29,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-10-01,macro_us10y,방어자산,미국 10년 국채금리,5.24,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-10-02,macro_us10y,방어자산,미국 10년 국채금리,5.28,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-10-05,macro_us10y,방어자산,미국 10년 국채금리,5.31,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-10-06,macro_us10y,방어자산,미국 10년 국채금리,5.27,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
+2026-10-07,macro_us10y,방어자산,미국 10년 국채금리,5.28,%,daily,FRED DGS10,official,2026-10-10T01:30:48.820732+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_us2y,방어자산,미국 2년 국채금리,3.66,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_us2y,방어자산,미국 2년 국채금리,3.61,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_us2y,방어자산,미국 2년 국채금리,3.59,%,daily,FRED DGS2,official,2026-09-05T12:55:03.705923+09:00,automated GitHub Actions incremental collector
@@ -1998,17 +2002,18 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-17,macro_us2y,방어자산,미국 2년 국채금리,4.67,%,daily,FRED DGS2,official,2026-10-07T01:13:59.267078+09:00,automated GitHub Actions incremental collector
 2026-09-18,macro_us2y,방어자산,미국 2년 국채금리,4.76,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
 2026-09-21,macro_us2y,방어자산,미국 2년 국채금리,4.76,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-09-22,macro_us2y,방어자산,미국 2년 국채금리,4.71,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-09-23,macro_us2y,방어자산,미국 2년 국채금리,4.85,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-09-24,macro_us2y,방어자산,미국 2년 국채금리,4.87,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-09-25,macro_us2y,방어자산,미국 2년 국채금리,4.81,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-09-28,macro_us2y,방어자산,미국 2년 국채금리,4.92,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-09-29,macro_us2y,방어자산,미국 2년 국채금리,4.89,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-09-30,macro_us2y,방어자산,미국 2년 국채금리,4.88,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-10-01,macro_us2y,방어자산,미국 2년 국채금리,4.78,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-10-02,macro_us2y,방어자산,미국 2년 국채금리,4.83,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-10-05,macro_us2y,방어자산,미국 2년 국채금리,4.84,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
-2026-10-06,macro_us2y,방어자산,미국 2년 국채금리,4.79,%,daily,FRED DGS2,official,2026-10-09T01:52:39.856085+09:00,automated GitHub Actions incremental collector
+2026-09-22,macro_us2y,방어자산,미국 2년 국채금리,4.71,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-09-23,macro_us2y,방어자산,미국 2년 국채금리,4.85,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-09-24,macro_us2y,방어자산,미국 2년 국채금리,4.87,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-09-25,macro_us2y,방어자산,미국 2년 국채금리,4.81,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-09-28,macro_us2y,방어자산,미국 2년 국채금리,4.92,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-09-29,macro_us2y,방어자산,미국 2년 국채금리,4.89,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-09-30,macro_us2y,방어자산,미국 2년 국채금리,4.88,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-10-01,macro_us2y,방어자산,미국 2년 국채금리,4.78,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-10-02,macro_us2y,방어자산,미국 2년 국채금리,4.83,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-10-05,macro_us2y,방어자산,미국 2년 국채금리,4.84,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-10-06,macro_us2y,방어자산,미국 2년 국채금리,4.79,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
+2026-10-07,macro_us2y,방어자산,미국 2년 국채금리,4.77,%,daily,FRED DGS2,official,2026-10-10T01:30:48.457139+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_us30y,방어자산,미국 30년 국채금리,4.97,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_us30y,방어자산,미국 30년 국채금리,4.9,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
 2025-09-04,macro_us30y,방어자산,미국 30년 국채금리,4.86,%,daily,FRED DGS30,official,2026-09-05T12:55:04.362167+09:00,automated GitHub Actions incremental collector
@@ -2273,17 +2278,18 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-17,macro_us30y,방어자산,미국 30년 국채금리,5.29,%,daily,FRED DGS30,official,2026-10-07T01:13:59.865935+09:00,automated GitHub Actions incremental collector
 2026-09-18,macro_us30y,방어자산,미국 30년 국채금리,5.34,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
 2026-09-21,macro_us30y,방어자산,미국 30년 국채금리,5.29,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-09-22,macro_us30y,방어자산,미국 30년 국채금리,5.29,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-09-23,macro_us30y,방어자산,미국 30년 국채금리,5.4,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-09-24,macro_us30y,방어자산,미국 30년 국채금리,5.47,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-09-25,macro_us30y,방어자산,미국 30년 국채금리,5.49,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-09-28,macro_us30y,방어자산,미국 30년 국채금리,5.56,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-09-29,macro_us30y,방어자산,미국 30년 국채금리,5.59,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-09-30,macro_us30y,방어자산,미국 30년 국채금리,5.64,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-10-01,macro_us30y,방어자산,미국 30년 국채금리,5.61,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-10-02,macro_us30y,방어자산,미국 30년 국채금리,5.63,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-10-05,macro_us30y,방어자산,미국 30년 국채금리,5.66,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
-2026-10-06,macro_us30y,방어자산,미국 30년 국채금리,5.64,%,daily,FRED DGS30,official,2026-10-09T01:52:40.318108+09:00,automated GitHub Actions incremental collector
+2026-09-22,macro_us30y,방어자산,미국 30년 국채금리,5.29,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-09-23,macro_us30y,방어자산,미국 30년 국채금리,5.4,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-09-24,macro_us30y,방어자산,미국 30년 국채금리,5.47,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-09-25,macro_us30y,방어자산,미국 30년 국채금리,5.49,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-09-28,macro_us30y,방어자산,미국 30년 국채금리,5.56,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-09-29,macro_us30y,방어자산,미국 30년 국채금리,5.59,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-09-30,macro_us30y,방어자산,미국 30년 국채금리,5.64,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-10-01,macro_us30y,방어자산,미국 30년 국채금리,5.61,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-10-02,macro_us30y,방어자산,미국 30년 국채금리,5.63,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-10-05,macro_us30y,방어자산,미국 30년 국채금리,5.66,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-10-06,macro_us30y,방어자산,미국 30년 국채금리,5.64,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
+2026-10-07,macro_us30y,방어자산,미국 30년 국채금리,5.67,%,daily,FRED DGS30,official,2026-10-10T01:30:49.348215+09:00,automated GitHub Actions incremental collector
 2025-09-01,macro_usdkrw,방어자산,USD/KRW,1388.8399658203125,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
 2025-09-02,macro_usdkrw,방어자산,USD/KRW,1392.93994140625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
 2025-09-03,macro_usdkrw,방어자산,USD/KRW,1394.5699462890625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-09-05T12:55:05.102397+09:00,automated GitHub Actions incremental collector
@@ -2561,14 +2567,15 @@ obs_date,series_id,category,indicator,value,unit,frequency,source,source_type,lo
 2026-09-21,macro_usdkrw,방어자산,USD/KRW,1384.8599853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-07T01:14:00.564425+09:00,automated GitHub Actions incremental collector
 2026-09-22,macro_usdkrw,방어자산,USD/KRW,1373.6800537109375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
 2026-09-23,macro_usdkrw,방어자산,USD/KRW,1350.3599853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-09-24,macro_usdkrw,방어자산,USD/KRW,1362.5,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-09-25,macro_usdkrw,방어자산,USD/KRW,1367.3599853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-09-28,macro_usdkrw,방어자산,USD/KRW,1354.510009765625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-09-29,macro_usdkrw,방어자산,USD/KRW,1359.56005859375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-09-30,macro_usdkrw,방어자산,USD/KRW,1350.5,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-10-01,macro_usdkrw,방어자산,USD/KRW,1356.8399658203125,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-10-02,macro_usdkrw,방어자산,USD/KRW,1360.5899658203125,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-10-05,macro_usdkrw,방어자산,USD/KRW,1342.56005859375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-10-06,macro_usdkrw,방어자산,USD/KRW,1343.75,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-10-07,macro_usdkrw,방어자산,USD/KRW,1339.739990234375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
-2026-10-08,macro_usdkrw,방어자산,USD/KRW,1342.0699462890625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-09T01:52:41.036670+09:00,automated GitHub Actions incremental collector
+2026-09-24,macro_usdkrw,방어자산,USD/KRW,1362.5,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-09-25,macro_usdkrw,방어자산,USD/KRW,1367.3599853515625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-09-28,macro_usdkrw,방어자산,USD/KRW,1354.510009765625,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-09-29,macro_usdkrw,방어자산,USD/KRW,1359.56005859375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-09-30,macro_usdkrw,방어자산,USD/KRW,1350.5,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-10-01,macro_usdkrw,방어자산,USD/KRW,1356.8399658203125,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-10-02,macro_usdkrw,방어자산,USD/KRW,1360.5899658203125,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-10-05,macro_usdkrw,방어자산,USD/KRW,1342.56005859375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-10-06,macro_usdkrw,방어자산,USD/KRW,1343.75,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-10-07,macro_usdkrw,방어자산,USD/KRW,1339.739990234375,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-10-08,macro_usdkrw,방어자산,USD/KRW,1339.0799560546875,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
+2026-10-09,macro_usdkrw,방어자산,USD/KRW,1341.0899658203125,KRW/USD,daily,Yahoo Finance KRW=X,public market,2026-10-10T01:30:49.962203+09:00,automated GitHub Actions incremental collector
